@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Respond.me</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<!-- bxSlider CSS file -->
+	<link href="css/jquery.bxslider.css" rel="stylesheet" />
+	<link href="css/chat-box.css" rel="stylesheet" />
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+	
+	<!-- jQuery library (served from Google) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<script src="js/jquery.customSelect.min.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('select.language-select').customSelect();
+			
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.we-banner').css({ opacity: 1});
+			
+			$('.respond-chat').click(function() { 
+				$( ".respond-box" ).slideToggle("fast");
+				$( ".chat-box" ).slideToggle("fast");
+
+			});
+			
+			$('.chat-minimize').click(function() { 
+				$( ".respond-box" ).slideToggle("fast");
+				$( ".chat-box" ).slideToggle("fast");
+			});
+			
+			$('.start-chat').click(function() { 
+				$( ".chat-form1" ).hide();
+				$( ".chat-form2" ).show();
+			});
+			
+		});
+	</script>
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+		<div id="header">
+			<div class="container">
+				<a href="" class="logo"><img src="img/logo.png" alt="respond.me" /></a>
+
+				<ul class="nav">
+					<li><a href="">Home</a><span class="nav-arrow"></span></li>
+					<li><a href="#">Pricing</a><span class="nav-arrow"></span></li>
+					<li><a href="#">Features</a><span class="nav-arrow"></span></li>
+					<li class="faq selected"><a href="#">FAQ</a><span class="nav-arrow"></span></li>
+					<li><a href="#">About</a><span class="nav-arrow"></span></li>
+					<li><a href="#">Contact Us</a><span class="nav-arrow"></span></li>
+				</ul>
+
+				<div class="header-sidebar">
+					<p>Country / Language
+					   <span class="sel-arrow open-sel"></span>
+						<select class="sel-bx language-select">
+							<option><span>US</span></option>
+							<option><span>US</span></option>
+							<option><span>US</span></option>
+							<option><span>US</span></option>
+						</select>
+					</p>
+					
+					<div class="header-buttons">
+						<a class="btn sign-up" href="#"><img src="img/tick.png" alt="" /> <span>Sign Up</span></a>
+						<a class="btn log-in" href="#"><img src="img/lock.png" alt="" /> <span>Log In</span></a>
+					</div>
+					
+				</div>
+			</div>
+		</div><!-- end header -->
+		
+		<div id="main">
+			<div class="container">
+				<div class="faq">
+					<div class="sixteen columns">
+						<h2 class="faq-title">FAQ</h2>
+					</div>
+					
+					<div class="eight columns column fec1">
+						<div class="faq-box">
+							<h4>Q. How can I add live chat software to my website?</h4>
+							<p>
+								<strong>A:</strong>
+								Simply, register with our website. Get our install code right when you log in and place it in your website's HTML.
+								You will now be able to take live chats through our control panel by logging into your account. 
+							</p>
+						</div>
+						<div class="faq-box">
+							<h4>Q. Do you offer live, real chat agents?</h4>
+							<p>
+								<strong>A:</strong>
+								Yes. We are proud to be the only software solution that offers live, dedicated chat agents. 
+							</p>
+						</div>
+						<div class="faq-box">
+							<h4>Q. Do you offer the ability to modify the chat windows?</h4>
+							<p>
+								<strong>A:</strong>
+								 Absolutely! You can select a chat window theme from our inventory for free. You may also upload your own. You may also select a customer or one of our available customer greeting signs. 
+							</p>
+						</div>
+						<div class="faq-box">
+							<p class="more-questions"><a href="#"><span>&raquo;</span> Ask Us More Quesions</a></p>
+						</div>
+					</div>
+					
+					<div class="eight columns column">
+						<div class="faq-box">
+							<h4>Q. Do you offer any type of reporting?</h4>
+							<p>
+								<strong>A:</strong>
+								Absolutely. We offer real time reporting of your live website visitors. You can track visitor live location, chat history, missed chat opportunities, queued visitors, open and solve tickets and much more. 
+							</p>
+						</div>
+						<div class="faq-box">
+							<h4>Q. What is your pricing?</h4>
+							<p>
+								<strong>A:</strong>
+								At Chattero we like to keep things simple. We have one pricing plan for our software and one pricing plan for our live chat agents. 
+								Our Software is $29 per month +$9 for every additional user & Our Live chat agents are $995 per month for dedicated agents and $595 for shared agents.
+							</p>
+						</div>
+						<div class="faq-box">
+							<h4>Q.When I sign off and am no longer available through Chattero to take incoming chats, what happens then?</h4>
+							<p>
+								<strong>A:</strong>
+								 In a case where you are signed off, your customer can you leave you a message which will be saved in your tickets and emailed to you immediately.
+							</p>
+						</div>
+					</div>
+				</div>
+				
+			</div><!-- end container -->						
+		</div><!-- end main -->
+		
+		<div id="footer">
+			<div class="container">
+				<div class="column footer-left">
+					<ul class="footer-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Terms</a></li>
+						<li><a href="#">Features</a></li>
+						<li><a href="#">Privacy</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Pricing</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li class="last"><a href="#">About</a></li>
+					</ul>
+					<p class="footer-logo"><a href=""><img src="img/footer-logo.png" alt="Respond.me" /></a></p>
+					<p class="follow-us">
+						Follow us:
+						<a href="#"><img src="img/like-btn.png" alt="Like us on Facebook" /></a>
+						<a href="#"><img src="img/tweet-btn.png" alt="Tweet us on Twitter" /></a>
+						<a href="#"><img src="img/gplus-btn.png" alt="Share this on Google Plus" /></a>
+					</p>
+					
+					<p class="copyright">&copy; Copyright 2013 Respond.me LTD</p>
+				</div>
+				
+		<!-- START CHAT-BOX -->
+		<div id="resp-me">	
+			<div class="column footer-respond columns seven">
+					<div class="respond-box">
+						<img class="we-banner" src="img/we-banner.png" alt="We are here" />
+						<a class="respond-chat"><img src="img/respond-chat.png" alt="Click to talk to us" /></a>
+					</div>
+					
+					<div class="chat-box">
+						<div class="cb">
+						<div class="chat-top">
+							<img class="chat-logo" src="img/chat-logo.png" alt="" />
+							<a class="chat-minimize"><img src="img/minimize.png" alt="" /></a>
+						</div>
+						
+						<form class="chat-form1" method="post">
+								<div class="cf1">
+							<p class="welcome">
+								Welcome to our live chat! Please fill in the form below before
+								starting the chat.
+							</p>
+							
+							<p class="gray-bg">
+								<label for="name">Name:</label><br />
+								<input type="text" name="respond-name" value="" />
+								
+								<ul class="edit-list">
+									<li><a href="#"><img src="img/edit-icon.png" alt="" /></a></li>
+									<li><a href="#"><img src="img/edit-icon2.png" alt="" /></a></li>
+									<li><a href="#"><img src="img/delete-icon.png" alt="" /></a></li>
+								</ul>
+							</p>
+							<p>
+								<label for="name">Email:</label><br />
+								<input type="email" name="respond-email" value="" />
+								
+								
+							</p>
+							<p>
+								<a class="start-chat">Start the chat</a>
+							</p>	
+								</div>						
+						</form>
+						<form class="chat-form2">
+							<div class="support">
+								<p>
+								<span>Support Operator</span>
+								<strong>Michael Starr</strong>
+								<span class="operator-stars">
+									<img src="img/star.png" alt="" />
+									<img src="img/star.png" alt="" />
+									<img src="img/star.png" alt="" />
+									<img src="img/star-half.png" alt="" />
+									<img src="img/star-empty.png" alt="" />
+								</span>
+								</p>
+							</div>
+							<div class="chat-content">
+								<a href="#"><img class="message-icon" src="img/email-icon.png" alt="" /></a>
+								<div class="chat-user">
+									<img src="img/chat-avatar1.png" alt="" />
+									<h5>Michael Starr:</h5>
+									<p>Hi Tom, how can I help you today?</p>
+								</div>
+									<div class="cht-border"></div>
+								<div class="chat-user cu2">
+									<img src="img/chat-avatar2.png" alt="" />
+									<h5>Customer:</h5>
+									<p class="cuf">Hi, do you have the ray ban sunglasses in more colors?</p>
+								</div>
+								
+							</div>
+							<div class="chat-submit">
+								<div class="cs">
+									<input type="text" name="message" value="" placeholder="Type your message..." />
+									<input type="submit" class="sub-btn" name="chat-submit" value="Submit" />
+								</div>
+							</div>
+								
+						</form>
+						</div>
+					</div><!-- end chat-box -->
+			</div><!-- end footer-respond -->
+		</div><!-- end resp-me -->
+			</div>
+		</div><!-- end footer -->
+
+
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

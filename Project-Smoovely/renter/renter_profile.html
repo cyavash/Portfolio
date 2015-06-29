@@ -1,0 +1,1324 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Renter Profile</title>
+
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/override.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <link href="../static/css/agent-dashboard.css" rel="stylesheet">
+     <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+    <!-- google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,400italic' rel='stylesheet' type='text/css'>
+
+
+    
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+<body id="" class="">
+
+  <!-- Header Starts -->
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container"> 
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
+          <span class="sr-only">Toggle navigation</span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+          
+        <a class="navbar-brand" href="#"><img src="../static/images/logo.png" /></a>             
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Renter</a></li>
+          <li><a href="#">Landlords</a></li>
+          <li><a href="#" class="nav-btn">Post</a></li>
+        </ul>
+      
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" class="message-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
+          <li class="dropdown">
+            <a href="#" class="user-icon" data-toggle="dropdown"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu user-dropdown">
+              <li><a href="#">My Profile</a></li>
+              <li><a href="#">Manage Properties</a></li>
+              <li><a href="#">Manage Bookmarks</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+          
+      </div>
+      <!--end of navbar-collapse-->    
+    </div>
+    <!--end of container-->  
+  </nav>
+  <!--end of navbar-->
+
+    <div class="container">
+      <div class="messages-container">
+        <div class="folders martop hidden-xs">
+          <ul>
+            <li><a href="#">Status</a></li>
+            <li class="active"><a href="#">Renter Profile</a></li>
+            <li><a href="#">Starred<span class="label">5</span></a></li>
+            <li><a href="#">Applications</a></li>
+            <li><a href="#">Account Settings</a></li>
+            <li><a href="#">Notification Settings</a></li>
+          </ul>
+		 
+        </div><!-- end folders -->
+        <div class="agent-profile">
+			<h1>Renter Profile</h1>
+				<div class="agent-info">
+					<p class="heading-applicant">
+						<span class="span-head">Applicant Information</span>
+						<span class="list-border2"></span>
+						<a class="border-gray-rounded pull-right renter-form-open"><span class="glyphicon glyphicon-pencil"></span></a>
+					</p>
+					
+					<div class="agent-image">
+						<img src="../static/images/user-img.jpg" alt="166x166" />
+						<div class="change-img"><a href="#">Change Image</a></div>
+					</div>
+					<div class="agent-details">
+						<h3>Joel Legris</h3>
+						<p>
+							<span>Date of Birth:</span><br />
+							2013-06-17
+						</p>
+						<p>
+							<span>Current Address:</span><br />
+							10-123 1/2 Main St. NW
+						</p>
+						<p class="p-ctc">
+							<span class="text-gray"> <span class="glyphicon glyphicon-earphone"></span> 123 1234 423</span><br />
+							 <span class="glyphicon glyphicon-envelope"></span> <!-- <i class="fa fa-envelope"></i> --> joel@legris.com
+						</p> 
+					</div>
+					<div class="fb-btn social-button">
+						<a href="#">Get Information from Facebook</a>
+					</div>
+					<div class="linkedin-btn social-button">
+						<a href="#">Get Information from LinkedIn</a>
+					</div>
+				</div><!-- end agent-info -->
+					<div class="agent-form renter-form">
+						<div class="row form-rounded-gray">
+						<div class="col-xs-12 col-sm-12">
+						  <div class="row">
+							<div class="col-xs-12 col-sm-8">
+							  <div class="form-group has-feedback has-success">
+								  <strong>Name</strong>
+								  <input class="form-control" id="id_name" maxlength="100" name="name" ng-model="name" placeholder="Joel" type="text" />
+								  <span class="help-block"></span>
+							  </div>
+							</div>
+							<div class="col-xs-12 col-sm-4">
+							  <div class="form-group has-feedback has-success">
+								  <strong>Date of Birth</strong>
+								  <input class="form-control dob datepicker" id="id_dob" name="dob" ng-model="dob" placeholder="" type="text" value="2013-06-17" />
+								<span class="help-block"></span>
+								</div>
+							</div><!-- end col-->
+						  </div><!-- end row -->
+						  
+						   <div class="row">
+							<div class="col-xs-12 col-sm-5">
+							  <div class="form-group has-feedback has-success">
+								  <strong>Telephone</strong>
+								  <input class="form-control" id="id_telephone" maxlength="100" name="phone" ng-model="phone" placeholder="" type="tel" />
+								  <span class="help-block"></span>
+							  </div>
+							</div>
+							<div class="col-xs-12 col-sm-7">
+							  <div class="form-group has-feedback has-success">
+								  <strong>Email</strong>
+								  <input class="form-control" id="id_email" name="email" ng-model="email" placeholder="" type="email" />
+								<span class="help-block"></span>
+								</div>
+							</div><!-- end col -->
+						  </div><!-- end row -->
+
+						  <div class="row">
+							<div class="col-xs-12 col-sm-8">
+							  <div class="form-group has-feedback has-success">
+								  <strong>Current Address</strong>
+								  <input class="form-control" id="id_address" name="address" ng-model="address" type="address" />
+								  <span class="help-block"></span>
+							   </div>
+							</div><!-- end col -->
+							<div class="col-xs-12 col-sm-4">
+						      <div class="form-group has-feedback has-success">
+									<strong>City</strong>
+									<select class="form-control" id="id_city" name="city" ng-model="city">  
+										<option value="" disabled selected>Select city</option>
+										<option value="YBG">Bagotville</option> 
+										<option value="YYC">Calgary</option>
+										<option value="YBL">Campbell River</option>
+										<option value="YYG">Charlottetown</option>
+										<option value="YYQ">Churchill</option>
+										<option value="YCC">Cornwall</option>
+										<option value="YHD">Dryden</option>
+										<option value="YEG">Edmonton</option>
+										<option value="YAG">Fort Frances</option>
+										<option value="YFC">Fredericton</option>
+										<option value="YQX">Gander</option>
+										<option value="YYR">Goose Bay</option>
+										<option value="YHZ">Halifax</option>
+										<option value="YGK">Kingston</option>
+										<option value="YKF">Kitchener</option>
+										<option value="YXU">London</option>
+										<option value="YMQ">Montreal</option>
+										<option value="YOW">Ottawa</option>
+										<option value="YQB">Quebec City</option>
+										<option value="YQR">Regina</option>
+										<option value="YQY">Sydney</option>
+										<option value="YYZ">Toronto</option>
+										<option value="YVR">Vancouver</option>
+										<option value="YYJ">Victoria</option>
+										<option value="YWG">Winnipeg</option>
+									</select>
+									<span class="help-block"></span>
+							   </div>
+							</div><!-- end col -->
+						  </div><!-- end row -->
+						  <div class="row">
+							<div class="col-xs-12 col-sm-6">
+								<button class="btn btn-orange">Save</button>
+								<button class="btn btn-gray">Cancel</button>
+							</div>
+						  </div><!-- end row -->
+						</div><!-- end col -->
+					  </div><!-- end row -->
+				</div>
+				<div class="renter-prof">
+					<p class="heading-previous">
+						<span class="span-head">Previous Residence</span>
+						<span class="list-border2"></span>
+						<button class="btn btn-orange agency-add">Add</button>
+					</p>
+					
+					<div class="prof-box">
+						<div class="profile-list-contain">
+							<ul class="profile-list">
+								<li>
+									<p class="text-small-gray">Landlord</p>
+									<p>Joel Legris</p>
+								</li>
+								<li>
+									<p class="text-small-gray">Phone</p>
+									<p>123 1234 423</p>
+								</li>
+								<li class="dates-t">
+									<p class="text-small-gray">Dates of Tenancy</p>
+									<p>Oct 23, 2013 - Oct 22, 2014</p>
+								</li>
+								<li>
+									<p class="text-small-gray">Reason for Leaving</p>
+									<p>Changed Job</p>
+								</li>
+								<li class="prof-actions pull-right">
+									<a><span class="glyphicon glyphicon-pencil"></span></a>
+									<a><span class="glyphicon glyphicon-remove"></span></a>
+								</li>
+							</ul>
+							<div class="plist-details">
+										<div class="form-rounded-gray">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12">
+											  <div class="row">
+												<div class="col-xs-12 col-sm-6">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Name of Landlord</strong>
+													  <input class="form-control" id="id_name" maxlength="100" name="name" ng-model="name" placeholder="" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-3">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Dates of Tenancy</strong>
+													  <input class="form-control dob datepicker" id="id_tenancy1" name="dob" ng-model="tenancy1" placeholder="" type="text" value="2013-06-17" />
+													 <span class="help-block"></span>
+													</div>
+												</div><!-- end col-->
+												<div class="col-xs-12 col-sm-3">
+												  <div class="form-group has-feedback has-success">
+														<span>&#8211;</span>
+													  <input class="form-control dob datepicker" id="id_tenancy2" name="dob" ng-model="tenancy2" placeholder="" type="text" value="2013-06-17" />
+													 <span class="help-block"></span>
+													</div>
+												</div><!-- end col-->
+											  </div><!-- end row -->
+											  
+											   <div class="row">
+												<div class="col-xs-12 col-sm-4">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Landlord Phone</strong>
+													  <input class="form-control" id="id_landlordphone" maxlength="100" name="phone" ng-model="phone" placeholder="" type="tel" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-8">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Reason for Leaving</strong>
+													  <input class="form-control" id="id_leaving" name="reason-leaving" ng-model="text" placeholder="" type="text" />
+													<span class="help-block"></span>
+													</div>
+												</div><!-- end col -->
+											  </div><!-- end row -->
+
+											  <div class="row">
+												<div class="col-xs-12 col-sm-6">
+													<button class="btn btn-orange-big">Save</button>
+													<button class="btn btn-gray-big">Cancel</button>
+												</div>
+											  </div><!-- end row -->
+											</div><!-- end col -->
+										  </div><!-- end row -->
+										</div>
+								</div>
+						</div><!-- end profile-list-contain -->
+						<div class="profile-list-contain">
+							<ul class="profile-list">
+								<li>
+									<p class="text-small-gray">Landlord</p>
+									<p>Joel Legris</p>
+								</li>
+								<li>
+									<p class="text-small-gray">Phone</p>
+									<p>123 1234 423</p>
+								</li>
+								<li class="dates-t">
+									<p class="text-small-gray">Dates of Tenancy</p>
+									<p>Oct 23, 2013 - Oct 22, 2014</p>
+								</li>
+								<li>
+									<p class="text-small-gray">Reason for Leaving</p>
+									<p>Changed Job</p>
+								</li>
+								<li class="prof-actions pull-right">
+									<a><span class="glyphicon glyphicon-pencil"></span></a>
+									<a><span class="glyphicon glyphicon-remove"></span></a>
+								</li>
+							</ul>
+							<div class="plist-details">
+										<div class="form-rounded-gray">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12">
+											  <div class="row">
+												<div class="col-xs-12 col-sm-6">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Name of Landlord</strong>
+													  <input class="form-control" id="id_name" maxlength="100" name="name" ng-model="name" placeholder="" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-3">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Dates of Tenancy</strong>
+													  <input class="form-control dob datepicker" id="id_tenancy1" name="dob" ng-model="tenancy1" placeholder="" type="text" value="2013-06-17" />
+													 <span class="help-block"></span>
+													</div>
+												</div><!-- end col-->
+												<div class="col-xs-12 col-sm-3">
+												  <div class="form-group has-feedback has-success">
+														<span>&#8211;</span>
+													  <input class="form-control dob datepicker" id="id_tenancy2" name="dob" ng-model="tenancy2" placeholder="" type="text" value="2013-06-17" />
+													 <span class="help-block"></span>
+													</div>
+												</div><!-- end col-->
+											  </div><!-- end row -->
+											  
+											   <div class="row">
+												<div class="col-xs-12 col-sm-4">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Landlord Phone</strong>
+													  <input class="form-control" id="id_landlordphone" maxlength="100" name="phone" ng-model="phone" placeholder="" type="tel" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-8">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Reason for Leaving</strong>
+													  <input class="form-control" id="id_leaving" name="reason-leaving" ng-model="text" placeholder="" type="text" />
+													<span class="help-block"></span>
+													</div>
+												</div><!-- end col -->
+											  </div><!-- end row -->
+
+											  <div class="row">
+												<div class="col-xs-12 col-sm-6">
+													<button class="btn btn-orange-big">Save</button>
+													<button class="btn btn-gray-big">Cancel</button>
+												</div>
+											  </div><!-- end row -->
+											</div><!-- end col -->
+										  </div><!-- end row -->
+									</div>
+							</div>
+						</div><!-- end profile-list-contain -->
+						<div class="profile-list-contain">
+							<ul class="profile-list">
+								<li>
+									<p class="text-small-gray">Landlord</p>
+									<p>Joel Legris</p>
+								</li>
+								<li>
+									<p class="text-small-gray">Phone</p>
+									<p>123 1234 423</p>
+								</li>
+								<li class="dates-t">
+									<p class="text-small-gray">Dates of Tenancy</p>
+									<p>Oct 23, 2013 - Oct 22, 2014</p>
+								</li>
+								<li>
+									<p class="text-small-gray">Reason for Leaving</p>
+									<p>Changed Job</p>
+								</li>
+								<li class="prof-actions pull-right">
+									<a><span class="glyphicon glyphicon-pencil"></span></a>
+									<a><span class="glyphicon glyphicon-remove"></span></a>
+								</li>
+							</ul>
+							<div class="plist-details">
+										<div class="form-rounded-gray">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12">
+											  <div class="row">
+												<div class="col-xs-12 col-sm-6">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Name of Landlord</strong>
+													  <input class="form-control" id="id_name" maxlength="100" name="name" ng-model="name" placeholder="" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-3">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Dates of Tenancy</strong>
+													  <input class="form-control dob datepicker" id="id_tenancy1" name="dob" ng-model="tenancy1" placeholder="" type="text" value="2013-06-17" />
+													 <span class="help-block"></span>
+													</div>
+												</div><!-- end col-->
+												<div class="col-xs-12 col-sm-3">
+												  <div class="form-group has-feedback has-success">
+														<span>&#8211;</span>
+													  <input class="form-control dob datepicker" id="id_tenancy2" name="dob" ng-model="tenancy2" placeholder="" type="text" value="2013-06-17" />
+													 <span class="help-block"></span>
+													</div>
+												</div><!-- end col-->
+											  </div><!-- end row -->
+											  
+											   <div class="row">
+												<div class="col-xs-12 col-sm-4">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Landlord Phone</strong>
+													  <input class="form-control" id="id_landlordphone" maxlength="100" name="phone" ng-model="phone" placeholder="" type="tel" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-8">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Reason for Leaving</strong>
+													  <input class="form-control" id="id_leaving" name="reason-leaving" ng-model="text" placeholder="" type="text" />
+													<span class="help-block"></span>
+													</div>
+												</div><!-- end col -->
+											  </div><!-- end row -->
+
+											  <div class="row">
+												<div class="col-xs-12 col-sm-6">
+													<button class="btn btn-orange-big">Save</button>
+													<button class="btn btn-gray-big">Cancel</button>
+												</div>
+											  </div><!-- end row -->
+											</div><!-- end col -->
+										  </div><!-- end row -->
+										</div>
+								</div>
+							</div><!-- end profile-list-contain -->
+							
+						
+					</div><!-- end prof-box -->
+					<p class="heading-additional">
+						<span class="span-head">Additional Occupants</span>
+						<span class="list-border2"></span>
+						<button class="btn btn-orange agency-add">Add</button>
+					</p>
+					
+					<div class="prof-box">
+						<div class="profile-list-contain">
+							<ul class="profile-list">
+								<li class="occupants-list1">
+									<p class="text-small-gray">Name</p>
+									<p>Joel Legris</p>
+								</li>
+								<li class="occupants-list2">
+									<p class="text-small-gray">Sex</p>
+									<p>Male</p>
+								</li>
+								<li class="occupants-list3">
+									<p class="text-small-gray">Age</p>
+									<p>Don't Know</p>
+								</li>
+								<li class="prof-actions pull-right">
+									<a><span class="glyphicon glyphicon-pencil"></span></a>
+									<a><span class="glyphicon glyphicon-remove"></span></a>
+								</li>
+							</ul>
+							<div class="plist-details">
+										<div class="form-rounded-gray">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12">
+											  <div class="row">
+												<div class="col-xs-12 col-sm-5">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Name of Landlord</strong>
+													  <input class="form-control" id="id_name-landlord" maxlength="100" name="name" ng-model="name" placeholder="" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-3">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Sex</strong>
+													  <div class="yes-no">
+															<div class="btn-group btn-toggle"> 
+																<button class="btn btn-primary active">Male</button>
+																<button class="btn btn-gray-other">Female</button>
+														    </div>
+														 </div>
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-4">
+												   <div class="form-group has-feedback has-success">
+													  <strong>Age</strong>
+													  <input class="form-control" id="id_age" maxlength="100" name="age" ng-model="age" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+											  </div><!-- end row -->
+											   <div class="row">
+												<div class="col-xs-12 col-sm-6">
+													<button class="btn btn-orange-big">Save</button>
+													<button class="btn btn-gray-big">Cancel</button>
+												</div>
+											  </div><!-- end row -->
+											  
+											</div><!-- end col -->
+										  </div><!-- end row -->
+										</div>
+								</div>
+						</div><!-- end profile-list-contain -->
+						
+						
+							
+					</div><!-- end prof-box -->
+					
+					<p class="heading-employment">
+						<span class="span-head">Employment Status &amp; Income Verification</span>
+						<span class="list-border2"></span>
+						<button class="btn btn-orange agency-add">Add</button>
+					</p>
+					
+					<div class="prof-box">
+						<div class="profile-list-contain">
+							<ul class="profile-list">
+								<li class="occupants-list1">
+									<p>Company Name ltd.</p>
+									<p><span class="font-normal">UI/UX designer, web developer</span></p>
+								</li>
+								<li class="occupants-list2">
+									<p class="text-small-gray">Wage</p>
+									<p>$ 50k / year</p>
+								</li>
+								<li class="occupants-list3">
+									<p class="text-small-gray">Time working</p>
+									<p>Two years and a half</p>
+								</li>
+								<li class="prof-actions pull-right">
+									<a><span class="glyphicon glyphicon-pencil"></span></a>
+									<a><span class="glyphicon glyphicon-remove"></span></a>
+								</li>
+								<li class="other-income">
+									<p>Here comes information that was added to the field Other income description</p>
+								</li>
+							</ul>
+							<div class="plist-details">
+										<div class="form-rounded-gray">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12">
+											  <div class="row">
+												<div class="col-xs-12 col-sm-5">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Company</strong>
+													  <input class="form-control" id="id_company" maxlength="100" name="company" ng-model="company" placeholder="" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-7">
+												   <div class="form-group has-feedback has-success">
+													  <strong>How long have you worked at this company?</strong>
+													  <input class="form-control" id="id_companyage" maxlength="100" name="companyage" ng-model="companyage" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+											  </div><!-- end row -->
+											  <div class="row">
+												<div class="col-xs-12 col-sm-9">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Occupation</strong>
+													  <input class="form-control" id="id_occup" maxlength="100" name="occupation" ng-model="occupation" placeholder="" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-3">
+												   <div class="form-group has-feedback has-success">
+													  <strong>Wage</strong>
+													  <input class="form-control" id="id_wage" maxlength="100" name="wage" ng-model="wage" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+											  </div><!-- end row -->
+											  <div class="row">
+												<div class="col-xs-12 col-sm-12">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Other income description</strong>
+													  <input class="form-control" id="other-income" maxlength="100" name="occupation" ng-model="other-income" placeholder="" type="text" />
+													 <em class="form-span">eg. Disability, Income Assistance, Savings</em>
+														<span class="help-block"></span>
+												  </div>
+												</div>
+											  </div><!-- end row -->
+											   <div class="row">
+												<div class="col-xs-12 col-sm-6">
+													<button class="btn btn-orange-big">Save</button>
+													<button class="btn btn-gray-big">Cancel</button>
+												</div>
+											  </div><!-- end row -->
+											  
+											</div><!-- end col -->
+										  </div><!-- end row -->
+										</div>
+								</div>
+						</div><!-- end profile-list-contain -->
+						<div class="profile-list-contain">
+							<ul class="profile-list">
+								<li class="occupants-list1">
+									<p>Company Name ltd.</p>
+									<p><span class="font-normal">UI/UX designer, web developer</span></p>
+								</li>
+								<li class="occupants-list2">
+									<p class="text-small-gray">Wage</p>
+									<p>$ 50k / year</p>
+								</li>
+								<li class="occupants-list3">
+									<p class="text-small-gray">Time working</p>
+									<p>Two years and a half</p>
+								</li>
+								<li class="prof-actions pull-right">
+									<a><span class="glyphicon glyphicon-pencil"></span></a>
+									<a><span class="glyphicon glyphicon-remove"></span></a>
+								</li>
+								<li class="other-income">
+									<p>Here comes information that was added to the field Other income description</p>
+								</li>
+							</ul>
+							<div class="plist-details">
+										<div class="form-rounded-gray">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12">
+											  <div class="row">
+												<div class="col-xs-12 col-sm-5">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Company</strong>
+													  <input class="form-control" id="id_company" maxlength="100" name="company" ng-model="company" placeholder="" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-7">
+												   <div class="form-group has-feedback has-success">
+													  <strong>How long have you worked at this company?</strong>
+													  <input class="form-control" id="id_companyage" maxlength="100" name="companyage" ng-model="companyage" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+											  </div><!-- end row -->
+											  <div class="row">
+												<div class="col-xs-12 col-sm-9">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Occupation</strong>
+													  <input class="form-control" id="id_occup" maxlength="100" name="occupation" ng-model="occupation" placeholder="" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-3">
+												   <div class="form-group has-feedback has-success">
+													  <strong>Wage</strong>
+													  <input class="form-control" id="id_wage" maxlength="100" name="wage" ng-model="wage" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+											  </div><!-- end row -->
+											  <div class="row">
+												<div class="col-xs-12 col-sm-12">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Other income description</strong>
+													  <input class="form-control" id="other-income" maxlength="100" name="occupation" ng-model="other-income" placeholder="" type="text" />
+													 <em class="form-span">eg. Disability, Income Assistance, Savings</em>
+														<span class="help-block"></span>
+												  </div>
+												</div>
+											  </div><!-- end row -->
+											   <div class="row">
+												<div class="col-xs-12 col-sm-6">
+													<button class="btn btn-orange-big">Save</button>
+													<button class="btn btn-gray-big">Cancel</button>
+												</div>
+											  </div><!-- end row -->
+											  
+											</div><!-- end col -->
+										  </div><!-- end row -->
+										</div>
+								</div>
+						</div><!-- end profile-list-contain -->
+						<div class="profile-list-contain">
+							<ul class="profile-list">
+								<li class="occupants-list1">
+									<p>Company Name ltd.</p>
+									<p><span class="font-normal">UI/UX designer, web developer</span></p>
+								</li>
+								<li class="occupants-list2">
+									<p class="text-small-gray">Wage</p>
+									<p>$ 50k / year</p>
+								</li>
+								<li class="occupants-list3">
+									<p class="text-small-gray">Time working</p>
+									<p>Two years and a half</p>
+								</li>
+								<li class="prof-actions pull-right">
+									<a><span class="glyphicon glyphicon-pencil"></span></a>
+									<a><span class="glyphicon glyphicon-remove"></span></a>
+								</li>
+								<li class="other-income">
+									<p>Here comes information that was added to the field Other income description</p>
+								</li>
+							</ul>
+							<div class="plist-details">
+										<div class="form-rounded-gray">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12">
+											  <div class="row">
+												<div class="col-xs-12 col-sm-5">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Company</strong>
+													  <input class="form-control" id="id_company" maxlength="100" name="company" ng-model="company" placeholder="" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-7">
+												   <div class="form-group has-feedback has-success">
+													  <strong>How long have you worked at this company?</strong>
+													  <input class="form-control" id="id_companyage" maxlength="100" name="companyage" ng-model="companyage" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+											  </div><!-- end row -->
+											  <div class="row">
+												<div class="col-xs-12 col-sm-9">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Occupation</strong>
+													  <input class="form-control" id="id_occup" maxlength="100" name="occupation" ng-model="occupation" placeholder="" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-3">
+												   <div class="form-group has-feedback has-success">
+													  <strong>Wage</strong>
+													  <input class="form-control" id="id_wage" maxlength="100" name="wage" ng-model="wage" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+											  </div><!-- end row -->
+											  <div class="row">
+												<div class="col-xs-12 col-sm-12">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Other income description</strong>
+													  <input class="form-control" id="other-income" maxlength="100" name="occupation" ng-model="other-income" placeholder="" type="text" />
+													 <em class="form-span">eg. Disability, Income Assistance, Savings</em>
+														<span class="help-block"></span>
+												  </div>
+												</div>
+											  </div><!-- end row -->
+											   <div class="row">
+												<div class="col-xs-12 col-sm-6">
+													<button class="btn btn-orange-big">Save</button>
+													<button class="btn btn-gray-big">Cancel</button>
+												</div>
+											  </div><!-- end row -->
+											  
+											</div><!-- end col -->
+										  </div><!-- end row -->
+										</div>
+								</div>
+						</div><!-- end profile-list-contain -->
+					</div><!-- end prof-box -->
+					
+					<p class="heading-vehicle">
+						<span class="span-head">Vehicle Information</span>
+						<span class="list-border2"></span>
+						<button class="btn btn-orange agency-add">Add</button>
+					</p>
+					
+					<div class="prof-box">
+						<div class="profile-list-contain">
+							<ul class="profile-list">
+								<li class="occupants-list1">
+									<p class="text-small-gray">Make</p>
+									<p>Opel</p>
+								</li>
+								<li class="occupants-list2">
+									<p class="text-small-gray">Model</p>
+									<p>Insignia</p>
+								</li>
+								<li class="occupants-list3">
+									<p class="text-small-gray">Year</p>
+									<p>2010</p>
+								</li>
+								<li class="prof-actions pull-right">
+									<a><span class="glyphicon glyphicon-pencil"></span></a>
+									<a><span class="glyphicon glyphicon-remove"></span></a>
+								</li>
+							</ul>
+							<div class="plist-details">
+										<div class="form-rounded-gray">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12">
+											  <div class="row">
+												<div class="col-xs-12 col-sm-5">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Make</strong>
+													  <select class="form-control" id="id_make" maxlength="100" name="company" ng-model="make">
+														<option value="ct">Citroen</option>
+														<option value="ct">Citroen</option>
+														<option value="ct">Citroen</option>
+													  </select>
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-3">
+												   <div class="form-group has-feedback has-success">
+													  <strong>Model</strong>
+													  <select class="form-control" id="id_model" maxlength="100" name="model" ng-model="model">
+														<option value="c5">C5</option>
+														<option value="c6">C6</option>
+														<option value="c7">C7</option>
+													  </select>
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-4">
+												   <div class="form-group has-feedback has-success">
+													  <strong>Year</strong>
+													  <input class="form-control" id="id_year" maxlength="100" name="year" ng-model="yeare" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+											  </div><!-- end row -->
+											   <div class="row">
+												<div class="col-xs-12 col-sm-6">
+													<button class="btn btn-orange-big">Save</button>
+													<button class="btn btn-gray-big">Cancel</button>
+												</div>
+											  </div><!-- end row -->
+											  
+											</div><!-- end col -->
+										  </div><!-- end row -->
+										</div>
+								</div>
+						</div><!-- end profile-list-contain -->
+						<div class="profile-list-contain">
+							<ul class="profile-list">
+								<li class="occupants-list1">
+									<p class="text-small-gray">Make</p>
+									<p>Opel</p>
+								</li>
+								<li class="occupants-list2">
+									<p class="text-small-gray">Model</p>
+									<p>Insignia</p>
+								</li>
+								<li class="occupants-list3">
+									<p class="text-small-gray">Year</p>
+									<p>2010</p>
+								</li>
+								<li class="prof-actions pull-right">
+									<a><span class="glyphicon glyphicon-pencil"></span></a>
+									<a><span class="glyphicon glyphicon-remove"></span></a>
+								</li>
+							</ul>
+							<div class="plist-details">
+										<div class="form-rounded-gray">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12">
+											  <div class="row">
+												<div class="col-xs-12 col-sm-5">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Make</strong>
+													  <select class="form-control" id="id_make" maxlength="100" name="company" ng-model="make">
+														<option value="ct">Citroen</option>
+														<option value="ct">Citroen</option>
+														<option value="ct">Citroen</option>
+													  </select>
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-3">
+												   <div class="form-group has-feedback has-success">
+													  <strong>Model</strong>
+													  <select class="form-control" id="id_model" maxlength="100" name="model" ng-model="model">
+														<option value="c5">C5</option>
+														<option value="c6">C6</option>
+														<option value="c7">C7</option>
+													  </select>
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-4">
+												   <div class="form-group has-feedback has-success">
+													  <strong>Year</strong>
+													  <input class="form-control" id="id_year" maxlength="100" name="year" ng-model="yeare" type="text" />
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+											  </div><!-- end row -->
+											   <div class="row">
+												<div class="col-xs-12 col-sm-6">
+													<button class="btn btn-orange-big">Save</button>
+													<button class="btn btn-gray-big">Cancel</button>
+												</div>
+											  </div><!-- end row -->
+											  
+											</div><!-- end col -->
+										  </div><!-- end row -->
+										</div>
+								</div>
+						</div><!-- end profile-list-contain -->
+					</div><!-- end prof-box -->
+					
+					<p class="heading-references">
+						<span class="span-head">References</span>
+						<span class="list-border2"></span>
+						<button class="btn btn-orange agency-add">Add</button>
+					</p>
+					
+					<div class="prof-box">
+						<div class="profile-list-contain">
+							<ul class="profile-list">
+								<li class="occupants-list1">
+									<p class="text-small-gray">Name</p>
+									<p>Igor Hodunay</p>
+								</li>
+								<li class="occupants-list2">
+									<p class="text-small-gray">Phone</p>
+									<p>123 1234 343</p>
+								</li>
+								<li class="occupants-list3">
+									<p class="text-small-gray">Relationship</p>
+									<p>Contract Worker</p>
+								</li>
+								<li class="prof-actions pull-right">
+									<a><span class="glyphicon glyphicon-pencil"></span></a>
+									<a><span class="glyphicon glyphicon-remove"></span></a>
+								</li>
+							</ul>
+							<div class="plist-details">
+										<div class="form-rounded-gray">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12">
+											  <div class="row">
+												<div class="col-xs-12 col-sm-5">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Name</strong>
+													  <input class="form-control" id="id_referenceName" maxlength="100" name="referenceName" ng-model="referenceName" type="text">
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-3">
+												   <div class="form-group has-feedback has-success">
+													  <strong>Phone</strong>
+													  <input type="text" class="form-control" id="id_ph" maxlength="100" name="ph" ng-model="referencePh" type="tel">
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-4">
+												   <div class="form-group has-feedback has-success">
+													  <strong>Relationship</strong>
+													  <select class="form-control" id="id_relationship" maxlength="100" name="year" ng-model="relationship" />
+														<option disabled selected>Select Relationship</option>
+														<option value="contract-worker">Contract Worker</option>
+														<option value="previous-landlord">Previous Landlord</option>
+													  </select>
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+											  </div><!-- end row -->
+											   <div class="row">
+												<div class="col-xs-12 col-sm-6">
+													<button class="btn btn-orange-big">Save</button>
+													<button class="btn btn-gray-big">Cancel</button>
+												</div>
+											  </div><!-- end row -->
+											  
+											</div><!-- end col -->
+										  </div><!-- end row -->
+										</div>
+								</div>
+						</div><!-- end profile-list-contain -->
+						<div class="profile-list-contain">
+							<ul class="profile-list">
+								<li class="occupants-list1">
+									<p class="text-small-gray">Name</p>
+									<p>Joel Legris</p>
+								</li>
+								<li class="occupants-list2">
+									<p class="text-small-gray">Phone</p>
+									<p>123 1234 472</p>
+								</li>
+								<li class="occupants-list3">
+									<p class="text-small-gray">Relationship</p>
+									<p>Previous Landlord</p>
+								</li>
+								<li class="prof-actions pull-right">
+									<a><span class="glyphicon glyphicon-pencil"></span></a>
+									<a><span class="glyphicon glyphicon-remove"></span></a>
+								</li>
+							</ul>
+							<div class="plist-details">
+										<div class="form-rounded-gray">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12">
+											  <div class="row">
+												<div class="col-xs-12 col-sm-5">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Name</strong>
+													  <input class="form-control" id="id_referenceName" maxlength="100" name="referenceName" ng-model="referenceName" type="text">
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-3">
+												   <div class="form-group has-feedback has-success">
+													  <strong>Phone</strong>
+													  <input type="text" class="form-control" id="id_ph" maxlength="100" name="ph" ng-model="referencePh" type="tel">
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-4">
+												   <div class="form-group has-feedback has-success">
+													  <strong>Relationship</strong>
+													  <select class="form-control" id="id_relationship" maxlength="100" name="year" ng-model="relationship" />
+														<option disabled selected>Select Relationship</option>
+														<option value="contract-worker">Contract Worker</option>
+														<option value="previous-landlord">Previous Landlord</option>
+													  </select>
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+											  </div><!-- end row -->
+											   <div class="row">
+												<div class="col-xs-12 col-sm-6">
+													<button class="btn btn-orange-big">Save</button>
+													<button class="btn btn-gray-big">Cancel</button>
+												</div>
+											  </div><!-- end row -->
+											  
+											</div><!-- end col -->
+										  </div><!-- end row -->
+										</div>
+								</div>
+						</div><!-- end profile-list-contain -->
+					</div><!-- end prof-box -->
+					
+					<p class="heading-addInfo">
+						<span class="span-head">Additional Information</span>
+						<span class="list-border2"></span>
+						<button class="btn btn-orange agency-add">Add</button>
+					</p>
+					
+					<div class="prof-box">
+						<div class="profile-list-contain">
+							<ul class="profile-list">
+								<li class="addInfo1">
+									<img class="pets-icon" src="../static/images/pet-icon.png" alt="29x25" />
+									<p class="text-small-gray">Having Pets?</p>
+									<p>Yes</p>
+								</li>
+								<li class="addInfo2">
+									<p class="text-small-gray">Description</p>
+									<p>I have fishes, I can't leave them on street</p>
+								</li>
+								<li class="prof-actions pull-right">
+									<a><span class="glyphicon glyphicon-pencil"></span></a>
+									<a><span class="glyphicon glyphicon-remove"></span></a>
+								</li>
+							</ul>
+							<div class="plist-details">
+										<div class="form-rounded-gray">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12">
+											  <div class="row">
+												<div class="col-xs-12 col-sm-3">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Having Pets</strong>
+													     <div class="yes-no">
+															<div class="btn-group btn-toggle"> 
+																<button class="btn btn-primary active">Yes</button>
+																<button class="btn btn-gray-other">No</button>
+														    </div>
+														 </div>
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<div class="col-xs-12 col-sm-9">
+												   <div class="form-group has-feedback has-success">
+													  <strong>Describe</strong>
+													  <input type="text" class="form-control" id="id_describe" maxlength="100" name="describe-pets" ng-model="describe-pets" type="text">
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+											  </div><!-- end row -->
+											  <br />
+											   <div class="row">
+												<div class="col-xs-12 col-sm-6">
+													<button class="btn btn-orange-big">Save</button>
+													<button class="btn btn-gray-big">Cancel</button>
+												</div>
+											  </div><!-- end row -->
+											  
+											</div><!-- end col -->
+										  </div><!-- end row -->
+										</div>
+								</div>
+						</div><!-- end profile-list-contain -->
+						<div class="profile-list-contain">
+							<ul class="profile-list">
+								<li class="addInfo1">
+									<img src="../static/images/smoking-icon.png" alt="32x19" />
+									<p class="text-small-gray">Do you smoke?</p>
+									<p>Yes</p>
+								</li>
+								<li class="addInfo2">
+									<p class="text-small-gray">Description</p>
+									<p>I work remotely and smoke while working</p>
+								</li>
+								<li class="prof-actions pull-right">
+									<a><span class="glyphicon glyphicon-pencil"></span></a>
+									<a><span class="glyphicon glyphicon-remove"></span></a>
+								</li>
+							</ul>
+							<div class="plist-details">
+										<div class="form-rounded-gray">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12">
+											  <div class="row">
+												<div class="col-xs-12 col-sm-3">
+												  <div class="form-group has-feedback has-success">
+													  <strong>Do you smoke?</strong>
+													     <div class="yes-no">
+															<div class="btn-group btn-toggle"> 
+																<button class="btn btn-primary active">Yes</button>
+																<button class="btn btn-gray-other">No</button>
+														    </div>
+														 </div>
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+												<br />
+												<div class="col-xs-12 col-sm-9">
+												   <div class="form-group has-feedback has-success">
+													  <strong>Describe</strong>
+													  <input type="text" class="form-control" id="id_describesmoke" maxlength="100" name="describe-smoke" ng-model="describe-smoke" type="text">
+													  <span class="help-block"></span>
+												  </div>
+												</div>
+											  </div><!-- end row -->
+											   <div class="row">
+												<div class="col-xs-12 col-sm-6">
+													<button class="btn btn-orange-big">Save</button>
+													<button class="btn btn-gray-big">Cancel</button>
+												</div>
+											  </div><!-- end row -->
+											  
+											</div><!-- end col -->
+										  </div><!-- end row -->
+										</div>
+								</div>
+						</div><!-- end profile-list-contain -->
+					</div><!-- end prof-box -->
+					
+					<div class="declaration-bottom">
+						<div class="checkbox">
+							<input id="declaration" type="checkbox" name="declaration">
+							<label for="declaration"></label>
+						</div>
+						<p>
+							I hereby state that the information contained herein is true and I authorize my References as listed above to release 
+							information regarding my employment and/or past/current tenancies. I also authorize a credit check to be conducted. 
+						</p>
+					</div>
+					
+				</div><!-- end renter-prof -->
+		
+        </div><!-- end profile -->
+      </div><!-- end messages-container -->
+
+
+    </div><!-- end container -->
+
+  <div class="footer">
+    <div class="container">  
+      <div class="row">    
+        <div class="col-xs-12 col-sm-5 hidden-xs">
+          <div class="media"> 
+            <a href="#"> <img class="media-object" src="../static/images/logo.png"> </a>
+            <div class="media-body">
+              Short info about website lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque pellentesque ullamcorper diam. Morbi elit nulla, semper ac, lobortis ut, rutrum in, arcu. <a href="#"> more</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-xs-12 col-sm-7">
+          <div class="row">
+            <div class="col-xs-4 col-sm-2">
+              <h4>Site Map</h4>
+              <a href="/">Home</a><br />
+              <a href="#">Renter</a><br />
+              <a href="#">Landlords</a> 
+            </div>
+            
+            <div class="col-xs-4 col-sm-2">
+              <h4>&nbsp;</h4>
+              <a href="/">Post</a><br />
+              <a href="#">Register</a><br />
+              <a href="#">Sign Up</a> 
+            </div>
+            
+            <div class="col-xs-4 col-sm-3">
+              <h4>Help & Support</h4>
+              <a href="/">Support</a><br />
+              <a href="#">Help</a><br />
+              <a href="#">FAQs</a> 
+            </div>
+            
+            <div class="col-xs-12 col-sm-5">
+              <h4 class="hidden-xs">Social</h4>
+              <div class="social-links"> 
+                <a href="#" class="social-roll facebook"></a> 
+                <a href="#" class="social-roll twitter"></a> 
+                <a href="#" class="social-roll pinterest"></a> 
+                <a href="#" class="social-roll linkedin"></a> 
+                <a href="#" class="social-roll youtube"></a> 
+                <a href="#" class="social-roll atom"></a> 
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          <span><a href="#">Terms of Use</a> <a href="#">Privacy Policy</a><a href="#">Copyright</a></span><br class="visible-xs" />
+          Copyright &copy; 2013 Smoovely inc. All rights reserved
+        </p>
+      </div>
+      <!--end of container-->
+    </div>
+    <!--end of footer-bottom-->
+  </div>
+<!--end of footer-->
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../static/js/jquery-1.11.0.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/bootstrap-datepicker.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#all').change(function () {
+          $('.message-item .checkbox input[type="checkbox"]').prop('checked', $(this).is(':checked'));
+        });
+      });
+	  
+    </script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.datepicker').datepicker()
+      });
+
+		$('.profile-list-contain').click(function(){
+			$(this).find('ul').addClass('plist-open');
+			$(this).find('.plist-details').show();
+		});
+		$('.renter-form-open').click(function(){
+			$(this).addClass('hide');
+			$('.renter-form').toggle();
+		});
+	</script>
+	
+	<script type="text/javascript">
+		$('.btn-toggle').click(function() {
+		$(this).find('.btn').toggleClass('active');  
+		
+		if ($(this).find('.btn-primary').size()>0) {
+			$(this).find('.btn').toggleClass('btn-primary');
+		}
+		if ($(this).find('.btn-danger').size()>0) {
+			$(this).find('.btn').toggleClass('btn-danger');
+		}
+		if ($(this).find('.btn-success').size()>0) {
+			$(this).find('.btn').toggleClass('btn-success');
+		}
+		if ($(this).find('.btn-info').size()>0) {
+			$(this).find('.btn').toggleClass('btn-info');
+		}
+		
+		$(this).find('.btn').toggleClass('btn-default');
+		   
+	});
+
+	$('form').submit(function(){
+		alert($(this["options"]).val());
+		return false;
+	});
+	
+	</script>
+  </body>
+</html>

@@ -1,0 +1,479 @@
+/* #Reset & Basics (Inspired by E. Meyers)
+================================================== */
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline; }
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display: block; }
+	body {
+		line-height: 1; }
+	ol, ul {
+		list-style: none; }
+	blockquote, q {
+		quotes: none; }
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none; }
+	table {
+		border-collapse: collapse;
+		border-spacing: 0; }
+
+
+/* #Basic Styles
+================================================== */
+	body {
+		background: #fff;
+		font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #444;
+		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+		-webkit-text-size-adjust: 100%;
+ }
+
+
+/* #Typography
+================================================== */
+	h1, h2, h3, h4, h5, h6 {
+		color: #181818;
+		font-family: "Georgia", "Times New Roman", serif;
+		font-weight: normal; }
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
+	h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; }
+	h3 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }
+	h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; }
+	h5 { font-size: 17px; line-height: 24px; }
+	h6 { font-size: 14px; line-height: 21px; }
+	.subheader { color: #777; }
+
+	p { margin: 0 0 20px 0; }
+	p img { margin: 0; }
+	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
+
+	em { font-style: italic; }
+	strong { font-weight: bold; color: #333; }
+	small { font-size: 80%; }
+
+/*	Blockquotes  */
+	blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #777; font-style: italic; }
+	blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+	blockquote cite { display: block; font-size: 12px; color: #555; }
+	blockquote cite:before { content: "\2014 \0020"; }
+	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
+
+	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+
+
+/* #Links
+================================================== */
+	a, a:visited { color: #333; text-decoration: underline; outline: 0; }
+	a:hover, a:focus { color: #000; }
+	p a, p a:visited { line-height: inherit; }
+	a {text-decoration: none;}
+
+
+/* #Lists
+================================================== */
+	ul, ol { margin-bottom: 20px; }
+	ul { list-style: none outside; }
+	ol { list-style: decimal; }
+	ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+	ul.square { list-style: square outside; }
+	ul.circle { list-style: circle outside; }
+	ul.disc { list-style: disc outside; }
+	ul ul, ul ol,
+	ol ol, ol ul { margin: 4px 0 5px 30px; font-size: 90%;  }
+	ul ul li, ul ol li,
+	ol ol li, ol ul li { margin-bottom: 6px; }
+	li { line-height: 18px; margin-bottom: 12px; }
+	ul.large li { line-height: 21px; }
+	li p { line-height: 21px; }
+	
+body {
+	font-family: MyriadPro-Regular;
+}
+
+/*----- ChatBox Styles -----*/ 
+#resp-me .footer-respond {
+	margin-top: 60px;
+	position: fixed;
+	bottom: 0;
+	right: 8px;
+	max-height: 600px;
+}
+	#resp-me .footer-respond a {
+		margin-bottom: -6px;
+		float: right;
+	}
+	
+
+#resp-me .respond-box {
+	z-index: 10000;
+	position: relative;
+}
+		
+#resp-me .we-banner {
+	top: 48px;
+	right: 30px;
+	position: relative;
+	top: 0px;
+	right: 144px;
+	z-index: 10;
+	opacity: 0.001;
+    transition: opacity 2s 30s;
+    -moz-transition: opacity 2s 30s;
+    -webkit-transition: opacity 2s 30s;
+    -o-transition: opacity 2s 30s;
+    -ms-transition: opacity 2s 30s;
+    -khtml-transition: opacity 2s 30s;
+}	
+
+#resp-me .respond-chat {
+	float: left;
+	cursor: pointer;
+	position: fixed;
+	right: 10px;
+	bottom: 0;
+}	
+
+#resp-me .chat-box {
+	display: none;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+	padding-bottom: 50px;
+	width: 330px;
+	overflow: hidden;
+	border: 8px solid #399CE3;
+	background: -webkit-rgb(238, 238, 238);
+	background: -o-rgb(238, 238, 238);
+	background: -ms-rgb(238, 238, 238);
+	background: -moz-rgb(238, 238, 238);
+	background: rgb(238, 238, 238);
+
+}
+	#resp-me .chat-form2 .chat-content {overflow-y: scroll; height: 220px; position: relative; z-index: 1000;}
+
+#resp-me .chat-form {
+	width: 94%;
+	margin: auto;
+	position: relative;
+	top: 40px;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	border: 1px solid #2e83c0;
+	background: #FFF;
+}
+	#resp-me .cf1 {
+		background: #FFF; 
+		padding-top: 10px;
+		overflow: hidden;
+		padding-bottom: 25px;
+		margin-bottom: -36px;
+		float: left;
+		border-bottom: 1px solid #d9d9d9;
+	}
+	#resp-me .chat-form p {
+		margin-left: 10px;
+	}
+	#resp-me .chat-form textarea {
+		resize: none;
+		width: 80%;
+	}
+	#resp-me .chat-form label {
+		font-size: 12px;
+		padding-top: 5px;
+	}
+	
+	#resp-me .gray-bg {
+		background: #f7f7f7;
+		height: 60px;
+		margin-bottom: -5px;
+		padding-top: 5px;
+	}
+	#resp-me .edit-list {
+		float: right;
+		margin-right: 10px;
+		margin-top: -48px;
+	}
+		#resp-me .gray-bg .edit-list {
+			display: block;
+		}	
+		#resp-me .edit-list li {
+			margin-left: 8px;
+			float: left;
+		}
+	
+#resp-me .chat-top {
+	height: 49px;
+	border-bottom: 1px solid #d2d2d2;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 2%, #f5f5f5 6%, #e8e8e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(2%,#f6f6f6), color-stop(6%,#f5f5f5), color-stop(100%,#e8e8e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 2%,#f5f5f5 6%,#e8e8e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 2%,#f5f5f5 6%,#e8e8e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 2%,#f5f5f5 6%,#e8e8e8 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 2%,#f5f5f5 6%,#e8e8e8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+	
+}	
+	#resp-me .chat-logo {
+		padding-left: 12px;
+		padding-top: 5px;
+	}
+	#resp-me .chat-minimize {
+		cursor: pointer;
+		padding-right: 21px;
+		padding-top: 18px;
+	}
+	
+	#resp-me .chat-form1 p {
+		padding-left: 16px;
+		color: #000;
+	}
+	#resp-me .chat-form1 p.welcome {
+		color: #000;
+		font-size: 0.929em;
+		line-height: 1.4;
+		margin-top: 14px;
+		margin-right: 16px;
+	}
+	#resp-me .chat-form1 input {
+		width: 183px;
+		height: 12px;
+		border: 1px solid #93b7cd;
+		border-bottom: 1px solid #e5f2f9;
+		height: 23px;
+		width: 194px;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		clear: both;
+	}
+	#resp-me .chat-form1 label {
+		font-weight: bold;
+		font-size: 13px;
+	}
+	#resp-me .chat-form1 .start-chat {
+		cursor: pointer;
+		float: left;
+		display: inline-block;
+		width: 103px;
+		height: 25px;
+		line-height: 26px;
+		text-align: center;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		border: 1px solid #d8d8d8;
+		background: url(../img/start-chat.png) repeat-x;
+		font-size: 12px;
+		color: #545454;
+	}
+		#resp-me .start-chat:hover {color: #545454;}		
+		
+#resp-me .chat-form2 {
+	display: none;
+	background: #FFF;
+}
+	#resp-me .message-icon {
+		margin-right: 10px;
+		padding-top: 8px;
+	}
+	#resp-me .chat-form2 .support {
+		color: #7c7c7c;
+		border-top: 1px solid #fff;
+		border-bottom: 1px solid #d9d9d9;
+		height: 29px;
+		background: -webkit-rgb(238, 238, 238);
+		background: -o-rgb(238, 238, 238);
+		background: -ms-rgb(238, 238, 238);
+		background: -moz-rgb(238, 238, 238);
+		background: rgb(238, 238, 238);
+
+	}
+		#resp-me .support p {
+			padding-left: 16px;
+			padding-top: 4px;
+			text-shadow: 0 1px 0 #FFFFFF;
+		}	
+		#resp-me .support strong {
+			color: #373737;
+			padding-left: 2px;
+		}
+		#resp-me .operator-stars {
+			float: right;
+			margin-right: 17px;
+		}
+			#resp-me .operator-stars img {
+				margin-right: -2px;
+			}
+			
+	#resp-me .chat-content {
+		background: #FFF;
+		overflow: hidden;
+	}
+		#resp-me .message-icon {
+			float: right;
+		}
+			#resp-me .chat-user img {
+				-webkit-border-radius: 3px 3px 3px 3px;
+				border-radius: 3px 3px 3px 3px;
+				margin-left: 11px;
+				border: 2px solid #c5cde0;
+				margin-top: 12px;
+				margin-left: 12px;
+				float: left;
+				margin-right: 11px;
+			}
+			#resp-me .chat-user h5 {
+				font-size: 13px;
+				color: #7c7c7c;
+				padding-top: 14px;
+				font-family: MyriadPro-Bold;
+				font-weight: normal;
+				margin-bottom: 0;
+			}
+			#resp-me .chat-user p {
+				margin-top: -2px;
+				line-height: 1.1;
+				color: #000;
+				margin-left: 70px;
+				margin-bottom: 20px;
+				font-size: 14px;
+			}
+				#resp-me .cu2 {
+					float: right;
+				}
+				#resp-me .cu2 img {
+					float: right;
+					margin-left: 14px;
+				}
+				#resp-me .cu2 h5 {
+					float: right;
+				}
+				#resp-me .cu2 p {
+					float: right; 
+					width: 230px;  
+					text-align: right;
+					margin-right: 70px;
+					margin-bottom: 20px;
+					font-size: 14px;
+				}
+				#resp-me .cu2 p.cuf {
+					margin-top: -25px;
+				}
+				#resp-me .cht-border {
+					width: 295px;
+					border: 1px solid #e8e8e8;
+					margin-left: 14px;
+					margin-top: 9px;
+					margin-bottom: 4px;
+					clear: both;
+					float: left;
+				}
+		
+		#resp-me .chat-submit {
+			clear: both;
+			border-top: 1px solid #d9d9d9;
+			margin-top: 19px;
+			padding-top: 20px;
+			float: left;
+			margin-bottom: -50px;
+			width: 100%;
+			margin-top: -8px;
+			background: -webkit-rgb(238, 238, 238);
+			background: -o-rgb(238, 238, 238);
+			background: -ms-rgb(238, 238, 238);
+			background: -moz-rgb(238, 238, 238);
+			background: rgb(238, 238, 238);
+
+		}
+			#resp-me .chat-submit input {
+				float: left;
+				border: 0 none;
+				height: 30px;
+				width: 200px;
+				text-indent: 10px;
+				line-height: 30px;
+				font-size: 13px;
+				color: #b7b7b7;
+			}
+			#resp-me .cs {
+				width: 290px;
+				background: #FFF;
+				height: 30px;
+				border: 1px solid #cdcdcd;
+				font-size: 13px;
+				color: #b7b7b7;
+				margin-left: 18px;
+				text-indent: 10px;
+				-webkit-border-radius: 2px;
+				border-radius: 2px;
+				height: 43px;
+				margin-bottom: 17px;
+			}
+			#resp-me .chat-submit .sub-btn {
+				clear: both;
+				width: 61px;
+				height: 26px;
+				padding: 0;
+				text-indent: 0;
+				float: right;
+				margin-right: 29px;
+				height: 25px;
+				line-height: 26px;
+				text-align: center;
+				-webkit-border-radius: 3px;
+				border-radius: 3px;
+				border: 1px solid #d8d8d8;
+				background: url(../img/start-chat.png) repeat-x;
+				font-size: 12px;
+				color: #4a4a4a;
+				margin-top: -53px;
+				position: relative;
+				z-index: 1000;
+				cursor: pointer;
+				margin-top: -23px;
+				margin-right: 12px;
+			}
+				@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+					/*#resp-me .chat-submit .sub-btn {margin-top: 0; top: -52px; position: relative; z-index: 1000; }*/
+				}
+				
+				#resp-me .chat-submit input::-ms-clear {
+					display: none;
+				}
+			
+				#resp-me .chat-submit .sub-btn:hover { 
+					background: url(../img/start-chat.png) repeat-x;
+					color: #545454;
+					border: 1px solid #d8d8d8;
+				}
+		
+/*------ End Chat Box Styles ------*/
+
+
+/*------FONTS ------*/
+@font-face {
+	    font-family: 'MyriadPro-Regular';
+	    src: url('../fonts/MyriadPro-Regular.eot');
+	    src: url('../fonts/MyriadPro-Regular.eot?iefix') format('eot'),
+	         url('../fonts/MyriadPro-Regular.woff') format('woff'),
+	         url('../fonts/MyriadPro-Regular.ttf') format('truetype'),
+	         url('../fonts/MyriadPro-Regular.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+		
+		@font-face {
+	    font-family: 'MyriadPro-Bold';
+	    src: url('../fonts/MyriadPro-Bold.eot');
+	    src: url('../fonts/MyriadPro-Bold.eot?iefix') format('eot'),
+	         url('../fonts/MyriadPro-Bold.woff') format('woff'),
+	         url('../fonts/MyriadPro-Bold.ttf') format('truetype'),
+	         url('../fonts/MyriadPro-Bold.svg#webfontZam02nTh') format('svg');
+	    font-weight: bold;
+	    font-style: normal; }

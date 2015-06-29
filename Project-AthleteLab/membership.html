@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Athlete Lab</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+	<script src="js/jquery.customSelect.min.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+	$('select.country-select').customSelect();
+		});
+	</script>
+	
+	<script type="text/javascript">
+	        $(document).ready(function() {
+			
+			//navigation
+			$('ul.nav > li').hover(function () {
+    if ($(this).find('ul.submenu').length > 0) {
+        clearTimeout($.data(this, 'timer'));
+     $('ul', this).stop(true, true).slideDown(100);
+        $(this).addClass('arrow-down');
+    }
+},
+function () {
+    if ($(this).find('ul.submenu').length > 0) {
+        $.data(this, 'timer', setTimeout($.proxy(function() {
+      $('ul', this).stop(true, true).slideUp(100);
+    }, this), 100));
+        $(this).removeClass('arrow-down');
+    }
+});					
+					//Tabs
+		$('.tab-button').click(function(){
+			if($(this).hasClass('tab-active')!=true)
+			{
+				$('.tab-button').removeClass('tab-active');
+				$(this).addClass('tab-active');
+				tab_index=$(this).index('.tab-button');
+				$('.tab-content').hide();
+				$('.tab-content:eq('+tab_index+')').fadeIn(0);
+			}
+		});
+					
+        	});
+				
+    </script>
+
+</head>
+<body>
+<div id="header" class="membership-header">
+	<div class="header-content">
+		<div class="country-icon"></div>
+		<select class="country-select">
+			<option>SINGAPORE</option>
+			<option>GERMANY</option>
+			<option>Korea</option>
+		</select>
+
+		<div class="navigation">
+			<a href="#"><img class="logo" src="images/logo.png" alt="Athlete Lab" /></a>
+			<ul class="nav">
+				<li><a href="#">Home</a>
+				</li>
+				<li><a href="#">Facilities</a>
+					<ul class="submenu">
+						<li><a href="#">Coaching</a></li>
+                        <li><a href="#">Performance Tests</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Trainers</a>
+					<ul class="submenu">
+						<li><a href="#">Coaching</a></li>
+                        <li><a href="#">Performance Tests</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Membership</a>
+					<ul class="submenu">
+						<li><a href="#">Coaching</a></li>
+                        <li><a href="#">Performance Tests</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Schedule</a>
+					<ul class="submenu">
+						<li><a href="#">Coaching</a></li>
+                        <li><a href="#">Performance Tests</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<ul class="action-buttons">
+				<a class="sign-up" href="#">Sign Up</a>
+				<a class="login" href="#">Login</a>
+			</ul>
+			
+		</div><!-- end navigation -->
+		
+		<!--Membership Tabs-->
+        <div class="tabs_div">
+        	<div class="inner_container">
+            	
+                <h2 class="title">PRICING - We keep it simple &amp; Flexible</h2>
+                
+                <!--Tabs div-->
+                <div id="membership_tabs">
+                	
+                    <!--Buttons-->
+                    <div class="buttons">
+                        <p class="tab-button first">RIDER PACKS</p>
+                        <p class="tab-button tab-active">Membership Plans</p>
+                        <p class="tab-button last">COACHING</p>
+                        <div class="clearfix"></div>
+                    </div>
+        
+                    <div class="clearfix"></div>
+                    
+                    <div id="t-container">
+                    <!--Tab Rider Packs Start-->
+                    <div class="tab-content packs">
+                        
+                        <!--Block-->
+                        <div class="block with_border first">
+                        	<!--Info-->
+                        	<div class="info">
+                                <h4 class="title">Single Session</h4>
+                                <h5 class="price">$30</h5>
+                                <span class="line"></span>
+                            </div>
+                            
+                            <br/>
+                            <p>Squad/ Squad (Single <br/> Discp) Members Only</p>
+                        	<a href="#" class="choose">Choose Plan</a>
+                            
+                        </div>
+                        
+                        <!--Block-->
+                        <div class="block with_border">
+                        	<!--Info-->
+                        	<div class="info">
+                                <h4 class="title">Single Session</h4>
+                                <h5 class="price">$40</h5>
+                                <span class="line"></span>
+                            </div>
+                            
+                            <br/>
+                            <p>Single Session <br/>(Casual Rider)</p>
+                        	<a href="#" class="choose">Choose Plan</a>
+                            
+                        </div>
+                        
+                        <!--Block-->
+                        <div class="block with_border">
+                        	<!--Info-->
+                        	<div class="info">
+                                <h4 class="title">4 Rides</h4>
+                                <h5 class="price">$140</h5>
+                                <span class="line"></span>
+                            </div>
+                            
+                            <br/>
+                            <p>We need to put some<br/> information here about<br/> ride packs</p>
+                        	<a href="#" class="choose">Choose Plan</a>
+                            
+                        </div>
+                        
+                        <!--Block-->
+                        <div class="block with_border">
+                        	<!--Info-->
+                        	<div class="info">
+                                <h4 class="title">8 Rides</h4>
+                                <h5 class="price">$240</h5>
+                                <span class="line"></span>
+                            </div>
+                            
+                            <br/>
+                            <p>We need to put some<br/> information here about<br/> ride packs</p>
+                        	<a href="#" class="choose">Choose Plan</a>
+                            
+                        </div>
+                        
+                        <!--Block-->
+                        <div class="block last">
+                        	<!--Info-->
+                        	<div class="info">
+                                <h4 class="title">12 Rides</h4>
+                                <h5 class="price">$300</h5>
+                                <span class="line"></span>
+                            </div>
+                            
+                            <br/>
+                            <p>We need to put some<br/> information here about<br/> ride packs</p>
+                        	<a href="#" class="choose">Choose Plan</a>
+                        
+                        </div>
+                        
+                    </div>
+        			<!--Tab Rider Packs Ended-->
+        
+        			<!--Tab Membership Plans Start-->
+                    <div class="tab-content plans tab-content-display">
+                        
+                        <!--Block-->
+                        <div class="block with_border first">
+                        	<!--Info-->
+                        	<div class="info">
+                                <h4 class="title">Peloton</h4>
+                                <h5 class="price">$140</h5>
+                                <h6 class="duration">per month</h6>
+                                <span class="line"></span>
+                            </div>
+                            
+                            <p>Unlimited Access to<br/> Virtual Reality Cycling Lab</p>
+                        	<a href="#" class="choose">Choose Plan</a>
+                            
+                        </div>
+                        
+                        <!--Block-->
+                        <div class="block">
+                        	<!--Info-->
+                        	<div class="info">
+                                <h4 class="title">Squad</h4>
+                                <h5 class="price">$140</h5>
+                                <h6 class="duration">per month</h6>
+                                <span class="line"></span>
+                            </div>
+                            
+                            <p>Unlimited Access to<br/> outdoor Squad Training</p>
+                        	<a href="#" class="choose">Choose Plan</a>
+                            
+                        </div>
+                        
+                        <!--Block-->
+                        <div class="block recommended">
+                        	<h6 class="recomm">RECOMMENDED</h6>
+                            <!--Info-->
+                            <div class="info">
+                                <h4 class="title">Green Jersey</h4>
+                                <h5 class="price">$240</h5>
+                                <h6 class="duration">per month</h6>
+                                <span class="line"></span>
+                            </div>
+                            
+                            <p>Unlimited Access to<br/> Virtual Reality Cycling Lab</p>
+                            <p>Unlimited Access to<br/> outdoor Squad Training</p>
+                        	<a href="#" class="choose">Choose Plan</a>
+                            
+                        
+                        </div>
+                        
+                        <!--Block-->
+                        <div class="block with_border">
+                        	<!--Info-->
+                        	<div class="info">
+                                <h4 class="title">Kom</h4>
+                                <h5 class="price">$235</h5>
+                                <h6 class="duration">per month</h6>
+                                <span class="line"></span>
+                            </div>
+                            
+                            <p>Unlimited Access to<br/> Virtual Reality Cycling Lab</p>
+                            <p>Bike Storage</p>
+                        	<a href="#" class="choose">Choose Plan</a>
+                            
+                            
+                        </div>
+                        
+                        <!--Block-->
+                        <div class="block last">
+                        	<!--Info-->
+                        	<div class="info">
+                                <h4 class="title">Peloton</h4>
+                                <h5 class="price">$140</h5>
+                                <h6 class="duration">per month</h6>
+                                <span class="line"></span>
+                            </div>
+                            
+                            <p>Unlimited Access to<br/> Virtual Reality Cycling Lab</p>
+                            <p>Unlimited Access to<br/> outdoor Squad Training</p>
+                            <p>Bike Storage</p>
+                        	<a href="#" class="choose">Choose Plan</a>
+                        
+                        </div>
+                    </div>
+                    <!--Tab Membership Plans Ended-->
+                    
+                    <!--Tab Coaching Start-->
+                    <div class="tab-content coaching">
+                    	
+                        <!--Block-->
+                        <div class="block with_border first">
+                        	<!--Info-->
+                        	<div class="info">
+                                <h4 class="title">1 Session</h4>
+                                <h5 class="price">$120</h5>
+                                <span class="line"></span>
+                            </div>
+                            
+                            <br/>
+                            <p>60 minute <br/> 1 - 1 Coaching</p>
+                        	<a href="#" class="choose">Choose Plan</a>
+                            
+                        </div>
+                        
+                        <!--Block-->
+                        <div class="block with_border">
+                        	<!--Info-->
+                        	<div class="info">
+                                <h4 class="title">3 Session</h4>
+                                <h5 class="price">$330</h5>
+                                <span class="line"></span>
+                            </div>
+                            
+                            <br/>
+                            <p>60 minute <br/> 1 - 1 Coaching</p>
+                        	<a href="#" class="choose">Choose Plan</a>
+                            
+                        </div>
+                        
+                        <!--Block-->
+                        <div class="block with_border">
+                        	<!--Info-->
+                        	<div class="info">
+                                <h4 class="title">5 Session</h4>
+                                <h5 class="price">$525</h5>
+                                <span class="line"></span>
+                            </div>
+                            
+                            <br/>
+                            <p>60 minute <br/> 1 - 1 Coaching</p>
+                        	<a href="#" class="choose">Choose Plan</a>
+                            
+                        </div>
+                        
+                        <!--Block-->
+                        <div class="block last">
+                        	<!--Info-->
+                        	<div class="info">
+                                <h4 class="title">Written Program</h4>
+                                <h5 class="price">$200<span>/mo</span></h5>
+                            	<span class="line"></span>
+                            </div>
+                            
+                            <br/>
+                            <p>Charged on a <br/> monthly basis</p>
+                        	<a href="#" class="choose">Choose Plan</a>
+                        
+                        </div>
+                        
+                    </div>
+                    <!--Tab Coaching Ended-->
+                   </div> 
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        <!--Membership Tabs Ended-->
+        
+		
+		
+	</div><!-- end header-content -->
+</div><!-- end header -->
+
+<!--Free Session-->
+            <div class="free-session">
+            	<div class="session-inner">
+                	<p>Don't know what plan to start with? Sign up for a free session first to experience the lab!</p>
+                    <a href="#" class="rff">Register for free</a>
+                </div>
+            </div>
+
+<div id="main">
+	
+        <!--Common Questions-->
+        <div id="common_questions">
+        	<div class="line_heading"><h3>SOME COMMON QUESTIONS</h3></div>
+            
+            <!--Question-->
+            <div class="text_block odd">
+            	<h3>What can be a dummy question?</h3>
+                <p>We're the Science of Cycling applied to tired old indoor cycling studios; real bikes, real courses, realtime data and really amazing results right in the heart of the City. You don't even need a bike. </p>
+            </div>
+            <!--Question-->
+            <div class="text_block even">
+            	<h3>What can be a dummy question?</h3>
+                <p>We're the Science of Cycling applied to tired old indoor cycling studios; real bikes, real courses, realtime data and really amazing results right in the heart of the City. You don't even need a bike. </p>
+            </div>
+            <!--Question-->
+            <div class="text_block odd">
+            	<h3>What can be a dummy question?</h3>
+                <p>We're the Science of Cycling applied to tired old indoor cycling studios; real bikes, real courses, realtime data and really amazing results right in the heart of the City. You don't even need a bike. </p>
+            </div>
+            <!--Question-->
+            <div class="text_block even">
+            	<h3>What can be a dummy question?</h3>
+                <p>We're the Science of Cycling applied to tired old indoor cycling studios; real bikes, real courses, realtime data and really amazing results right in the heart of the City. You don't even need a bike. </p>
+            </div>
+            <!--Question-->
+            <div class="text_block odd">
+            	<h3>What can be a dummy question?</h3>
+                <p>We're the Science of Cycling applied to tired old indoor cycling studios; real bikes, real courses, realtime data and really amazing results right in the heart of the City. You don't even need a bike. </p>
+            </div>
+            <!--Question-->
+            <div class="text_block even">
+            	<h3>What can be a dummy question?</h3>
+                <p>We're the Science of Cycling applied to tired old indoor cycling studios; real bikes, real courses, realtime data and really amazing results right in the heart of the City. You don't even need a bike. </p>
+            </div>
+            
+              
+            <div class="clearfix"></div>    
+        </div>
+        <!--Common Questions Ended-->
+	 
+        <!--Help Support-->
+        <div id="help_support">
+        	<div class="inner_container">
+            
+            	<div class="right_col">
+                	<h2>Questions?</h2>
+                    <h3>Talk to someone in person to get your questions answered quickly!</h3>
+                    <h4>HELP & SUPPORT</h4>
+                    
+                    <p class="website">supportSG@athlete-lab.com</p>
+                    <p class="address">+65 6543 1234 (Available from 6am - 8pm)</p>
+                </div>
+                
+            </div>
+        </div>
+        <!--Help Support Ended-->
+	
+</div><!-- end main -->
+
+<div id="fb-updates" class="updates-mb">
+	<div class="updates-content">
+		
+		<h2>Get the Latest Updates from us on Facebook</h2>
+		<h3>Pictures, articles, latest timetables and the best in training gear is shared
+		daily on our page.</h3>
+		<a class="fb-like" href="#"><img src="images/fb-like.jpg" alt="" /></a>
+	
+	</div><!-- end updates-content -->
+</div><!-- end fb-updates -->
+
+<div id="footer">
+	<div class="footer-content">
+		<img class="footer-logo" src="images/footer-logo.png" alt="Athlete Lab" />
+		<p>Copyright &copy; 2013 Athlete Lab All rights reserved.</p>
+		
+		<ul class="company">
+			<li>Company</li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Trainers</a></li>
+			<li><a href="#">Terms</a></li>
+			<li><a href="#">Privacy</a></li>
+		</ul>
+		
+		<ul class="memberships">
+			<li>Memberships</li>
+			<li><a href="#">Monthly Subscription</a></li>
+			<li><a href="#">Ride Packs</a></li>
+			<li><a href="#">Coaching</a></li>
+			<li><a href="#">Bike Storage</a></li>
+		</ul>
+		
+		<ul class="contact">
+			<li>Contact</li>
+			<li><a href="#">Singapore</a></li>
+			<li><a href="#">Sydney</a></li>
+		</ul>
+		
+		<ul class="social-buttons">
+			<a class="twitter" href="#"><img src="images/twitter-icon.png" alt="Follow us on Twitter" /></a>
+			<a class="facebook" href="#"><img src="images/fb-icon.png" alt="Like us on Facebook" /></a>
+		</ul>	
+	</div><!-- end footer-content -->
+</div><!-- end footer -->
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Athlete Lab</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+	<script src="js/jquery.customSelect.min.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+	$('select.country-select').customSelect();
+		});
+	</script>
+	
+	<script type="text/javascript">
+	        $(document).ready(function() {
+			
+			//navigation
+			$('ul.nav > li').hover(function () {
+    if ($(this).find('ul.submenu').length > 0) {
+        clearTimeout($.data(this, 'timer'));
+     $('ul', this).stop(true, true).slideDown(100);
+        $(this).addClass('arrow-down');
+    }
+},
+function () {
+    if ($(this).find('ul.submenu').length > 0) {
+        $.data(this, 'timer', setTimeout($.proxy(function() {
+      $('ul', this).stop(true, true).slideUp(100);
+    }, this), 100));
+        $(this).removeClass('arrow-down');
+    }
+});		
+					//Tabs
+		$('.tab-button').click(function(){
+			if($(this).hasClass('tab-active')!=true)
+			{
+				$('.tab-button').removeClass('tab-active');
+				$(this).addClass('tab-active');
+				tab_index=$(this).index('.tab-button');
+				$('.tab-content').hide();
+				$('.tab-content:eq('+tab_index+')').fadeIn(0);
+			}
+		});
+					
+        	});
+			
+			// Vimeo Video Load
+			function imgClick() {    
+			$('.video-img').hide();
+			$('.vimeo-video').show();
+}
+				
+    </script>
+
+</head>
+<body>
+<div id="header" class="homepage-header">
+	<div class="header-content">
+		<div class="country-icon"></div>
+		<select class="country-select">
+			<option>SINGAPORE</option>
+			<option>GERMANY</option>
+			<option>Korea</option>
+		</select>
+
+		<div class="navigation">
+			<a href="#"><img class="logo" src="images/logo.png" alt="Athlete Lab" /></a>
+			<ul class="nav">
+				<li><a href="#">Home</a>
+				</li>
+				<li><a href="#">Facilities</a>
+					<ul class="submenu">
+						<li><a href="#">Coaching</a></li>
+                        <li><a href="#">Performance Tests</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Trainers</a>
+					<ul class="submenu">
+						<li><a href="#">Coaching</a></li>
+                        <li><a href="#">Performance Tests</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Membership</a>
+					<ul class="submenu">
+						<li><a href="#">Coaching</a></li>
+                        <li><a href="#">Performance Tests</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Schedule</a>
+					<ul class="submenu">
+						<li><a href="#">Coaching</a></li>
+                        <li><a href="#">Performance Tests</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<ul class="action-buttons">
+				<a class="sign-up" href="#">Sign Up</a>
+				<a class="login" href="#">Login</a>
+			</ul>
+			
+		</div><!-- end navigation -->
+
+		<div class="heading1">
+			<h2>Experience the thrill of the Road</h2>
+		</div>
+		<div class="tri-1"></div>
+		
+		<div class="heading2">
+			<h2>At Athlete Lab</h2>
+		</div>
+		<div class="tri-2"></div>
+		
+		<a class="free-lesson" href="#">Free Introductory Lesson</a>
+	
+	</div><!-- end header-content -->
+
+</div><!-- end header -->
+
+<div id="main">
+	<div class="main-content">
+		<h2 class="heading-pattern hp1">What is Athlete Lab</h2>
+		<p class="top-text">
+			We're the Science of Cycling applied to tired old indoor cycling studios; real bikes,
+			real courses, realtime data and really amazing results right in the heart of the City. You
+			don't even need a bike.
+		</p>
+		
+		<div class="video-img" id="vPlayer" onclick="imgClick();">
+			<a><img src="images/video-img.jpg" alt="" /></a>
+		</div>
+		<div class="vimeo-video" style="display: none">
+			<iframe src="http://player.vimeo.com/video/38646386?autoplay=1" width="1062" height="474" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+		</div>
+				
+		<div class="img-box">
+			<a href="#"><img src="images/f-img1.jpg" alt="scientific equipment" /></a>
+			<h3>Scientific Equipment</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id dapibus
+				risus. Nulla convallis, massa in tincidunt egestas, turpis libero pulvinar dui,
+				et tincidunt mi
+			</p>
+		</div>
+		
+		<div class="img-box">
+			<a href="#"><img src="images/f-img2.jpg" alt="Trai with the Stars" /></a>
+			<h3>Train with the Stars</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id dapibus
+				risus. Nulla convallis, massa in tincidunt egestas, turpis libero pulvinar dui,
+				et tincidunt mi
+			</p>
+		</div>
+		
+		<div class="img-box img-box-last">
+			<a href="#"><img src="images/f-img3.jpg" alt="Central CBD Location" /></a>
+			<h3>Central CBD Location</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id dapibus
+				risus. Nulla convallis, massa in tincidunt egestas, turpis libero pulvinar dui,
+				et tincidunt mi
+			</p>
+		</div>
+		
+	</div><!-- end main-content -->
+</div><!-- end main -->
+
+<div id="home-trainers">
+	<div class="trainers-content">
+		<h2>Train with Professionals</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adip- <br />iscing elit. Phasellus et nisl quis
+			risus tempus mattis. Nunc ultrices lacus tellus, quis con- <br /> vallis neque facilisis vitae.
+		</p>
+		<a href="#" class="view-trainers">View Our Trainers</a>
+		
+		<small>John Doe, Trainer Singapore</small>
+	</div><!-- end trainers-contnet -->
+</div><!-- end trainers -->
+
+<div id="testimonials">
+	<div class="testimonials-content">
+		<h3 class="heading-pattern hp2">CUSTOMER TESTIMONIALS</h3>
+            
+            <div class="buttons">
+                <p class="tab-button tab-active"><img src="images/t-img1.jpg" alt="" /><span class="pointer"></span></p>
+                <p class="tab-button"><img src="images/t-img2.jpg" alt="" /><span class="pointer"></span></p>
+                <p class="tab-button"><img src="images/t-img3.jpg" alt="" /><span class="pointer"></span></p>
+                <p class="tab-button"><img src="images/t-img4.jpg" alt="" /><span class="pointer"></span></p>
+                <p class="tab-button"><img src="images/t-img5.jpg" alt="" /><span class="pointer"></span></p>
+                <p class="tab-button"><img src="images/t-img6.jpg" alt="" /><span class="pointer"></span></p>
+                <p class="tab-button"><img src="images/t-img7.jpg" alt="" /><span class="pointer"></span></p>
+                <p class="tab-button tab-button-last"><img src="images/t-img8.jpg" alt="" /><span class="pointer"></span></p>
+            </div>
+
+			<div class="clearfix"></div>
+			
+            <!--Tabs-->
+            
+            <div class="tab-content tab-content-display">
+                <div class="testimonial">
+                	<p class="quote">This is a fantastic Testimonial about how great athlete lab </p>
+                    <p class="name">John Doe - Citibank Singapore </p>
+                </div>
+            </div>
+
+            <div class="tab-content">
+                <div class="testimonial">
+                	<p class="quote">Testimonial Two</p>
+                    <p class="name">John Doe - Citibank Singapore </p>
+                </div>
+            </div>
+            
+            <div class="tab-content">
+                <div class="testimonial">
+                	<p class="quote">Testimonial Three</p>
+                    <p class="name">John Doe - Citibank Singapore </p>
+                </div>
+            </div>
+            
+            <div class="tab-content">
+                <div class="testimonial">
+                	<p class="quote">Testimonial Four</p>
+                    <p class="name">John Doe - Citibank Singapore </p>
+                </div>
+            </div>
+            <div class="tab-content">
+               <div class="testimonial">
+                	<p class="quote">Testimonial Five</p>
+                    <p class="name">John Doe - Citibank Singapore </p>
+                </div>
+            </div>
+            
+            <div class="tab-content">
+               <div class="testimonial">
+                	<p class="quote">Testimonial Six</p>
+                    <p class="name">John Doe - Citibank Singapore </p>
+                </div>
+            </div>
+            
+            <div class="tab-content">
+                <div class="testimonial">
+                	<p class="quote">Testimonial Seven</p>
+                    <p class="name">John Doe - Citibank Singapore </p>
+                </div>
+            </div>
+            
+            <div class="tab-content">
+               <div class="testimonial">
+                	<p class="quote">Testimonial Eight</p>
+                    <p class="name">John Doe - Citibank Singapore </p>
+                </div>
+            </div>
+		
+		
+	</div><!-- end testimonials-content -->
+</div><!-- end testimonials -->
+
+<div id="fb-updates">
+	<div class="updates-content">
+		<img class="white-arrow" src="images/white-arrow.png" alt="" />
+		<h2>Get the Latest Updates from us on Facebook</h2>
+		<h3>Pictures, articles, latest timetables and the best in training gear is shared
+		daily on our page.</h3>
+		<a class="fb-like" href="#"><img src="images/fb-like.jpg" alt="" /></a>
+	
+	</div><!-- end updates-content -->
+</div><!-- end fb-updates -->
+
+<div id="footer">
+	<div class="footer-content">
+		<img class="footer-logo" src="images/footer-logo.png" alt="Athlete Lab" />
+		<p>Copyright &copy; 2013 Athlete Lab All rights reserved.</p>
+		
+		<ul class="company">
+			<li>Company</li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Trainers</a></li>
+			<li><a href="#">Terms</a></li>
+			<li><a href="#">Privacy</a></li>
+		</ul>
+		
+		<ul class="memberships">
+			<li>Memberships</li>
+			<li><a href="#">Monthly Subscription</a></li>
+			<li><a href="#">Ride Packs</a></li>
+			<li><a href="#">Coaching</a></li>
+			<li><a href="#">Bike Storage</a></li>
+		</ul>
+		
+		<ul class="contact">
+			<li>Contact</li>
+			<li><a href="#">Singapore</a></li>
+			<li><a href="#">Sydney</a></li>
+		</ul>
+		
+		<ul class="social-buttons">
+			<a class="twitter" href="#"><img src="images/twitter-icon.png" alt="Follow us on Twitter" /></a>
+			<a class="facebook" href="#"><img src="images/fb-icon.png" alt="Like us on Facebook" /></a>
+		</ul>	
+	</div><!-- end footer-content -->
+</div><!-- end footer -->
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Casting Frontier</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>	
+<script src="js/jquery.tabify.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// <![CDATA[
+				
+			$(document).ready(function () {
+				$('#tab-menu').tabify();
+			});
+					
+			// ]]>
+		</script>
+</head>
+<body>
+<div id="container">
+	<div id="header">
+		<a href="#" class="back-to-profile">
+			Back to my profile
+		</a>
+		
+		<h1><a href=""><img src="img/cf-logo.png" alt="Casting Frontier Online Casting Solutions" /></a> <span>Casting Frontier Online Casting Solutions</span></h1>
+		
+		<div class="tabs">
+			<ul id="tab-menu" class="menu">
+				<li><a href="#info-content">Info</a><span></span></li>
+				<li class="active"><a href="#headshots-content">Headshots</a><span></span></li>
+				<li><a href="#resume-content">Resume</a><span></span></li>
+				<li><a href="#specialSkills-content">Special Skills</a><span></span></li>
+				<li><a href="#links-content">Links</a><span></span></li>
+				<li><a href="#reels-content">Reels</a><span></span></li>
+				<li><a href="#relationships-content">Relationships</a><span></span></li>
+				<li><a href="#notifications-content">notifications</a><span></span></li>
+				<li><a href="#bookOuts-content">Book Outs</a><span></span></li>
+			</ul>
+		</div>
+	</div><!-- end header -->
+
+	<div id="main">
+		<div id="info-content" class="content">
+			<div class="actor-photo">
+				<img src="img/model-img.jpg" alt="Actor Image" />
+				<p class="submit-photo">Your New Photo</p>
+				
+			</div><!-- end actor-photo -->
+			
+			<div class="content-right">
+				<h3>A charge applies per photo change on basic profiles. If you upgrade to a Premium or Premium Plus profile you may
+				change photos at any time - free of charge!</h3>
+				
+				<a href="#" class="pay-btn btn"><span>Pay $9.99</span></a>
+				<a href="#" class="pay-btn btn"><span>Pay $12.00</span></a>
+				<a href="#" class="upgrade-btn btn"><span>Upgrade</span></a>
+				<a href="#" class="no-btn btn"><span>No Thanks</span></a>
+				
+				<ul class="headshot-list">
+					<li><a href="#">Replace main <br />headhshot</a></li>
+					<li><a href="#">Add an additional<br />	 headhshot</a></li>
+				</ul>
+				
+			</div><!-- end content-right -->
+			
+		</div><!-- end content -->
+		<div id="headshots-content" class="content">
+			<div class="head-left">
+				<h3>Change Headshots</h3>
+				<p>
+					Headshots should appear immediately after you upload the file. If you experience<br /> any difficulties uploading a headshot, please email your headshot to <a href="mailto:support@castingfrontier.com">support@castingfrontier.com</a> along with your first and last name. 
+					<br />Please allow 24 - 48 business hours for processing.
+				</p>
+				<p>
+					You can also mail your headshot to Casting Frontier, 6565 Sunset Blvd. Suite 200, Los Angeles, CA 90028, along with your name, and we'll upload it for you.
+				</p>
+				<p>
+					<a href="#">Click Here</a> to add more headshots to your profile.
+				</p>
+				
+			</div><!-- end head-left -->
+			<div class="head-right">
+				<h3>Upload Headshot</h3>
+				<form method="post" enctype="multipart/form-data">
+					<p><strong>Headshot file:</strong>
+					<input class="browse" type="file" name="somename" size="chars">
+					</p>
+					
+					<button class="upload">Upload</button>
+					
+				</form>
+				
+				<p class="img-size">(JPG and PNG files smaller than 5Mb, please.)</p>
+				
+				<img class="headshot-preview" src="img/headshot-preview.jpg" alt="" />
+			</div><!-- end head-right -->
+			
+			<div class="headshot-images">
+				<ul>
+					<li>
+						<div class="head-arrows">
+							<a href="#" class="right-a"><img src="img/right-arrow.png" alt="" /></a>
+						</div>
+						
+						<img class="head-img" src="img/model-img2.jpg" alt="" />
+					
+						<p>
+							<span>Photo 1</span><br />
+							<img class=" primary" src="img/primary.png" alt="Primary Photo" /><br />
+							<a href="#" class="img-btn">Delete</a>
+						</p>
+					</li>
+					<li>
+					<div class="head-arrows">
+						<a href="#" class="left-a"><img src="img/left-arrow.png" alt="" /></a>
+						<a href="#" class="right-a"><img src="img/right-arrow.png" alt="" /></a>
+					</div>	
+							<img class="head-img" src="img/placeholder-img2.png" alt="" />
+						
+						<p>
+							<span>Photo 1</span><br />
+							<a href="#" class="img-btn">Add Photo</a>
+						</p>
+					</li>
+					<li>
+						<div class="head-arrows">
+							<a href="#" class="left-a"><img src="img/left-arrow.png" alt="" /></a>
+							<a href="#" class="right-a"><img src="img/right-arrow.png" alt="" /></a>
+						</div>
+						
+						<img class="head-img" src="img/placeholder-img2.png" alt="" />
+					
+						<p>
+							<span>Photo 1</span><br />
+							<a href="#" class="img-btn">Add Photo</a>
+						</p>
+					</li>
+					<li>
+						<div class="head-arrows">
+							<a href="#" class="left-a"><img src="img/left-arrow.png" alt="" /></a>
+							<a href="#" class="right-a"><img src="img/right-arrow.png" alt="" /></a>
+						</div>	
+						
+						<img class="head-img" src="img/placeholder-img2.png" alt="" />
+					
+						<p>
+							<span>Photo 1</span><br />
+							<a href="#" class="img-btn">Add Photo</a>
+						</p>
+					</li>
+					
+				</ul>
+			</div><!-- end headshot-images -->
+			
+		</div><!-- end content -->
+		<div id="resume-content" class="content">
+			Resume
+		</div><!-- end content -->
+		<div id="specialSkills-content" class="content">
+			Special Skills
+		</div><!-- end content -->
+		<div id="links-content" class="content">
+			Links
+		</div><!-- end content -->
+		<div id="reels-content" class="content">
+			Reels
+		</div><!-- end content -->
+		<div id="relationships-content" class="content">
+			Relationships
+		</div><!-- end content -->
+		<div id="notifications-content" class="content">
+			Notifications
+		</div><!-- end content -->
+		<div id="bookOuts-content" class="content">
+			Book Outs
+		</div><!-- end content -->
+
+	</div><!-- end main -->
+	
+	<div class="footer">
+		<p>Copyright 2013, The Casting Frontier. All Rights Reserved. <a href="http://www.castingfrontier.com/terms-of-use" target="_blank">Terms of Use</a> and <a href="http://www.castingfrontier.com/privacy-policy" target="_blank">Privacy Policy</a>.</p>
+		<p>All trademark property of their repective holders. Use of our software during the casting process does not imply endorsement.</p>
+	</div><!-- end footer -->
+
+</div><!-- end container-->
+
+</body>
+</html>

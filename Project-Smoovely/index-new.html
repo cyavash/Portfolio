@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home Page</title>
+  <link href="static/css/bootstrap.css" rel="stylesheet">
+  <link href="static/css/datepicker.css" rel="stylesheet">
+  <link href="static/css/bootstrap-slider.min.css" rel="stylesheet">
+  <link href="static/css/bootstrap-tagsinput.css" rel="stylesheet">
+  <link href="static/css/override.css" rel="stylesheet">
+  <link href="static/css/style.css" rel="stylesheet">
+  <link href="static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="static/css/filters.css" rel="stylesheet">
+
+  <!-- google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,400italic' rel='stylesheet' type='text/css'>
+  
+  <!-- CSS to style the select -->
+  <link rel="stylesheet" href="static/css/bootstrap-select.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  </head>
+
+<body>
+
+  <!-- Header Starts -->
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container"> 
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
+          <span class="sr-only">Toggle navigation</span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+          
+        <a class="navbar-brand" href="#"><img src="static/images/logo.png" /></a>             
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Renter</a></li>
+          <li><a href="#">Landlords</a></li>
+          <li><a href="#" class="nav-btn">Post</a></li>
+        </ul>
+      
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" class="message-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
+          <li class="dropdown">
+            <a href="#" class="user-icon" data-toggle="dropdown"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu user-dropdown">
+              <li><a href="#">My Profile</a></li>
+              <li><a href="#">Manage Properties</a></li>
+              <li><a href="#">Manage Bookmarks</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+          
+      </div>
+      <!--end of navbar-collapse-->    
+    </div>
+    <!--end of container-->  
+  </nav>
+  <!--end of navbar-->
+
+  <div class="search-results-container right-shadow">
+    <div id="saved-searches">
+      <div class="arrow"></div>
+      
+      <ul class="saved-searches-list">
+        <li><a href="#">Apartments in my city</a></li>
+        <li><a href="#">Offices cheaper 1K monthly</a></li>
+      </ul>
+	
+      <div class="new-entry-form">
+        <h3>Save Search</h3>
+        Create a nickname for common searches<br/>
+	
+        <div class="form-fields">
+          <span class="glyphicon glyphicon-cog hidden-xs" aria-hidden="true"></span>
+          <button class="btn btn-orange">Save</button>
+          <div class="text-input">
+            <input type="text" class="form-control" placeholder="Title" />
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" class="check-visible" /> Email new listings to me
+            </label>
+          </div>
+        </div> 
+      </div>
+    </div>
+	
+	
+
+    <div class="search-fields-box">
+      <span class="glyphicon glyphicon-filter" aria-hidden="true" id="filters-content-handle"></span>
+      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+      <span class="glyphicon glyphicon-bell" aria-hidden="true" id="saved-searches-handle"></span>
+      
+      <div class="input-group">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+        <input type="text" class="form-control" placeholder="Search by keywords">
+      </div>     
+    </div>
+
+    <div class="search-tags">
+      <input type="text" data-role="tagsinput" value="Condo,1 bedroom,House,1 bath" />
+    </div>
+	
+
+	
+    <div class="search-sort-n-paging hidden-xs">
+      <div class="paging">
+        <span class="active">1</span> / 120 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      </div>
+      Sort by 
+      <div class="dropdown">
+        <span class="sort-type" id="dLabel" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Price</span>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Action</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="results">
+      <div id="estate-754">
+        <div class="list-item">
+          <div class="row">
+            <div class="col-xs-4 no-padding-right">
+              <a href="#">
+                <img src="static/images/list-img.png" class="img-thumbnail item-img">
+              </a>
+            </div>
+
+            <div class="col-xs-5 no-padding-right">
+              <h4>
+                <a class="estate-instance" href="#" slug="estate-754" latitude="49.2562" longitude="-123.1934">Estate 754</a>
+              </h4>
+              <p class="info">1 beds,  baths, 3 parking</p>
+              <p class="description">
+                Estate description change on mouse hover and it can be very long but we can cut...
+              </p>
+            </div>
+
+            <div class="col-xs-3">
+              <p class="price">$591.15</p>
+              <p class="sqft">563sq</p>
+              <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="estate-1222">
+        <div class="list-item">
+          <div class="row">
+            <div class="col-xs-4 no-padding-right">
+              <a href="#">
+                <img src="static/images/list-img.png" class="img-thumbnail item-img">
+              </a>
+            </div>
+
+            <div class="col-xs-5 no-padding-right">
+              <h4>
+                <a class="estate-instance" href="#" slug="estate-1222" latitude="49.2588" longitude="-123.1959">Estate 1222</a>
+              </h4>
+              <p class="info">1 beds,  baths, 3 parking</p>
+              <p class="description">
+                Estate description change on mouse hover and it can be very long but we can cut...
+              </p>
+            </div>
+
+            <div class="col-xs-3">
+              <p class="price">$591.15</p>
+              <p class="sqft">563sq</p>
+              <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="estate-522">
+        <div class="list-item">
+          <div class="row">
+            <div class="col-xs-4 no-padding-right">
+              <a href="#">
+                <img src="static/images/list-img.png" class="img-thumbnail item-img">
+              </a>
+            </div>
+
+            <div class="col-xs-5 no-padding-right">
+              <h4>
+                <a class="estate-instance" href="#" slug="estate-522" latitude="49.2563" longitude="-123.1956">Estate 522</a>
+              </h4>
+              <p class="info">1 beds,  baths, 3 parking</p>
+              <p class="description">
+                Estate description change on mouse hover and it can be very long but we can cut...
+              </p>
+            </div>
+
+            <div class="col-xs-3">
+              <p class="price">$591.15</p>
+              <p class="sqft">563sq</p>
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="estate-350">
+        <div class="list-item">
+          <div class="row">
+            <div class="col-xs-4 no-padding-right">
+              <a href="#">
+                <img src="static/images/list-img.png" class="img-thumbnail item-img">
+              </a>
+            </div>
+
+            <div class="col-xs-5 no-padding-right">
+              <h4>
+                <a class="estate-instance" href="#" slug="estate-350" latitude="49.2551" longitude="-123.1987">Estate 350</a>
+              </h4>
+              <p class="info">1 beds,  baths, 3 parking</p>
+              <p class="description">
+                Estate description change on mouse hover and it can be very long but we can cut...
+              </p>
+            </div>
+
+            <div class="col-xs-3">
+              <p class="price">$591.15</p>
+              <p class="sqft">563sq</p>
+              <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="filters-content"> 
+  <div id="additional-filter" class="addition-attributes">
+    <div class="row hidden-xs">
+      <div class="col-xs-4">
+        <h4>Amenities</h4>
+      </div>
+
+      <div class="col-xs-4">
+        <h4>Features</h4>
+      </div>
+
+      <div class="col-xs-4">
+        <h4>Date Available</h4>
+      </div>      
+    </div>
+
+
+    <div class="row" id="estate-form">
+      <div class="col-xs-12 col-sm-4">
+        <h4 class="visible-xs">Amenities</h4>
+        <div class="row">
+          <div class="col-xs-6">
+            <input type="checkbox" id="floor" class="amenity-check" checked />
+            <label for="floor">Flooring & Tilling</label>
+
+            <br />
+
+            <input type="checkbox" id="ac" class="amenity-check" checked />
+            <label for="ac">AC</label>
+
+            <br />
+
+            <input type="checkbox" class="amenity-check" id="fridge" />
+            <label for="fridge">Fridge</label>
+
+            <br />
+
+            <input type="checkbox" class="amenity-check" id="doors" />
+            <label for="doors">Wooden Doors</label>
+          </div>
+          <div class="col-xs-6">
+            <input type="checkbox" class="amenity-check" id="machine" />
+            <label for="machine">Washing Machine</label>
+
+            <br />
+
+            <input type="checkbox" class="amenity-check" id="lift" checked />
+            <label for="lift">Lift</label> 
+
+            <br />
+
+            <input type="checkbox" class="amenity-check" id="dinning" checked />
+            <label for="dinning">Dinning Table</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4 border-right-left-grey">
+        <hr class="visible-xs" />
+        <h4 class="visible-xs">Features</h4>
+        <div class="row">
+          <div class="col-xs-6">
+            <input type="checkbox" id="f1" class="feature-check" checked />
+            <label for="f1">Feature one</label>
+
+            <br />
+
+            <input type="checkbox" id="f2" class="feature-check" />
+            <label for="f2">Second feature</label>
+
+            <br />
+
+            <input type="checkbox" id="f3" class="feature-check" />
+            <label for="f3">Feature three</label>
+
+            <br />
+
+            <input type="checkbox" id="f4" class="feature-check" checked />
+            <label for="f4">Forth feature</label>
+          </div>
+
+          <div class="col-xs-6">
+            <input type="checkbox" id="f6" class="feature-check" checked />
+            <label for="f6">Feature six</label>
+
+            <br />
+
+            <input type="checkbox" id="f7" class="feature-check" checked />
+            <label for="f7">Seven feature</label>
+
+            <br />
+
+            <input type="checkbox" id="f8" class="feature-check" checked />
+            <label for="f8">Feature eight</label>
+          </div>
+        </div>
+        <br />
+      </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <hr class="visible-xs" />
+        <h4 class="visible-xs">Date Available</h4>
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="calendar-input">
+              <input type="text" class="form-control datepicker"  placeholder="Start" />
+              <i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="calendar-input">
+              <input type="text" class="form-control datepicker"  placeholder="End" />
+              <i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <br /><br />
+      </div>
+    </div>
+  </div>
+  
+  <div class="search-results-map">
+    <div id="space-filter" class="addition-attributes">
+      <label>Square feet</label>
+      <div class="space-slider">
+        <input id="space-slider" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]" data-slider-handle="square" />
+      </div>
+    </div>
+
+    <div id="type-filter" class="addition-attributes">
+      <ul class="nav nav-justified hidden-xs">
+        <li>
+          <input type="checkbox" id="estate-one" name="estate-type" value="" checked="">
+          <label for="estate-one"><span>Single Family House</span></label>
+        </li>
+        <li>
+          <input type="checkbox" id="estate-two" name="estate-type" value="">
+          <label for="estate-two"><span>Apartment</span></label>
+        </li>
+        <li>
+          <input type="checkbox" id="estate-three" name="estate-type" value="">
+          <label for="estate-three"><span>Townhouse or Condo</span></label>
+        </li>
+        <li>
+          <input type="checkbox" id="estate-four" name="estate-type" value="">
+          <label for="estate-four"><span>Duplex or Fourplex</span></label>
+        </li>
+        <li>
+          <input type="checkbox" id="estate-five" name="estate-type" value="">
+          <label for="estate-five"><span>Loft</span></label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="search-attributes">
+      <div class="row">
+        <div class="col-xs-5 no-padding">
+          <div class="price-attr">
+            <label>Price</label>
+            <div class="price-slider">
+              <input id="price-slider" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]" data-slider-handle="square" />
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-7">
+          <div class="row other-attr">
+            <div class="col-xs-4 no-padding">
+              <a data-target="space-filter" class="additional-attr-openner">
+                Space
+                <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+              </a>
+              
+            </div>
+            <div class="col-xs-4 no-padding">
+              <a data-target="type-filter" class="additional-attr-openner">
+                Type
+                <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="col-xs-4 no-padding">
+              <a data-target="additional-filter" class="additional-attr-openner">
+                Filters
+                <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="search-btn">
+        <button class="btn btn-orange">Search</button>
+      </div>
+    </div>
+
+    <br />
+    <div id="map-canvas" style="height:622px;margin-top:31px;"></div>
+  </div>
+</div><!-- end filters-content -->
+
+  <div class="footer">
+    <div class="container">  
+      <div class="row">    
+        <div class="col-xs-12 col-sm-5 hidden-xs">
+          <div class="media"> 
+            <a href="#"> <img class="media-object" src="static/images/logo.png"> </a>
+            <div class="media-body">
+              Short info about website lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque pellentesque ullamcorper diam. Morbi elit nulla, semper ac, lobortis ut, rutrum in, arcu. <a href="#"> more</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-xs-12 col-sm-7">
+          <div class="row">
+            <div class="col-xs-4 col-sm-2">
+              <h4>Site Map</h4>
+              <a href="/">Home</a><br />
+              <a href="#">Renter</a><br />
+              <a href="#">Landlords</a> 
+            </div>
+            
+            <div class="col-xs-4 col-sm-2">
+              <h4>&nbsp;</h4>
+              <a href="/">Post</a><br />
+              <a href="#">Register</a><br />
+              <a href="#">Sign Up</a> 
+            </div>
+            
+            <div class="col-xs-4 col-sm-3">
+              <h4>Help & Support</h4>
+              <a href="/">Support</a><br />
+              <a href="#">Help</a><br />
+              <a href="#">FAQs</a> 
+            </div>
+            
+            <div class="col-xs-12 col-sm-5">
+              <h4 class="hidden-xs">Social</h4>
+              <div class="social-links"> 
+                <a href="#" class="social-roll facebook"></a> 
+                <a href="#" class="social-roll twitter"></a> 
+                <a href="#" class="social-roll pinterest"></a> 
+                <a href="#" class="social-roll linkedin"></a> 
+                <a href="#" class="social-roll youtube"></a> 
+                <a href="#" class="social-roll atom"></a> 
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    </div>
+    </div><!-- end container -->
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          <span><a href="#">Terms of Use</a> <a href="#">Privacy Policy</a><a href="#">Copyright</a></span><br class="visible-xs" />
+          Copyright &copy; 2013 Smoovely inc. All rights reserved
+        </p>
+      </div>
+      <!--end of container-->
+    </div>
+    <!--end of footer-bottom-->
+  </div>
+<!--end of footer-->
+
+  <!-- Include all compiled plugins (below), or include individual files as needed --> 
+  <script src="static/js/jquery-1.11.0.min.js"></script> 
+  <script src="static/js/bootstrap.min.js"></script> 
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script> 
+  <script src="static/js/bootstrap-select.min.js"></script> 
+  <script src="static/js/bootstrap-datepicker.js"></script>
+  <script src="static/js/bootstrap-slider.min.js"></script>
+  <script src="static/js/bootstrap-tagsinput.min.js"></script>
+  
+  <script type="text/javascript">
+    $(function(){
+      $("#price-slider").slider({});
+      $("#space-slider").slider({});
+
+      $('.datepicker').datepicker()
+      .on('changeDate', function(ev){
+          $(this).datepicker('hide');
+      });
+
+      $(document).on('click', '.dropdown-menu.saved-searches-menu', function (e) {
+        e.stopPropagation();
+      });
+
+      $('#saved-searches-handle').click(function(){
+        $(this).toggleClass('open');
+        $('#saved-searches').slideToggle();
+      });
+	  
+	  $('#filters-content-handle').click(function(){
+        $(this).toggleClass('open');
+        $('.filters-content, .addition-attributes').slideToggle();
+      });
+	   $('.type-toggle').click(function(){
+        $(this).find('span').toggleClass('glyphicon-chevron-down');
+        $('.type-inner').slideToggle();
+      });
+	   $('.more-toggle').click(function(){
+        $(this).find('span').toggleClass('glyphicon-chevron-down');
+        $('.more-inner').slideToggle();
+      });
+	  
+	   $('.show-starred .glyphicon').click(function(){
+        $(this).toggleClass('star-select');
+      });
+	  
+
+      $('.search-attributes .other-attr a').click(function () {
+        $('.additional-attr-openner').not($(this)).find('.glyphicon').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+        $('.additional-attr-openner').not($(this)).removeClass('open');
+        $(this).toggleClass('open');
+        $('.addition-attributes').not('#' + $(this).attr('data-target')).hide();
+        $('#' + $(this).attr('data-target')).slideToggle('fast');
+        $(this).find('.glyphicon').toggleClass("glyphicon-chevron-down glyphicon-chevron-up");
+      })
+    })
+	
+		/*Select all */
+		 $('.features-deselect').click(function(){
+			$('.more-box2').find('input[type=checkbox]').prop('checked', false);
+		 });
+    
+    function initialize() {
+      var mapCanvas = document.getElementById('map-canvas');
+      loadLocations();
+
+      var mapOptions = {
+        center: new google.maps.LatLng(locations[0][1], locations[0][2]),
+        zoom: 15,
+        disableDefaultUI: true,
+        zoomControl: true,
+        zoomControlOptions: {
+          style: google.maps.ZoomControlStyle.SMALL,
+          position: google.maps.ControlPosition.TOP_RIGHT
+        },
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+
+      locations.forEach(function(location) {
+        var infowindow = new google.maps.InfoWindow({
+          content: $('#' + location[3]).html()
+        });
+
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(location[1], location[2]),
+          map: map,
+          icon: 'static/images/marker.png',
+          infowindow: infowindow
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          markers.forEach(function(marker) {
+            marker.infowindow.close()
+          });
+          this.infowindow.open(map, this);
+          $(".list-item").parent('div').css("overflow", "hidden");
+        });
+
+        markers.push(marker);
+      });
+    }
+
+    var locations = [];
+    var markers = [];
+
+    function loadLocations() {
+      $(".estate-instance").each(function(i) {
+        var latitude = $(this).attr('latitude');
+        var longitude = $(this).attr('longitude');
+        var location = [$(this).text(),latitude,longitude,$(this).attr('slug')];
+        locations.push(location);
+      });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script> 
+</body>
+</html>

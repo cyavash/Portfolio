@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+	<link href="css/chat-box.css" rel="stylesheet" type="text/css" />
+	<!-- jQuery library (served from Google) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.we-banner').css({ opacity: 1});
+			
+			$('.respond-chat').click(function() { 
+				$( ".respond-box" ).slideToggle("fast");
+				$( ".chat-box" ).slideToggle("fast");
+
+			});
+			
+			$('.chat-minimize').click(function() { 
+				$( ".respond-box" ).slideToggle("fast");
+				$( ".chat-box" ).slideToggle("fast");
+			});
+			
+			$('.start-chat').click(function() { 
+				$( ".chat-form1" ).hide();
+				$( ".chat-form2" ).show();
+			});
+			
+		});
+	</script>
+	
+</head>
+		<!-- START CHAT-BOX -->
+		<div id="resp-me">	
+			<div class="footer-respond">
+					<div class="respond-box">
+						<img class="we-banner" src="img/we-banner.png" alt="We are here" />
+						<a class="respond-chat"><img src="img/respond-chat.png" alt="Click to talk to us" /></a>
+					</div>
+					
+					<div class="chat-box">
+						<div class="cb">
+						<div class="chat-top">
+							<img class="chat-logo" src="img/chat-logo.png" alt="" />
+							<a class="chat-minimize"><img src="img/minimize.png" alt="" /></a>
+						</div>
+						
+						<form class="chat-form1" method="post">
+								<div class="cf1">
+							<p class="welcome">
+								Welcome to our live chat! Please fill in the form below before
+								starting the chat.
+							</p>
+							
+							<p class="gray-bg">
+								<label for="name">Name:</label><br />
+								<input type="text" name="respond-name" value="" />
+								
+								<ul class="edit-list">
+									<li><a href="#"><img src="img/edit-icon.png" alt="" /></a></li>
+									<li><a href="#"><img src="img/edit-icon2.png" alt="" /></a></li>
+									<li><a href="#"><img src="img/delete-icon.png" alt="" /></a></li>
+								</ul>
+							</p>
+							<p>
+								<label for="name">Email:</label><br />
+								<input type="email" name="respond-email" value="" />
+								
+								
+							</p>
+							<p>
+								<a class="start-chat">Start the chat</a>
+							</p>	
+								</div>						
+						</form>
+						<form class="chat-form2">
+							<div class="support">
+								<p>
+								<span>Support Operator</span>
+								<strong>Michael Starr</strong>
+								<span class="operator-stars">
+									<img src="img/star.png" alt="" />
+									<img src="img/star.png" alt="" />
+									<img src="img/star.png" alt="" />
+									<img src="img/star-half.png" alt="" />
+									<img src="img/star-empty.png" alt="" />
+								</span>
+								</p>
+							</div>
+							<div class="chat-content">
+								<a href="#"><img class="message-icon" src="img/email-icon.png" alt="" /></a>
+								<div class="chat-user">
+									<img src="img/chat-avatar1.png" alt="" />
+									<h5>Michael Starr:</h5>
+									<p>Hi Tom, how can I help you today?</p>
+
+								</div>
+									<div class="cht-border"></div>
+								<div class="chat-user cu2">
+									<img src="img/chat-avatar2.png" alt="" />
+									<h5>Customer:</h5>
+									<p class="cuf">Hi, do you have the ray ban sunglasses in more colors?</p>
+								</div>
+								
+							</div>
+							<div class="chat-submit">
+								<div class="cs">
+									<input type="text" name="message" value="" placeholder="Type your message..." />
+									<input type="submit" class="sub-btn" name="chat-submit" value="Submit" />
+								</div>
+							</div>
+								
+						</form>
+						</div>
+					</div><!-- end chat-box -->
+			</div><!-- end footer-respond -->
+		</div><!-- end resp-me -->
+				
+</body>		
+</html>

@@ -1,0 +1,1108 @@
+﻿
+/* ==========================================================================
+   RESET STYLES
+   ========================================================================== */
+* {
+	margin: 0; padding: 0;
+}
+   
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+	background: #FFF;
+	font-family: Helvetica, Arial, Sans-serif;
+	color: #000;
+}
+
+
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */ 
+body {
+	background: #d7d7d7;
+}
+
+img {
+	border: 0 none;
+}
+
+li {
+	list-style: none;
+}
+
+#container {
+	width: 1000px;
+	margin: 0 auto;
+	background: #FFF;
+	overflow: hidden;
+}
+/* ==========================================================================
+   HEADER STYLES
+   ========================================================================== */   
+
+.top-bar {
+	height: 50px;
+	background: url(../img/top-bar.png) repeat-x;
+}
+	.head-logo {
+		float: left;
+		margin-left: 20px;
+		margin-top: 6px;
+	}
+	p.phone {
+		float: right;
+		margin-right: 18px;
+		margin-top: 13px;
+		font-size: 18px;
+		color: #fff;
+	}
+		.phone img {
+			position: relative;
+			top: 2px;
+			padding-right: 4px;
+		}
+
+.nav {
+	background: #ececec;
+	overflow: hidden;
+	clear: both;
+	position: relative;
+	top: -1px;
+}
+	.nav ul {
+		float: left;
+		margin-left: 150px;
+		margin-top: 22px;
+		margin-bottom: 23px;
+	}
+	.nav ul li {
+		float: left;
+		font-size: 19px;
+		color: #7d7d7d;
+	}
+	.nav ul li span {
+		margin-right: 25px;
+		margin-left: 24px;
+	}
+	.nav ul li a {
+		text-decoration: none;
+		font-size: 18.5px;
+		color: #7d7d7d;
+		position: relative;
+		top: 1px;
+	}
+		.nav ul li a:hover {color: #646262;}
+		.right-last {margin-right: 0!important;}
+
+.fibro-box {
+	width: 960px;
+	clear: both;
+	float: left;
+	margin-left: 18px;
+	background: url(../img/dotted-border.png) 50% 98% repeat-x;
+	clear: both;
+}
+	.fibro-logo {
+		float: left;
+		margin-top: 13px;
+	}
+	.contact-specialist {
+		float: right;
+		margin-right: 36px;
+		margin-top: 43px;
+		width: 245px;
+	}
+		.contact-specialist img {
+			float: left;
+			margin-right: 20px;
+			position: relative;
+			top: 5px;
+		}
+		.contact-specialist p {
+			font-size: 16px;
+			color: #050000;
+		}
+		p.big-text {
+			font-weight: bold;
+			font-size: 22.5px;
+		}
+		.order-now {
+			font-size: 16px;
+			color: #0000ff;
+			margin-left: 110px;
+		}
+  
+/* ==========================================================================
+   MAIN STYLES
+   ========================================================================== */   
+.first-part {
+	position: relative;
+}
+   
+#main h1 {
+	font-size: 63px;
+	color :#000;
+	font-weight: normal;
+	text-align: center;
+}
+
+#main p.opening-text {
+	font-size: 22px;
+	text-align: center;
+	color: #000;
+	line-height: 1.63;
+	width: 730px;
+	padding-left: 120px;
+	margin-top: 0;
+}
+
+h3.dear-friend {
+	font-size: 20px;
+	margin-left: 19px;
+	padding-top: 32px;
+}
+
+#main p {
+	margin-left: 19px;
+	margin-right: 23px;
+	font-size: 16px;
+	line-height: 1.5;
+	margin-top: 15px;
+	
+}
+
+.fibro-img {
+	float: right;
+	right: 0;
+	position: absolute;
+}
+
+.z-strong {z-index: 10; position: relative;}
+
+ul.benefits {
+	margin-top: 12px;
+	float: left;
+	z-index: 100;
+	position: relative;
+	width: 600px;
+}
+	.benefits li {
+		font-weight: bold;
+		font-size: 16px;
+		background: url(../img/tick-black.png) 0% 50% no-repeat;
+		padding-left: 38px;
+		margin-left: 55px;
+		margin-top: 16px;
+	}
+	
+.review-name {
+	clear: both;
+	width: 255px;
+	float: left;
+	margin-top: 48px;
+	margin-left: 8px;
+}
+	#main .review-name p {
+		font-size: 20px;
+		font-weight: bold;
+		font-size: 20px;
+		text-align: center;
+		margin-top: 6px;
+	}
+	
+.review-content {
+	width: 722px;
+	margin-top: 48px;
+	float: left;
+}
+	#main .review-content p {
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+	
+.rc2 {
+	clear: both;
+}
+	.rc2 p {margin-bottom: 20px!important;}
+
+#main h3 {
+	font-size: 25px;
+	margin-left: 20px;
+}
+
+#main .big-bold {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.bad-inflammation {
+	clear: both;
+	background: url(../img/dotted-border.png.) repeat-x;
+	width: 960px;
+	margin: 0 auto;
+	margin-top: -14px;
+}
+	.clipboard {
+		float: left;
+		margin-right: 17px;
+		margin-top: 36px;
+	}
+	#main .bad-inflammation h3 {
+		font-family: Georgia,serif;
+		font-weight: normal;
+		font-size: 36px;
+		color: #000;
+		padding-top: 22px;
+		line-height: 1.29;
+	}
+	.enlarge-box {
+		float: left;
+		margin-left: 324px;
+		margin-top: 8px;
+		width: 260px;
+	}
+	.click-to-enlarge {
+		float: right;
+		margin-right: 10px;
+		font-size: 14px;
+		color: #0000ff;
+		margin-top: -8px;
+	}
+	.bad-inflammation .contact-specialist {
+		float: right;
+		margin-right: 55px;
+	}
+		#main .bad-inflammation .contact-specialist img {
+			float: left;
+		}	
+		#main .bad-inflammation .contact-specialist p {
+			margin: 0; padding: 0;
+			width: 230px;
+			font-size: 16px;
+			line-height: 1.3;
+		}
+		#main .bad-inflammation .contact-specialist .big-text {
+			font-size: 22.5px;
+		}
+
+/*----- FEATURES STYLES -----*/	
+.features {
+	clear: both;
+}
+
+.heading-bg {
+	clear: both;
+	background: url(../img/heading-bg.png) 50% 74% no-repeat;
+	text-align: center;
+	font-family: Georgia,Serif;
+	font-size: 25.22px;
+	font-style: italic;
+	color: #000;
+	text-decoration: underline;
+	padding-top: 24px;
+}	
+	.heading-bg2 {background: url(../img/heading-bg2.png) 50% 74% no-repeat;}
+	.increased-E {
+		padding-top: 40px;
+		background-position: 50% 80%;
+	}
+	.mental-C {
+		padding-top: 70px;
+		background-position: 50% 86%;
+	}
+	.biological-F{
+		padding-top: 70px;
+		background-position: 50% 86%;
+	}
+	
+.features-box {
+	margin-top: 52px;
+	float: left;
+}
+	.features-box img {
+		float: left;
+		margin-left: 18px;
+		margin-right: 30px;
+	}
+	.features-box h5 {
+		font-size: 20px;
+	}
+	#main .features-box p {
+		line-height: 1.28;
+		font-size: 16px;
+		margin-right: 41px;
+	}
+
+.fi2 {margin-bottom: 40px;}
+.fi8 {margin-bottom: 100px;}
+.fi10 {margin-bottom: 130px;}
+
+.seven-ways {
+	clear: both;
+	color: #000;
+	font-size: 36px;
+	margin-left: 24px;
+	font-weight: normal;
+	line-height: 1.2;
+	padding-top: 38px;
+	font-family: Georgia, serif;
+	font-weight: normal;
+}
+	.seven-ways .seven {
+		font-weight: bold;
+		font-size: 100px;
+		float: left;
+		line-height: 0.85;
+		margin-right: 15px;
+		font-family: arial;
+		margin-top: 4px;
+	}
+	
+.seven-box {
+	width: 842px;
+	margin: 0 auto;
+	background: #ececec;
+}
+	#main .seven-box p {
+		margin-right: 30px;
+		font-size: 20px;
+		padding-top: 15px;
+		line-height: 1.29;
+	}
+	.seven-box ol {
+		margin-left: 23px;
+		margin-right: 30px;
+		margin-top: 5px;
+		padding-bottom: 25px;
+	}
+		.seven-box ol li {
+			font-size: 20px;
+			list-style-type: decimal;
+			list-style: bold;
+			margin-left: 23px;
+			padding-top: 20px;
+			font-weight: bold;
+		}	.seven-box ol li span {font-weight: normal;}
+		
+.clinical-heading {
+	clear: both;
+	color: #000;
+	font-size: 36px;
+	margin-left: 24px;
+	font-weight: normal;
+	line-height: 1.2;
+	padding-top: 38px;
+	font-family: Georgia, serif;
+	font-weight: normal;
+}	
+	.clinical-heading img {
+		float: left;
+		margin-right: 10px;
+		padding-top: 10px;
+	}
+
+.clinical-logos {
+	margin-left: 80px;
+	margin-top: 32px;
+	margin-bottom: 15px;
+}
+
+.clinical-box {
+	clear: both;
+	margin-bottom: 33px;
+	float: left;
+}
+	#main .clinical-box p {
+		font-size: 20px;
+		line-height: 1.25;
+	}
+	.clinical-head {
+		font-weight: bold;
+	}
+		
+		
+h4.how-fast {
+	clear: both;
+	color: #000;
+	font-size: 36px;
+	font-weight: normal;
+	line-height: 1.2;
+	text-align: center;
+	font-family: Georgia, serif;
+	font-weight: normal;
+}
+.satisfied-users {
+	margin-top: 17px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.user-testimonial {
+	clear: both;
+	margin-left: 40px;
+	margin-top: 2px;
+	padding-bottom: 13px;
+}
+	.user-avatar {
+		float: left;
+		margin-right: 20px;
+	}
+	.user-testimonial h5 {
+		text-decoration: underline;
+		font-style: italic;
+		font-size: 23px;
+		color: #000;
+		padding-top: 7px;
+		margin-bottom: 17px;
+	}
+	#main .user-testimonial p {
+		margin-right: 120px;
+		margin-left: 56px;
+		font-size: 20px;
+		line-height: 1.29;
+		margin-bottom: 23px;
+	}
+	p.user-name {
+		font-weight: bold;
+	}
+		
+#main p.ftc-note {
+	width: 760px;
+	margin-left: 96px;
+	font-size: 15px;
+	font-style: italic;
+	margin-top: 0;
+	line-height: 1.23;
+	margin-top: -10px;
+}
+		
+.cost-effective {
+	clear: both;
+	width: 960px;
+	margin: 0 auto;
+	background: url(../img/dotted-border.png) repeat-x;
+	margin-top: 36px;
+}
+	.costless-head {
+		clear: both;
+		color: #000;
+		font-size: 36px;
+		font-weight: normal;
+		line-height: 1.2;
+		padding-top: 19px;
+		margin-bottom: 38px;
+		font-family: Georgia, serif;
+		font-weight: normal;
+	}
+		.costless-head img {
+			float: left;
+			margin-right: 12px;
+			padding-top: 7px;
+		}
+	#main .cost-effective p {
+		margin-left: 84px;
+		margin-right: 80px;
+		font-size: 20px;
+		line-height: 1.2;
+	}
+	.cost-img {
+		width: 860px;
+		height: 450px;
+		background: url(../img/cost-effective.jpg) no-repeat;
+		margin-top: 25px;
+	}	
+		.cost-img h5 {
+			font-size: 29px;
+			padding-top: 305px;
+			margin-left: 42px;
+		}
+
+.fibromage {
+	position: relative;
+}	
+	.fibromage img {
+		position: absolute;
+		left: 220px;
+		margin-top: -35px;
+	}
+	.fibromage h5 {
+		float: left;
+		margin-top: 300px;
+		margin-left: 370px;
+		font-size: 30px;
+		position: relative;
+		z-index: 10;
+	}
+
+#main .contact-specialist2 {
+	float: right;
+	width: 350px;
+	z-index: 10;
+	position: relative;
+	margin-right: 0;
+	margin-top: 105px;
+}
+	.contact-specialist2 img {
+		margin-top: 13px;
+	}
+	#main .contact-specialist2 p {
+		margin-left: 0;
+		margin-bottom: 0;
+		line-height: 1;
+		font-size: 16px;
+	}
+	#main .contact-specialist2 .big-text {
+		margin-left: 64px;
+		margin-top: 8px;
+		margin-bottom: 5px;
+		font-size: 22.5px;
+	}
+	
+.positives-box {
+	clear: both;
+	padding-top: 33px;
+}
+	#main .positives-box p {
+		margin-left: 84px;
+		margin-right: 130px;
+		font-size: 20px;
+		line-height: 1.2;
+		margin-bottom: 25px;
+	}
+	
+.guarantee-head {
+	clear: both;
+	color: #000;
+	font-size: 35px;
+	font-weight: normal;
+	line-height: 1.2;
+	margin-left: 20px;
+	padding-top: 30px;
+	margin-bottom: 45px;
+	font-family: Georgia, serif;
+	font-weight: normal;
+}
+	.guarantee-head img {
+		float: left;
+		margin-right: 10px;
+		margin-top: -10px;
+	}
+
+.guarantee-icon {
+	float: left;
+	margin-right: 18px;
+	margin-bottom: 5px;
+	margin-top: 20px;
+	margin-left: 45px;
+}
+.gp1 {
+	margin-right: 45px!important;
+}	
+
+.try-box {
+	clear: both;
+	float: left;
+	width: 960px;
+	background: url(../img/dotted-border.png) repeat-x;
+	margin-left: 18px;
+	margin-top: 20px;
+}
+	#main .try-box p {
+		margin-left: 81px;
+		margin-right: 90px;
+		font-size: 20px;
+		color: #000;
+		line-height: 1.2;
+		margin-bottom: 25px;
+	}
+	.try-head {
+		width: 585px;
+		float: left;
+		clear: both;
+		color: #000;
+		font-size: 35px;
+		font-weight: normal;
+		line-height: 1.2;
+		margin-top: 25px;
+		margin-bottom: 36px;
+		font-family: Georgia, serif;
+		font-weight: normal;
+	}
+		.try-head img {
+			float: left;
+			margin-right: 10px;
+			padding-top: 6px;
+		}
+		
+	#main .try-box .contact-specialist {
+		float: right;
+		margin-top: 16px;
+		margin-right: -40px;
+	}
+		#main .try-box .contact-specialist img {
+			float: left;
+			margin-right: 20px;
+			position: relative;
+			top: 5px;
+		}
+		#main .try-box .contact-specialist p {
+			margin: 0;
+			margin-top: 14px;
+			font-size: 16px;
+			color: #050000;
+		}
+		#main .try-box p.big-text {
+			font-weight: bold;
+			font-size: 22.5px;
+			margin-top: 0;
+		}
+		#main .try-box .order-now {
+			font-size: 16px;
+			color: #0000ff;
+			margin-left: 110px;
+		}
+	
+	.clear {clear: both;}
+	
+.choice-head {
+	font-size: 33px;
+	clear: both;
+	color: #000;
+	font-weight: normal;
+	line-height: 1.2;
+	margin-left: 81px;
+}
+
+.try-box ol {
+	clear: both;
+	margin-top: 34px;
+}
+	.try-box ol li {
+		list-style-type: decimal;
+		font-size: 19px;
+		line-height: 1.24;
+		margin-left: 107px;
+		margin-right: 90px;
+		margin-bottom: 26px;
+	}
+	
+#main p.order-p {margin-right: 60px; margin-left: 79px;}
+
+
+#lightbox {
+	width: 722px;
+	height: 732px;
+	background: #FFF;
+	z-index: 1000;
+	position: absolute;
+	left: 300px;
+	top: 2900px;
+	display: none;
+	-webkit-box-shadow: 1px -2px 2px 3px #43484b;
+	box-shadow: 0px -1px 2px 1px #43484b; 
+}
+	.cross {
+		float: right;
+		margin-top: -18px;
+		margin-right: -20px;
+	}
+	.lightbox-img {
+		margin-left: 86px;
+		margin-top: 45px;
+	}
+		
+.overlay {
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width:100%;
+	height: auto!important;
+	position: FIXED;
+    z-index:998;
+    background: url(../img/gray.png) repeat;
+	display: none;
+}
+
+.ordering-head {
+	width: 960px;
+	height: 62px;
+	background: #0b6b87;
+	clear: both;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 28px;
+	color: #fff;
+	line-height: 62px;
+	margin-top: 12px;
+	float: left;
+	margin-left: 18px;
+}
+	.ordering-head img {
+		padding-right: 30px;
+		margin-left: -10px;
+		position: relative;
+		top: 5px;
+	}
+	
+.supply-box {
+	width: 298px;
+	float: left;
+	margin-left: 18px;
+	margin-right: 7px;
+	margin-top: 37px;
+	border: 3px solid #d7d7d7;
+	outline: 1px solid #a1a1a1;
+}
+	.supply-box h5 {
+		font-size: 25px;
+		color: #0b6b87;
+		text-align: center;
+		padding-top: 10px;
+	}
+	#main .supply-box p {
+		margin-top: 0;
+		text-align: center;
+		font-size: 18px;
+		color: #464646;
+	}
+	.si1 {
+		margin-left: 55px;
+		margin-top: 26px;
+	}
+	.si2 {
+		margin-top: 28px;
+		margin-left: 16px;
+	}
+	.si3 {
+		margin-top: 21px;
+		margin-left: 26px;
+	}
+	
+	
+	#main .supply-box .sup-text {
+		font-size: 16px;
+		padding-top: 5px;
+		line-height: 1.24;
+	}
+	
+	#main .supply-value {
+		font-size: 15px!important;
+		padding-top: 22px;
+		line-height: 1.2;
+	}
+		#main .supply-value span.blue-price {
+			font-size: 24px;
+			color: #0b6b87;
+			font-weight: bold;
+			position: relative; top: 2px;
+		}
+		.gray-price {
+			text-decoration: line-through;
+			color: #b7b7b7;
+			font-size: 24px;
+			font-weight: bold;
+			padding-left: 5px;
+			position: relative; top: 2px;
+		}
+		
+	.st2 {
+		margin-left: 5px!important;
+		margin-right: 5px!important;
+	}
+	.st3 {
+		margin-left: 5px!important;
+		margin-right: 5px!important;
+	}
+	.ac3 {
+		margin-top: 20px!important;
+	}
+		
+	.add-cart {
+		display: block;
+		width: 220px;
+		height: 60px;
+		background: url(../img/cart-btn.png) repeat-x;
+		text-decoration: none;
+		font-size: 22px;
+		color: #FFF;
+		text-align: center;
+		border: 1px solid #d7922d;
+		-webkit-border-radius: 6px;
+		border-radius: 6px;
+		-webkit-box-shadow: 0px 1px 1px 0px #c5d5de;
+		box-shadow: 0px 1px 1px 0px #c5d5de; 
+		margin: 0 auto;
+		line-height: 60px;
+		margin-top: 36px;
+		margin-bottom: 19px;
+	}
+	.card-icons {
+		margin-left: 55px;
+		margin-bottom: 14px;
+	}
+	
+.order-phone {
+	width: 960px;
+	background: url(../img/dotted-border.png) bottom repeat-x;
+	float: left;
+	margin-left: 18px;
+	padding-bottom: 16px;
+}
+	.order-phone h4 {
+		font-size: 34.99px;
+		color: #0b6b87;
+		margin-top: 25px;
+		font-weight: normal;
+		padding-top: 14px;
+	}
+	.order-phone h4 img {
+		float: left;
+		margin-left: 38px;
+		margin-right: 55px;
+		margin-top: -10px;
+	}
+	#main p.call-timing {
+		font-size: 24.99px;
+		color: #0b6b87;
+		margin: 0; padding: 0;
+		float: left;
+		margin-left: 168px;
+		margin-top: -10px;
+	}
+	.order-list {
+		clear: both;
+		margin-left: 120px;
+		margin-top: 25px;
+		float: left;
+	}
+		.order-list li {
+			float: left;
+			font-weight: bold;
+			font-size: 22px;
+			color: #555555;
+			width: 300px;
+			line-height: 1.2;
+			margin-right: 24px;
+		}
+			.order-list li img {
+				float: left;
+				margin-right: 12px;
+			}
+			.order-list li span {
+				position: relative;
+				top: 10px;
+				line-height: 1.2;
+			}
+				.op2 span{top: 18px!important;}
+				.op3 {margin-top: 25px; margin-right: 0!important; margin-left: -108px; position: relative; left: 22px;}
+	
+.final-message {
+	clear: both;
+}
+	.final-head {
+		font-size: 36px;
+		line-height: 1.15;
+		margin-left: 18px;
+		margin-top: 22px;
+		float: left;
+		margin-bottom: 40px;
+		font-family: Georgia, serif;
+		font-weight: normal;
+	}
+		.final-head img {
+			float: left;
+			margin-right: 15px;
+			margin-top: 9px;
+		}
+	#main .final-message p {
+		margin-left: 103px;
+		font-size: 20px;
+		line-height: 1.2;
+		margin-right: 115px;
+		margin-bottom: 20px;	
+	}
+	
+	.achieve-list {
+		margin-left: 170px;
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+		.achieve-list li {
+			font-size: 15px;
+			color: #000;
+			list-style-type: disc;
+		}
+			.achieve-list li span {
+				font-size: 20px;
+			}
+			
+.cindy-sign {
+	padding-left: 103px;
+	padding-top: 10px;
+	margin-bottom: -13px;
+}
+
+h4.big-reasons {
+	font-size: 33px;
+	margin-left: 43px;
+	clear: both;
+	float: left;
+	padding-top: 5px;
+	line-height: 0.5;
+	margin-top: 44px;
+	font-family: Georgia;
+	font-weight: normal;
+}
+	.big-reasons span {
+		font-size: 73px;
+		float: left;
+		margin-right: 18px;
+		margin-top: -20px;
+	}
+		
+.reason-box {
+	width: 242px;
+	float: left;
+	margin-left: 38px;
+	margin-top: 35px;
+}	
+	.reason-box1 {
+		margin-left: 100px;
+	}
+	.reason-box h5 {
+		height: 68px;
+		background: #2b2b2b;
+		text-align: center;
+		font-family: Georgia, serif;
+		font-weight: normal;
+	}
+		.reason-box h5 span {
+			color: #FFF;
+			font-size: 53px;
+			text-align: center;
+			line-height: 60px;
+		}
+	#main .reason-box p {
+		font-size: 20px;
+		margin: 0;
+		padding: 0;
+		line-height: 1.2;
+		margin-top: 20px;
+		margin-right: 5px;
+	}
+	
+.few-more {
+	font-size: 25px;
+	text-align: center;
+	clear: both;
+	padding-top: 125px;
+	margin-bottom: 10px;
+}	
+
+.more-box {
+	width: 298px;
+	float: left;
+	margin-left: 18px;
+	margin-right: 7px;
+	margin-top: 27px;
+	border: 3px solid #d7d7d7;
+	outline: 1px solid #a1a1a1;
+	height: 542px;
+}
+	.more-box h5 {
+		font-size: 25px;
+		text-align: center;
+		line-height: 1.2;
+		margin-bottom: 25px;
+		margin-top: 14px;
+	}
+	#main .more-box p {
+		text-align: center;
+		font-size: 16px;
+		line-height: 1.3;
+	}	
+
+a.order-today {
+	width: 520px;
+	height: 52px;
+	line-height: 52px;
+	clear: both;
+	margin-top: 73px;
+	float: left;
+	margin-left: 240px;
+	margin-bottom: 35px;
+}	
+	
+/* ==========================================================================
+   FOOTER STYLES
+   ========================================================================== */ 	
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 20px;
+	width: 960px;
+	background: url(../img/dotted-border.png) top repeat-x;
+	margin-top: 55px;
+}
+
+.footer-nav {
+	margin-left: 93px;
+	margin-top: 30px;
+	float: left;
+	margin-bottom: 42px;
+}
+	.footer-nav li {
+			float: left;
+			color: #c2c2c2;
+	}
+	.footer-nav li a {
+		color: #000;
+		font-size: 16px;
+		text-decoration: none;
+	}
+	.footer-nav li span {
+		color: #c2c2c2;
+		font-size: 18px;
+		padding-left: 48px;
+		padding-right: 49px;
+	}
+	
+#footer p {
+	clear: both;
+	float: left;
+	margin-left: 145px;
+	font-size: 12px;
+	color: #000;
+}
+
+.privacy {
+	float: left;
+	margin-left: 52px;
+	margin-top: -4px;
+	margin-bottom: 40px;
+}
+	.privacy li {
+		float: left;
+	}
+	.privacy li a {
+		text-decoration: none;
+		color: #000;
+		font-size: 12px;
+	}
+	.privacy li span {
+		padding-left: 4px;
+		padding-right: 5px;
+		font-size: 12px;
+	}
+
+   

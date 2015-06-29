@@ -1,0 +1,52 @@
+.coming-soon {
+	padding-left: 40px;
+}
+
+.coming-soon h2 {
+		padding-bottom: 25px;
+	}
+	
+.top-section {padding: 0; margin-top: 40px; }
+
+.content-form {background: url(../img/design.png); margin-left: 0; width: 100%;}
+
+.content-top h1 {
+	font-size: 300%;
+	line-height: 0.6;
+	padding-top: 30px;
+	padding-bottom: 40px;
+}
+	.content-top .bourbon {padding-left: 42px; font-size: 68%;}
+	
+.content-top sup {
+	top: -7px;
+	left: -20px;
+}
+
+.content-form form {
+	text-align: center;
+	padding-left: 0px;
+}
+	.content-form input {padding-left: 70px; width: 70%;}
+	.content-form .submit {padding-left: 0; margin-left: 0px; width: 100%; margin-top: 10px;}
+	
+.proof-container {
+	margin-left: 120px;
+}
+
+#footer {
+	margin-top: 50px;
+	
+}
+
+.bottled-by {
+	padding-right: 10px;
+}
+.copyright {
+	padding-right: 0;
+	padding-bottom: 0;
+}
+	.copyright a {font-size: 11px!important;}
+	.copyright p {font-size: 13px;}
+	
+.social a {margin: 0;}

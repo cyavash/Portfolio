@@ -1,0 +1,589 @@
+﻿/* ==========================================================================
+   RESET STYLES
+   ========================================================================== */
+* {
+	margin: 0; padding: 0;
+}
+   
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+img {
+	border: 0 none;
+}
+
+li {
+	list-style: none;
+}
+
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */   
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+	background: #0f1316 url(../images/bg.jpg) top center no-repeat;
+}
+
+#container {
+	width: 960px;
+	background: #0f1316;
+	margin: 0 auto;
+	margin-top: 33px;
+	border-top-left-radius: 10px; 
+	border-top-right-radius: 10px; 
+	position: relative;
+}
+
+/* ==========================================================================
+   HEADER STYLES
+   ========================================================================== */   
+
+.header-top {
+	background: url(../images/top-bg.png) repeat-x;
+	height: 53px;
+	border-top-left-radius: 10px; 
+	border-top-right-radius: 10px; 
+}
+
+.logo {
+	float: left;
+	margin-left: 22px;
+	text-decoration: none;
+}
+
+.logo img {
+	float: left;
+	margin-right: 10px;
+}
+
+#header h1 {
+	font-weight: normal;
+	font-family: Tungsten-Bold;
+	font-size: 26.49px;
+	color: #fff;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.login-form {
+	float: right;
+	margin-right: 18px;
+	
+}
+	.login-form a {
+		text-decoration: none;
+		font-family: Helvetica;
+		font-weight: bold;
+		font-size: 12px;
+		color: #6f7173;
+		margin-right: 14px;
+	}
+	.login-form input {
+		width: 125px;
+		height: 30px;
+		background: #e9e9e9;
+		border: 1px solid #b1b1b1;
+		font-family: Helvetica;
+		font-weight: bold;
+		font-size: 10px;
+		color: #777777;
+		margin-right: 5px;
+	}
+		input.username {
+			background-image: url(../images/user-icon.png);
+			background-repeat: no-repeat;
+			background-position: 4% 50%;
+			-webkit-box-shadow: inset 0px 3px 3px 0px #ababab;
+			box-shadow: inset 0px 3px 4px 0px #ababab; 
+			padding-left: 25px;
+		} 
+		input.password {
+			background-image: url(../images/lock-icon.png);
+			background-repeat: no-repeat;
+			background-position: 4% 50%;
+			padding-left: 25px;
+			color: #333;
+			-webkit-box-shadow: inset 0px 3px 3px 0px #ababab;
+			box-shadow: inset 0px 3px 4px 0px #ababab; 
+		}
+		input.login-btn {
+			width: 70px;
+			height: 30px;
+			background: #228ec6;
+			font-weight: bold;
+			color: #FFF;
+			font-size: 12px;
+			cursor: pointer;
+			border: 0;
+			border-top: 1px solid #3eceeb;
+			border-radius: 4px;
+			padding-bottom: 3px;
+			font-family: Helvetica;
+		}
+		
+.action-list {
+	clear: both;
+	margin-left: 577px;
+	position: relative;
+	top: -12px;
+	
+}
+	.action-list li {
+		float: left;
+		margin-right: 22px;
+	}
+	.action-list li a {
+		text-decoration: none;
+		font-family: Tungsten-SemiBold;
+		font-size: 26px;
+		color: #FFF;
+	}
+	.action-list li a:hover {
+		color: #299cd7;
+	}	
+
+.language-select {
+	float: right;
+	margin-top: -5px;
+	margin-right: 24px;
+	background: url(../images/select-bg.png) repeat-x;
+	width: 90px;
+	height: 28px;
+	cursor: pointer;
+	font-size: 13.29px;
+	color: #a1a1a1;
+	text-indent: 6px;
+	padding-top: 4px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	border-radius: 2px 2px 3px 3px;
+	margin-bottom: 3px;
+}
+
+.language-select option {
+	font-size: 13.29px;
+	color: #a1a1a1;
+	padding-left: 10px;
+	padding-top: 4px;
+}
+
+/* We can style the inner box, too */
+.customSelectInner {
+	background:url(../images/select-arrow.png) no-repeat 75% 50%;
+}
+
+
+/*===== Navigation Styles =====*/
+.nav {
+	clear: both;
+	border-top-left-radius: 10px; 
+	border-top-right-radius: 10px; 
+	width: 920px;
+	margin: 0 auto;
+	height: 40px;
+	background: url(../images/nav-bg.png) repeat-x;
+	border: 1px solid #77797b;
+	border-bottom: 0 none;
+	position: relative;
+	top: 2px;
+}
+	.nav li {
+		float: left;
+		padding-right: 0px;
+		padding-top: 0px;
+		line-height: 1;
+		padding-bottom: 25px;
+	}
+	.nav li span {
+		display: inline-block;
+		background: url(../images/nav-border.png) right no-repeat;
+		padding-right: 32px;
+	}	
+	
+	.nav li a {	
+		text-decoration: none;
+		font-family: Tungsten-SemiBold;
+		color: #a4a6a7;
+		font-size: 24px;
+		padding-top: 11px;
+		float: left;
+	}
+	.nav li a:hover {
+		color: #299cd7;
+		background: url(../images/hover-arrow.png) 50% 0% no-repeat;
+	}
+	.nav li:hover {
+		background: url(../images/glow2.png) 90% 100% no-repeat;
+	}
+	
+.nav-logo {
+	position: absolute;
+	left: 409px; 	
+	margin-top: -18px;
+}
+
+li.nav-home {
+	padding-left: 73px;
+}
+li.nav-about {
+	padding-left: 38px;
+}
+	li.nav-about:hover {
+		background: url(../images/glow2.png) 70% 100% no-repeat;
+	}
+li.nav-promotions {
+	padding-left: 37px;
+}
+	li.nav-promotions:hover {
+		background: url(../images/glow2.png) 60% 100% no-repeat;
+	}
+li.nav-vip {
+	padding-left: 114px;
+}
+	li.nav-vip:hover {
+		background: url(../images/glow2.png) 80% 100% no-repeat;
+	}
+li.nav-contact {
+	padding-left: 34px;
+}
+	li.nav-contact:hover {
+		background: url(../images/glow2.png) 60% 100% no-repeat;
+	}
+li.nav-chat {
+	padding-left: 39px;
+}
+	li.nav-chat:hover {
+		background: url(../images/glow2.png) 70% 100% no-repeat;
+	}
+li.nav-chat span {background: 0 none;}
+
+
+/*===== Featured Styles =====*/
+#featured {
+	clear: both;	
+}
+
+.slideshow {
+	width: 920px;
+	margin: 0 auto;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+}
+
+.slide1 {
+	width: 921px;
+	height: 297px;
+	background: url(../images/slide-img.jpg) no-repeat;
+}	
+
+.bxslider h2 {
+	font-family: Tungsten-SemiBold;
+	font-size: 58.81px;
+	color: #f9f9f9;
+	font-weight: normal;
+	width: 260px;
+	line-height: 0.9;
+	text-align: center;
+	margin-left: 30px;
+	margin-top: 12px;
+}
+
+.join-today {
+	margin-top: 16px;
+	float: left;
+	margin-left: 40px;
+}
+
+
+
+#featured h3 {
+	font-family: Tungsten-SemiBold;
+	font-weight: normal;
+	color: #f8b744;
+	font-size: 36px;
+	text-align: center;
+	margin-top: 7px;
+	margin-bottom: 10px;
+}
+
+#featured .logos a  {
+	float: left;
+}
+
+#featured .logos {
+	float: left;
+	margin-bottom: 20px;
+}	
+
+.cimbbank {margin-left: 112px;}
+.krungthai {margin-left: 10px; margin-top: 2px;}
+.kasikorn-bank {margin-left: 14px; margin-top: -2px;}
+.bank-logo1 {margin-left: 3px; margin-top: 0px;}
+.scb-bank {margin-left: 13px; margin-top: -4px;}
+.bca-logo {margin-left: 20px; margin-top: -4px;}
+.bangkok-bank {margin-left: 150px; margin-top: 4px;}
+.permata-bank {margin-left: 15px; margin-top: 1px;}
+.mandiri-bank {margin-left: 7px; margin-top: 2px;}
+.public-bank {margin-left: 3px; margin-top: -3px;}
+
+
+/* ==========================================================================
+   MAIN STYLES
+   ========================================================================== */   
+#main {
+	clear: both;
+	width: 904px;
+	margin: 0 auto;
+	border: 1px solid #585b5e;
+	background: url(../images/main-bg.png) repeat-x;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	overflow: hidden;
+}
+
+.main-wrapper {
+	width: 842px;
+	margin: 0 auto;
+	margin-top: 28px;
+	border: 1px solid #181919;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+
+.main-content {
+	background: url(../images/mainContent-bg.png) repeat-x;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	overflow: hidden;
+}
+
+.tab-list {
+	float: left;
+	margin-left: 270px;
+	margin-top: 22px;	
+	margin-bottom: 32px;
+}
+	.tab-list li {
+		float: left;
+		margin-right: 32px;
+	}
+	.tab-list li a {
+		text-decoration: none;
+		font-family: Tungsten-SemiBold;
+		color: #6e5629;
+		font-size: 24px;
+	}
+	
+	.tab-list li.selected a{
+		color: #f8b744;
+		border-bottom: 1px solid #f8b744;
+		padding-left: 3px;
+		padding-right: 3px;
+	}
+
+.box-content {
+	float: left;
+	width: 250px;
+	border: 1px solid #d0d0d0;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	margin-left: 13px;
+	margin-right: 5px;
+	margin-bottom: 20px;
+}
+	.box-content h3 {
+		font-family: Tungsten-Bold;
+		font-weight: normal;
+		color: #fff;
+		font-size: 30px;
+	}
+	
+	.box-bottom {
+		height: 52px;
+		background: #489bc0;
+		-webkit-border-bottom-left-radius: 3px;
+		-webkit-border-bottom-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+	}
+		.box-bottom p {
+			font-family: Tungsten-SemiBold;
+			font-size: 24px;
+			color: #fff;
+			text-align: center;
+			padding-top: 7px;
+		}
+		
+.bx1 {
+	width: 250px;
+	height: 185px;
+	background: url(../images/vera-john.jpg) no-repeat;
+}
+	.bx1 h3 {
+		margin-left: 83px;
+		padding-top: 140px;
+	}
+.bx2 {
+	width: 250px;
+	height: 185px;
+	background: url(../images/sbobet.jpg) no-repeat;
+}
+	.bx2 h3 {
+		margin-left: 83px;
+		padding-top: 140px;
+	}
+.bx3 {
+	width: 250px;
+	height: 185px;
+	background: url(../images/poker-afb.jpg) no-repeat;
+}
+	.bx3 h3 {
+		margin-left: 83px;
+		padding-top: 140px;
+	}
+
+ .main-border {
+	width: 934px;
+	position: absolute;
+	height: 2px;
+	background: url(../images/main-border.png) repeat-x;
+	left: 0;
+	top: 0;
+	margin-top: 1330px;
+ }
+ 
+ .items1 {
+	clear: both;
+	float: left;
+	margin-left: 342px;
+	margin-top: 20px;
+	
+ }
+	.items1 li {
+		float: left;
+		margin-left: 8px;
+	}
+	.items1 li a {
+		float: left;
+		padding-right: 9px;
+		border-right: 1px solid #FFF;
+		line-height: 1;	
+		text-decoration: none;
+		font-size: 12px;
+		color: #FFF;
+	}
+	.items1 li a.last {border: 0 none;}
+ 
+ .bottom-text {
+	clear: both;
+	color: #9a999d;
+	font-size: 12px;
+	text-align: center;
+	padding-top: 15px;
+	margin-bottom: 15px;
+	line-height: 1.7;
+ }
+ 
+
+ /* ==========================================================================
+   FOOTER STYLES
+   ========================================================================== */   
+#footer {
+	clear: both;
+	background: #0f1316;
+}
+
+.footer-content {
+	width: 960px;
+	margin: 0 auto;
+	
+}
+
+.footer-top {
+	width: 922px;
+	margin: 0 auto;
+	background: url(../images/nav-bg.png) repeat-x;
+	height: 30px;
+	border: 1px solid #77797b;
+	border-bottom: 0 none;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.gambleaware {
+	margin-left: 186px;
+	margin-top: -7px;
+	float: left;
+}
+
+.gamcare {
+	float: left;
+	margin-left: 20px;
+	margin-top: -14px;
+}
+
+.gaming-authority {
+	float: left;
+	margin-left: 13px;
+	margin-top: -16px;
+}
+
+.twitter {
+	float: left;
+	margin-left: 20px;
+	margin-top: -10px;
+}
+
+.facebook {
+	float: left;
+	margin-left: 6px;
+	margin-top: -10px;
+}
+
+.mastercard {
+	float: left;
+	margin-left: 15px;
+	margin-top: -10px;
+}
+
+.visa {
+	float: left;
+	margin-left: 17px;
+	margin-top: -10px;
+}
+
+.footer-logo {
+	float: left;
+	clear: both;
+	margin-left: 443px;
+	margin-top: 9px;
+	margin-bottom: 4px;
+}
+
+.footer-bottom  {
+	clear: both;
+	height: 38px;
+	background: url(../images/footerBottom-bg.png) repeat-x;
+	width: 960px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}   
+   
+   

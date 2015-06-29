@@ -1,0 +1,3350 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Property Listing</title>
+
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <link href="static/css/datepicker.css" rel="stylesheet">
+    <link href="static/css/override.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+     <link href="static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+    <!-- google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,400italic' rel='stylesheet' type='text/css'>
+
+
+    
+    
+<link href="static/css/bootstrap-slider.min.css" rel="stylesheet">
+<link href="static/css/bootstrap-select.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+   <body id="" class="">
+
+
+    <!-- Header Starts -->
+    <nav class="navbar navbar-default" role="navigation">
+
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="static/images/logo.png" /></a>
+        </div>
+           <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-left">
+            <li class=""><a href="dashboard/index.html">Dashboard</a></li>
+            <li class=""><a href="estate/new/index.html">Post</a></li>
+          </ul>
+ 
+
+      <ul class="nav navbar-nav navbar-right header-login-signup">
+
+           
+            <li>
+              <a href="accounts/signup/index.html">Register</a>
+            </li>
+           
+            <li>
+                 
+                  <a id="signin-button" class="btn"
+                      data-toggle="modal"
+                      data-remote="/accounts/login/ #form-content"
+                      data-target="#dialog-modal">Sign in
+                  </a>
+            </li>
+           
+            
+
+            </ul>
+             </div>
+      </div>
+    </nav>
+
+
+  
+  
+  
+
+
+    <input required="required" form="save-query-form" name="query" type="hidden" id="id_query" value=" " class="search-query-input form-control">
+
+    <div class="search-box">
+      <form id="estate-search-form" action="index.html" method="GET">
+        <div class="row">
+          <div class="col-md-1 hidden-sm hidden-xs search-label">
+            Search
+          </div>
+
+          <div class="col-sm-3" id="search-bar">
+            <div class="input-group">
+              <input class="form-control search-text-field" id="id_search_terms" maxlength="100" name="search_terms" placeholder="Search by keywords" type="text" />
+              <div class="input-group-btn">
+                <button id="search-button" type="submit" class="btn btn-default" tabindex="-1">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-5">
+            <div class="range-input-container">
+              <span class="label">Price</span>
+              <div class="row range-input">
+                <div class="col-xs-6">
+                  <input type="text" class="form-control min-range" placeholder="min value" />
+                </div>
+                <div class="col-xs-6">
+                  <input type="text" class="form-control max-range" placeholder="max value" />
+                </div>
+              </div>         
+              <span class="unit" style="right:13px;">$</span>
+            </div>
+          
+            <div class="range-input-container">
+              <span class="label">SQFT</span>
+              <div class="row range-input">
+                <div class="col-xs-6">
+                  <input type="text" class="form-control min-range" placeholder="min value" />
+                </div>
+                <div class="col-xs-6">
+                  <input type="text" class="form-control max-range" placeholder="max value" />
+                </div>
+              </div>         
+              <span class="unit">sq</span>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="row">
+              <div class="col-xs-6 hidden-xs">
+                <div class="dropdown">
+                  <a class="advance-option" id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                    Advance
+                    <span class="caret"></span>
+                  </a>
+
+                  <div class="dropdown-menu advance-option-menu" role="menu" aria-labelledby="dLabel">
+                    <div class="row">
+                      <div class="col-xs-4" style="width:315px">
+                        <span class="un-select" id="amenities-uncheck">Deselect All</span>
+                        <h4>Amenities</h4>
+
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <input type="checkbox" id="floor" class="amenity-check" checked />
+                            <label for="floor">Flooring & Tilling</label>
+
+                            <br />
+
+                            <input type="checkbox" id="ac" class="amenity-check" checked />
+                            <label for="ac">AC</label>
+
+                            <br />
+
+                            <input type="checkbox" class="amenity-check" id="fridge" />
+                            <label for="fridge">Fridge</label>
+
+                            <br />
+
+                            <input type="checkbox" class="amenity-check" id="doors" />
+                            <label for="doors">Wooden Doors</label>
+                          </div>
+                          <div class="col-xs-6">
+                            <input type="checkbox" class="amenity-check" id="machine" />
+                            <label for="machine">Washing Machine</label>
+
+                            <br />
+
+                            <input type="checkbox" class="amenity-check" id="lift" checked />
+                            <label for="lift">Lift</label> 
+
+                            <br />
+
+                            <input type="checkbox" class="amenity-check" id="dinning" checked />
+                            <label for="dinning">Dinning Table</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-4 border-right-left" style="width:290px">
+                        <span class="un-select" id="features-uncheck">Deselect All</span>
+                        <h4>Features</h4>
+
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <input type="checkbox" id="f1" class="feature-check" checked />
+                            <label for="f1">Feature one</label>
+
+                            <br />
+
+                            <input type="checkbox" id="f2" class="feature-check" />
+                            <label for="f2">Second feature</label>
+
+                            <br />
+
+                            <input type="checkbox" id="f3" class="feature-check" />
+                            <label for="f3">Feature three</label>
+
+                            <br />
+
+                            <input type="checkbox" id="f4" class="feature-check" checked />
+                            <label for="f4">Forth feature</label>
+
+                            <br />
+
+                            <input type="checkbox" id="f5" class="feature-check" checked />
+                            <label for="f5">Feature five</label>
+                          </div>
+                          <div class="col-xs-6">
+                            <input type="checkbox" id="f6" class="feature-check" checked />
+                            <label for="f6">Feature six</label>
+
+                            <br />
+
+                            <input type="checkbox" id="f7" class="feature-check" checked />
+                            <label for="f7">Seven feature</label>
+
+                            <br />
+
+                            <input type="checkbox" id="f8" class="feature-check" checked />
+                            <label for="f8">Feature eight</label>
+
+                            <br />
+
+                            <input type="checkbox" id="f9" class="feature-check" />
+                            <label for="f9">Ninth feature</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-4" style="width:160px">
+                        <h4>Date Available</h4>
+                        <br />
+                        <input type="text" class="form-control datepicker" placeholder="Start date" />
+                        <input type="text" class="form-control datepicker" placeholder="End date" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <a href="#" class="advance-options">Advance <span class="caret"></span></a> -->
+              </div>
+              <div class="col-xs-12 col-sm-6 text-center">
+                <a class="find-btn">FIND</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+<!-- search -->
+  
+    <!-- Header Ends -->
+    <div class="container-fluid">
+      <div class="row">
+        <!-- RESULTS -->
+        <div class="col-md-3 homeResults">
+            <!-- listing head -->
+            <div class="listing-head clearfix">
+              <!-- pagination -->
+              <div class="listing-pager clearfix">
+                <ul>
+                  
+
+                  <li><div class="listing-pager-current">1/45</div></li>
+
+                  
+                  <li>
+                    <a class="arrow arrow-next"
+                       href="estate/index.html%3F&amp;page=2.html" >
+                    </a>
+                  </li>
+                  
+
+                </ul>
+              </div>
+               <!-- end pagination -->
+               <br /><br />
+               <!-- sort -->
+
+              <div class="sorting">
+                <ul class="clearfix">
+                  <li class="active"><a href="estate/index.html%3Fsort=-price&amp;&amp;&amp;page=1.html" class="fa">Price</a></li>
+                  <li><a href="estate/index.html%3Fsort=-area&amp;&amp;&amp;page=1.html" class="fa">Area</a></li>
+                </ul>
+              </div>
+
+              <ul class="nav nav-tabs custom-pills pull-right" role="tablist">
+                <li role="presentation" class="active"><a role="tab" data-toggle="tab"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Stared</a></li>
+                <li role="presentation" class="dropdown">
+                  <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents" aria-expanded="false">Saved <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+                    <li><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="false">Some option</a></li>
+                    <li class=""><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2" aria-expanded="false">Another option</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <!-- listing -->
+            <div id="listing">
+              <div class="listing-scroll">
+                  
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-754/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-754/index.html" slug="estate-754" latitude="49.2562" longitude="-123.1934">
+                          Estate 754
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 754
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$416.12</p>
+                      <p class="sqft">412sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4144/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4144">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1222/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1222/index.html" slug="estate-1222" latitude="49.2588" longitude="-123.1959">
+                          Estate 1222
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1222
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$422.24</p>
+                      <p class="sqft">406sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4612/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4612">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-522/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-522/index.html" slug="estate-522" latitude="49.2563" longitude="-123.1956">
+                          Estate 522
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 522
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$434.66</p>
+                      <p class="sqft">422sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3912/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3912">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-350/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-350/index.html" slug="estate-350" latitude="49.2551" longitude="-123.1987">
+                          Estate 350
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 350
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$466.26</p>
+                      <p class="sqft">409sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3740/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3740">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1982/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1982/index.html" slug="estate-1982" latitude="49.2585" longitude="-123.1916">
+                          Estate 1982
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1982
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$483.48</p>
+                      <p class="sqft">474sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/5372/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="5372">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-504/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-504/index.html" slug="estate-504" latitude="49.251" longitude="-123.1976">
+                          Estate 504
+                        </a>
+                      </h4>
+                      <p class="info">3 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 504
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$487.29</p>
+                      <p class="sqft">439sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3894/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3894">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-970/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-970/index.html" slug="estate-970" latitude="49.256" longitude="-123.1971">
+                          Estate 970
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 970
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$498.00</p>
+                      <p class="sqft">498sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4360/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4360">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1873/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1873/index.html" slug="estate-1873" latitude="49.2507" longitude="-123.1908">
+                          Estate 1873
+                        </a>
+                      </h4>
+                      <p class="info">0 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1873
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$505.44</p>
+                      <p class="sqft">468sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/5263/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="5263">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-102/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-102/index.html" slug="estate-102" latitude="49.2544" longitude="-123.1905">
+                          Estate 102
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 102
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$518.34</p>
+                      <p class="sqft">489sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3292/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3292">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-335/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-335/index.html" slug="estate-335" latitude="49.2532" longitude="-123.1969">
+                          Estate 335
+                        </a>
+                      </h4>
+                      <p class="info">2 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 335
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$559.68</p>
+                      <p class="sqft">528sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3725/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3725">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-656/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-656/index.html" slug="estate-656" latitude="49.259" longitude="-123.1907">
+                          Estate 656
+                        </a>
+                      </h4>
+                      <p class="info">3 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 656
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$568.14</p>
+                      <p class="sqft">557sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4046/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4046">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1477/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1477/index.html" slug="estate-1477" latitude="49.2562" longitude="-123.1969">
+                          Estate 1477
+                        </a>
+                      </h4>
+                      <p class="info">0 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1477
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$572.67</p>
+                      <p class="sqft">567sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4867/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4867">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1786/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1786/index.html" slug="estate-1786" latitude="49.2533" longitude="-123.1924">
+                          Estate 1786
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1786
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$573.30</p>
+                      <p class="sqft">455sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/5176/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="5176">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-961/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-961/index.html" slug="estate-961" latitude="49.2524" longitude="-123.1951">
+                          Estate 961
+                        </a>
+                      </h4>
+                      <p class="info">0 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 961
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$574.26</p>
+                      <p class="sqft">563sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4351/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4351">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-148-2/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-148-2/index.html" slug="estate-148-2" latitude="49.2547" longitude="-123.1951">
+                          Estate 148
+                        </a>
+                      </h4>
+                      <p class="info">3 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 148
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$578.79</p>
+                      <p class="sqft">531sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3538/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3538">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1352/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1352/index.html" slug="estate-1352" latitude="49.2532" longitude="-123.1927">
+                          Estate 1352
+                        </a>
+                      </h4>
+                      <p class="info">3 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1352
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$586.60</p>
+                      <p class="sqft">419sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4742/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4742">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-290/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-290/index.html" slug="estate-290" latitude="49.2599" longitude="-123.1966">
+                          Estate 290
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 290
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$591.15</p>
+                      <p class="sqft">563sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3680/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3680">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1846/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1846/index.html" slug="estate-1846" latitude="49.2519" longitude="-123.1952">
+                          Estate 1846
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1846
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$592.80</p>
+                      <p class="sqft">520sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/5236/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="5236">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-531/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-531/index.html" slug="estate-531" latitude="49.25" longitude="-123.197">
+                          Estate 531
+                        </a>
+                      </h4>
+                      <p class="info">2 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 531
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$601.60</p>
+                      <p class="sqft">470sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3921/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3921">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-683/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-683/index.html" slug="estate-683" latitude="49.2526" longitude="-123.1989">
+                          Estate 683
+                        </a>
+                      </h4>
+                      <p class="info">2 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 683
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$615.60</p>
+                      <p class="sqft">570sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4073/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4073">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1768/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1768/index.html" slug="estate-1768" latitude="49.2571" longitude="-123.1921">
+                          Estate 1768
+                        </a>
+                      </h4>
+                      <p class="info">3 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1768
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$634.92</p>
+                      <p class="sqft">407sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/5158/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="5158">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1654/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1654/index.html" slug="estate-1654" latitude="49.2504" longitude="-123.1937">
+                          Estate 1654
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1654
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$641.48</p>
+                      <p class="sqft">553sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/5044/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="5044">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-975/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-975/index.html" slug="estate-975" latitude="49.2588" longitude="-123.1974">
+                          Estate 975
+                        </a>
+                      </h4>
+                      <p class="info">2 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 975
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$645.46</p>
+                      <p class="sqft">547sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4365/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4365">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-703/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-703/index.html" slug="estate-703" latitude="49.2511" longitude="-123.1988">
+                          Estate 703
+                        </a>
+                      </h4>
+                      <p class="info">2 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 703
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$646.60</p>
+                      <p class="sqft">610sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4093/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4093">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-27/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-27/index.html" slug="estate-27" latitude="49.2562" longitude="-123.192">
+                          Estate 27
+                        </a>
+                      </h4>
+                      <p class="info">2 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 27
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$648.00</p>
+                      <p class="sqft">480sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3217/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3217">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1610/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1610/index.html" slug="estate-1610" latitude="49.2589" longitude="-123.1925">
+                          Estate 1610
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1610
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$657.20</p>
+                      <p class="sqft">424sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/5000/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="5000">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-402/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-402/index.html" slug="estate-402" latitude="49.2542" longitude="-123.1986">
+                          Estate 402
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 402
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$658.00</p>
+                      <p class="sqft">470sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3792/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3792">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-181/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-181/index.html" slug="estate-181" latitude="49.2588" longitude="-123.192">
+                          Estate 181
+                        </a>
+                      </h4>
+                      <p class="info">0 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 181
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$658.86</p>
+                      <p class="sqft">474sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3371/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3371">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-880/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-880/index.html" slug="estate-880" latitude="49.2532" longitude="-123.1936">
+                          Estate 880
+                        </a>
+                      </h4>
+                      <p class="info">3 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 880
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$662.36</p>
+                      <p class="sqft">571sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4270/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4270">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-158/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-158/index.html" slug="estate-158" latitude="49.2514" longitude="-123.1972">
+                          Estate 158
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 158
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$664.40</p>
+                      <p class="sqft">604sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3348/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3348">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1853/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1853/index.html" slug="estate-1853" latitude="49.2568" longitude="-123.1901">
+                          Estate 1853
+                        </a>
+                      </h4>
+                      <p class="info">0 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1853
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$667.80</p>
+                      <p class="sqft">630sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/5243/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="5243">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1944/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1944/index.html" slug="estate-1944" latitude="49.2555" longitude="-123.1954">
+                          Estate 1944
+                        </a>
+                      </h4>
+                      <p class="info">3 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1944
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$670.32</p>
+                      <p class="sqft">504sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/5334/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="5334">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-971/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-971/index.html" slug="estate-971" latitude="49.2517" longitude="-123.1935">
+                          Estate 971
+                        </a>
+                      </h4>
+                      <p class="info">2 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 971
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$675.27</p>
+                      <p class="sqft">549sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4361/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4361">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-435/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-435/index.html" slug="estate-435" latitude="49.2558" longitude="-123.1994">
+                          Estate 435
+                        </a>
+                      </h4>
+                      <p class="info">2 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 435
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$676.50</p>
+                      <p class="sqft">451sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3825/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3825">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1337/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1337/index.html" slug="estate-1337" latitude="49.2553" longitude="-123.1955">
+                          Estate 1337
+                        </a>
+                      </h4>
+                      <p class="info">0 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1337
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$679.46</p>
+                      <p class="sqft">641sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4727/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4727">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1315/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1315/index.html" slug="estate-1315" latitude="49.2592" longitude="-123.194">
+                          Estate 1315
+                        </a>
+                      </h4>
+                      <p class="info">2 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1315
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$680.40</p>
+                      <p class="sqft">540sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4705/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4705">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-50-2/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-50-2/index.html" slug="estate-50-2" latitude="49.2571" longitude="-123.1914">
+                          Estate 50
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 50
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$685.86</p>
+                      <p class="sqft">497sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3440/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3440">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-162/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-162/index.html" slug="estate-162" latitude="49.2595" longitude="-123.1985">
+                          Estate 162
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 162
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$696.60</p>
+                      <p class="sqft">430sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3352/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3352">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-26-2/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-26-2/index.html" slug="estate-26-2" latitude="49.2574" longitude="-123.1965">
+                          Estate 26
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 26
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$725.00</p>
+                      <p class="sqft">725sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3416/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3416">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-197/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-197/index.html" slug="estate-197" latitude="49.2506" longitude="-123.1964">
+                          Estate 197
+                        </a>
+                      </h4>
+                      <p class="info">0 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 197
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$725.90</p>
+                      <p class="sqft">610sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3387/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3387">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1895/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1895/index.html" slug="estate-1895" latitude="49.2538" longitude="-123.1946">
+                          Estate 1895
+                        </a>
+                      </h4>
+                      <p class="info">2 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1895
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$726.45</p>
+                      <p class="sqft">501sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/5285/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="5285">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-458/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-458/index.html" slug="estate-458" latitude="49.2571" longitude="-123.1987">
+                          Estate 458
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 458
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$735.54</p>
+                      <p class="sqft">598sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3848/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3848">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-992/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-992/index.html" slug="estate-992" latitude="49.257" longitude="-123.1929">
+                          Estate 992
+                        </a>
+                      </h4>
+                      <p class="info">3 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 992
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$741.24</p>
+                      <p class="sqft">522sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4382/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4382">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-863/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-863/index.html" slug="estate-863" latitude="49.2526" longitude="-123.1918">
+                          Estate 863
+                        </a>
+                      </h4>
+                      <p class="info">2 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 863
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$741.66</p>
+                      <p class="sqft">526sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4253/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4253">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1126/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1126/index.html" slug="estate-1126" latitude="49.2527" longitude="-123.194">
+                          Estate 1126
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1126
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$758.13</p>
+                      <p class="sqft">683sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4516/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4516">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-299/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-299/index.html" slug="estate-299" latitude="49.253" longitude="-123.1968">
+                          Estate 299
+                        </a>
+                      </h4>
+                      <p class="info">2 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 299
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$759.72</p>
+                      <p class="sqft">487sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3689/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3689">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1553/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1553/index.html" slug="estate-1553" latitude="49.2558" longitude="-123.1987">
+                          Estate 1553
+                        </a>
+                      </h4>
+                      <p class="info">0 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1553
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$764.10</p>
+                      <p class="sqft">566sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4943/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4943">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-899/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-899/index.html" slug="estate-899" latitude="49.2585" longitude="-123.1952">
+                          Estate 899
+                        </a>
+                      </h4>
+                      <p class="info">2 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 899
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$768.80</p>
+                      <p class="sqft">496sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/4289/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="4289">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-1780/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-1780/index.html" slug="estate-1780" latitude="49.2586" longitude="-123.1921">
+                          Estate 1780
+                        </a>
+                      </h4>
+                      <p class="info">3 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 1780
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$781.41</p>
+                      <p class="sqft">427sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/5170/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="5170">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+
+                 <div class="list-item">
+                  <div class="row">
+                    <div class="col-xs-4 no-padding-right">
+
+                       <a href="estate/estate-22/index.html">
+                        
+                        <img src="static/images/sample-img.png" class="img-thumbnail item-img" />
+                        
+                      </a>
+                    </div>
+                    <div class="col-xs-5 no-padding-right">
+                      <h4>
+                         <a class="estate-instance" href="estate/estate-22/index.html" slug="estate-22" latitude="49.2529" longitude="-123.1993">
+                          Estate 22
+                        </a>
+                      </h4>
+                      <p class="info">1 beds,  baths, 3 parking</p>
+                      <p class="description">
+                         Estate description 22
+                      </p>
+                    </div>
+                    <div class="col-xs-3">
+                      <p class="price">$782.04</p>
+                      <p class="sqft">686sq</p>
+                    </div>
+                  </div>
+                   <div class="list-item-action">
+                    <form class="bookmark-form" action="http://localhost:8000/estate/bookmark/create/3212/" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='tc2R4i9qj1wasvFCKyEwBqfvwhxk3zwM' />
+                      <a class="bookmark "
+                         href="javascript:void(0);"
+                         data-id="3212">
+                        <span class="fav fa fa-star fa-lg "></span>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+
+    
+                
+              </div>
+            </div>
+        </div>
+
+        <!-- MAP -->
+        <div class="col-md-9 homeMap">
+          <div id="map-canvas"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="infowindows">
+      
+      <div class="marker-popover-container infowindow" slug="estate-754">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-754/index.html">
+              Estate 754
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1222">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1222/index.html">
+              Estate 1222
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-522">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-522/index.html">
+              Estate 522
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-350">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-350/index.html">
+              Estate 350
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1982">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1982/index.html">
+              Estate 1982
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-504">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-504/index.html">
+              Estate 504
+            </a></h4>
+            <p class="info">3 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-970">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-970/index.html">
+              Estate 970
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1873">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1873/index.html">
+              Estate 1873
+            </a></h4>
+            <p class="info">0 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-102">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-102/index.html">
+              Estate 102
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-335">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-335/index.html">
+              Estate 335
+            </a></h4>
+            <p class="info">2 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-656">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-656/index.html">
+              Estate 656
+            </a></h4>
+            <p class="info">3 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1477">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1477/index.html">
+              Estate 1477
+            </a></h4>
+            <p class="info">0 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1786">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1786/index.html">
+              Estate 1786
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-961">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-961/index.html">
+              Estate 961
+            </a></h4>
+            <p class="info">0 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-148-2">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-148-2/index.html">
+              Estate 148
+            </a></h4>
+            <p class="info">3 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1352">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1352/index.html">
+              Estate 1352
+            </a></h4>
+            <p class="info">3 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-290">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-290/index.html">
+              Estate 290
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1846">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1846/index.html">
+              Estate 1846
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-531">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-531/index.html">
+              Estate 531
+            </a></h4>
+            <p class="info">2 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-683">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-683/index.html">
+              Estate 683
+            </a></h4>
+            <p class="info">2 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1768">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1768/index.html">
+              Estate 1768
+            </a></h4>
+            <p class="info">3 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1654">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1654/index.html">
+              Estate 1654
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-975">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-975/index.html">
+              Estate 975
+            </a></h4>
+            <p class="info">2 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-703">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-703/index.html">
+              Estate 703
+            </a></h4>
+            <p class="info">2 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-27">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-27/index.html">
+              Estate 27
+            </a></h4>
+            <p class="info">2 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1610">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1610/index.html">
+              Estate 1610
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-402">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-402/index.html">
+              Estate 402
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-181">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-181/index.html">
+              Estate 181
+            </a></h4>
+            <p class="info">0 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-880">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-880/index.html">
+              Estate 880
+            </a></h4>
+            <p class="info">3 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-158">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-158/index.html">
+              Estate 158
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1853">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1853/index.html">
+              Estate 1853
+            </a></h4>
+            <p class="info">0 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1944">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1944/index.html">
+              Estate 1944
+            </a></h4>
+            <p class="info">3 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-971">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-971/index.html">
+              Estate 971
+            </a></h4>
+            <p class="info">2 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-435">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-435/index.html">
+              Estate 435
+            </a></h4>
+            <p class="info">2 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1337">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1337/index.html">
+              Estate 1337
+            </a></h4>
+            <p class="info">0 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1315">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1315/index.html">
+              Estate 1315
+            </a></h4>
+            <p class="info">2 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-50-2">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-50-2/index.html">
+              Estate 50
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-162">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-162/index.html">
+              Estate 162
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-26-2">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-26-2/index.html">
+              Estate 26
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-197">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-197/index.html">
+              Estate 197
+            </a></h4>
+            <p class="info">0 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1895">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1895/index.html">
+              Estate 1895
+            </a></h4>
+            <p class="info">2 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-458">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-458/index.html">
+              Estate 458
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-992">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-992/index.html">
+              Estate 992
+            </a></h4>
+            <p class="info">3 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-863">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-863/index.html">
+              Estate 863
+            </a></h4>
+            <p class="info">2 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1126">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1126/index.html">
+              Estate 1126
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-299">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-299/index.html">
+              Estate 299
+            </a></h4>
+            <p class="info">2 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1553">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1553/index.html">
+              Estate 1553
+            </a></h4>
+            <p class="info">0 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-899">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-899/index.html">
+              Estate 899
+            </a></h4>
+            <p class="info">2 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-1780">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-1780/index.html">
+              Estate 1780
+            </a></h4>
+            <p class="info">3 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="marker-popover-container infowindow" slug="estate-22">
+        <div class="marker-popover">
+          
+          <img src="static/images/sample-img.png" height=96 width=170 class="img-thumbnail item-img" />
+          
+
+          <div class="detail">
+            <h4><a href="estate/estate-22/index.html">
+              Estate 22
+            </a></h4>
+            <p class="info">1 beds,  baths, 3 parking</p>
+            <a>More &raquo;</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+
+         <!-- Modal -->
+<div class="modal fade" id="save-search-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-5 hidden-xs">
+            <div class="media">
+              <a class="pull-left" href="index.html#">
+                <img class="media-object" src="http://localhost:8000/static/images/footer-logo.png" alt="...">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">About</h4>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-7">
+
+            <div class="row">
+              <div class="col-xs-4 col-sm-3">
+                <h4>Site Map</h4>
+                <a href="index.html">Home</a><br />
+                <a href="index.html#">Renter</a><br />
+                <a href="index.html#">Landlords</a>
+              </div>
+
+              <div class="col-xs-4 col-sm-3">
+                <h4>&nbsp;</h4>
+                <a href="index.html">Post</a><br />
+                <a href="index.html#">Register</a><br />
+                <a href="index.html#">Sign Up</a>
+              </div>
+
+              <div class="col-xs-4 col-sm-3">
+                <h4>Help & Support</h4>
+                <a href="index.html">Support</a><br />
+                <a href="index.html#">Help</a><br />
+                <a href="index.html#">FAQs</a>
+              </div>
+
+              <div class="col-xs-12 col-sm-3">
+                <h4 class="hidden-xs">Social</h4>
+                <div class="social-links">
+                <a href="index.html#" class="social-roll facebook"></a>
+                <a href="index.html#" class="social-roll twitter"></a>
+                <a href="index.html#" class="social-roll pinterest"></a>
+                <a href="index.html#" class="social-roll linkedin"></a>
+                <a href="index.html#" class="social-roll youtube"></a>
+                <a href="index.html#" class="social-roll atom"></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <hr />
+        <p>
+          <span>Terms of Use &nbsp;&nbsp;&nbsp; Privacy Policy &nbsp;&nbsp;&nbsp; Copyright</span><br class="visible-xs" />
+          Copyright © 2013 Smoovely inc. All rights reserved
+        </p>
+      </div>
+    </div>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="static/js/jquery-1.11.0.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      function submitForm(ev) {
+          var form = $(this).parents('form:first');
+          ev.preventDefault();
+          $.ajax({
+              url: form.attr('action'),
+              type: 'POST',
+              data: form.serialize(),
+              success: function(data) {
+                  var $d = $("<div/>").append(data);
+                  var contentFound = $d.find("#form-content");
+                  if (contentFound.html()) {
+                      $(".modal-content").html($d.find("#form-content"));
+                  } else {
+                      if (data.location != undefined && data.location.length != 0 && data.location != '/') {
+                          console.log(data.location);
+                          location.pathname = data.location;
+                      }
+                      else {
+                          location.reload()
+                      }
+                  }
+              },
+              error: function(data) {
+                  var responseHtml = data.responseJSON.html;
+                  var $d = $("<div/>").append(responseHtml);
+                  var contentFound = $d.find("#form-content");
+                  if (contentFound.html()) {
+                      $(".modal-content").html($d.find("#form-content"));
+                  }
+              }
+          });
+      }
+
+
+      $(document).ready(function() {
+          $('#dialog-modal').on('click', '#submit-btn', submitForm);
+          
+      });
+
+      $(document).ready(function() {
+        $(document).on('click', '.dropdown-menu.advance-option-menu', function (e) {
+          e.stopPropagation();
+        });
+
+        $('#amenities-uncheck').click(function () {
+          $('.amenity-check').attr('checked', false);
+        });
+
+        $('#features-uncheck').click(function () {
+          $('.feature-check').attr('checked', false);
+        });
+
+        $('.datepicker').datepicker()
+        .on('changeDate', function(ev){
+            $(this).datepicker('hide');
+        });
+
+      });
+
+    </script>
+    
+<script src="static/js/bootstrap-slider.min.js"></script>
+<script src="static/js/bootstrap-select.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="static/js/bootbox.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="static/js/common.js"></script>
+<script type="text/javascript" src="static/js/bookmark.js"></script>
+<script type="text/javascript" src="static/js/estate-list.js"></script>
+<script src="static/js/bootstrap-datepicker.js"></script>
+
+
+     <!-- Modal -->
+    <div class="modal fade" id="dialog-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+
+        <div class="modal-content">
+
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Respond.me</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<!-- bxSlider CSS file -->
+	<link href="css/jquery.bxslider.css" rel="stylesheet" />
+	<link href="css/chat-box.css" rel="stylesheet" />
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+	
+	<!-- jQuery library (served from Google) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<script src="js/jquery.customSelect.min.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('select.language-select').customSelect();
+			
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.we-banner').css({ opacity: 1});
+			
+			$('.respond-chat').click(function() { 
+				$( ".respond-box" ).slideToggle("fast");
+				$( ".chat-box" ).slideToggle("fast");
+
+			});
+			
+			$('.chat-minimize').click(function() { 
+				$( ".respond-box" ).slideToggle("fast");
+				$( ".chat-box" ).slideToggle("fast");
+			});
+			
+			$('.start-chat').click(function() { 
+				$( ".chat-form1" ).hide();
+				$( ".chat-form2" ).show();
+			});
+			
+		});
+	</script>
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+		<div id="header">
+			<div class="container">
+				<a href="" class="logo"><img src="img/logo.png" alt="respond.me" /></a>
+
+				<ul class="nav">
+					<li><a href="">Home</a><span class="nav-arrow"></span></li>
+					<li><a href="#">Pricing</a><span class="nav-arrow"></span></li>
+					<li><a href="#">Features</a><span class="nav-arrow"></span></li>
+					<li class="faq"><a href="#">FAQ</a><span class="nav-arrow"></span></li>
+					<li><a href="#">About</a><span class="nav-arrow"></span></li>
+					<li><a href="#">Contact Us</a><span class="nav-arrow"></span></li>
+				</ul>
+
+				<div class="header-sidebar">
+					<p>Country / Language
+					   <span class="sel-arrow open-sel"></span>
+						<select class="sel-bx language-select">
+							<option><span>US</span></option>
+							<option><span>US</span></option>
+							<option><span>US</span></option>
+							<option><span>US</span></option>
+						</select>
+					</p>
+					
+					<div class="header-buttons">
+						<a class="btn sign-up" href="#"><img src="img/tick.png" alt="" /> <span>Sign Up</span></a>
+						<a class="btn log-in" href="#"><img src="img/lock.png" alt="" /> <span>Log In</span></a>
+					</div>
+					
+				</div>
+			</div>
+		</div><!-- end header -->
+		
+		<div id="main">
+			<div class="container">
+				<div class="privacy-page">
+					<div class="sixteen columns">
+						<h2 class="page-title pt2">Terms</h2>
+					</div>
+					
+					<div class="sixteen columns">
+						<h3 class="bordered-heading">1. Terms and conditions acceptance</h3>
+						<p>
+							1.1. Chattero, Inc. renders 'Chatero' services via the following Internet website <a href="http://www.Chatteroinc.com/" target="_blank">http://www.Chatteroinc.com/</a>
+							on principles set out in this terms and conditions document.
+						</p>
+						<p>1.2. By accepting these terms and conditions, the user confirms to have read, understood and accepted its contents.</p>
+						<p>1.3. Accepting these terms and conditions is a condition to use products and services provided by Chattero, Inc.</p>
+						<p>1.4. All users are obliged to observe these terms and conditions.</p>
+						<p>
+							1.5. Chattero, Inc. reserves the right to modify the provisions of these terms and conditions without each time notifying the user of the imple- mented
+							modifications. The user may at any time familiarize himself with the currently effective privacy policy version on our Internet website <a href="http://www.Chatteroinc.com/">http://www.Chatteroinc.com/</a>.
+						</p>
+						<p>
+							1.6. Further use of products and rendered services after additional modifications in the terms and conditions have been implemented, shall constitute the consent to accept these modifications. Refusal to accept
+							these modifications shall preclude the user from using the offered products and services.
+						</p>
+						
+						<h3 class="bordered-heading">2. Services description</h3>
+						<p>
+							2.1. All software, used by users in accordance with its application and purpose defined in these terms and conditions, available on the following website <a href="http://www.Chatteroinc.com/">http://www.Chatteroinc.com/</a> and provided
+							by Chattero, Inc. shall be deemed as service or product.
+						</p>
+						<p>
+							2.2. The use of any new services and products available on aforementioned website, after the user has accepted the terms and conditions shall be subject to its provisions.
+						</p>
+						<p>2.3. Chattero, Inc. is exclusively entitled to decide on functionality, the use, subject matter and the range of particular services and products as well as to cease rendering 
+						these services.</p>
+						<p>2.4. Chattero, Inc. is exclusively authorized to decide on the contents and the nature of the software as well as to freely add, change or remove par- ticular elements.</p>
+						
+						<h3 class="bordered-heading">3. Access and the use of services</h3>
+						<p>
+							3.1. Chattero, Inc. services and products are exclusively designated for business use and must be used only in accordance with their purpose, appli- cation and their general characteristics. 
+						</p>
+						<p>3.2. Chattero, Inc. services and products can be accessed solely by logging on particular website.</p>
+						<p>3.3. Every user is assigned a particular password and login which must not be used by third parties without the user's content. The user is respon- sible for keeping and proper security
+						for his password and login.</p>
+						<p>3.4. The user must be at least 13 years of age to be able to register and to access his or her Chattero account.</p>
+						<p>3.5. The user undertakes to use the services and products in accordance with their use, purpose and in the manner consistent with both these terms and conditions and provisions of currently
+						effective law.</p>
+						<p>3.6. The user bears full responsibility for all contents, phrases and entries added to the network in connection with the use of offered services and products.</p>
+						<p>3.7. The user understands, has become familiar with technical requirements necessary to use the services and products and has no objections in respect thereof. The use is aware of risk and threats 
+						connected with electronic data transmission.</p>
+						<p>3.8. Chattero, Inc. reserves the right to access individual users' accounts for the technical and administrative purposes and for security reasons. The obtained information in such a manner shall not be processed
+						or made available to third parties unless required by provisions of law.</p>
+						
+						<h3 class="bordered-heading">4. Trademarks and copyright</h3>
+						<p>
+							4.1. "Chattero" is a trademark owned by Chattero Software SA, registered in United States Patent and Trademark Office and is therefore subject to national as well as international protection.
+						</p>
+						<p>
+							4.2. The Chattero, Inc. service provider states that it has rights to intangible assets in the form of a graphic project of offered services and software, website layout, computer software as well as to all company
+							signs, symbols and trademarks used within its scope of business activity. These assets are protected respectively by: an act dated 4th February 1994- Copyright and Neighboring Rights; an act dated 16 April 1993- Combating
+							of Unfair Competition; an act dated 30th June 2000-Industrial Property Rights; European Union Law and other binding international agreements.
+						</p>
+						<p>4.3. All services and products offered by Chatter, Inc., which constitute specific works, are its exclusive property and are covered by an act on copy- right and neighboring rights</p>
+						<p>4.4. Website addresses as well as their contents and layouts are protected by the aforesaid acts.</p>
+						<p>4.5. Prior written consent of Chattero, Inc. is required for any not permitted business and non-business use of offered services and products. Such consent is required in particular when disseminating and publicizing 
+							particular elements(e.g. photos, films, texts) in other Internet services, printed publications, books, multimedia presentations and in other electronic media as well as for the disposal or use of its work 
+							(adaptations, alterations, modifications)
+						</p>
+						<p>
+							4.6. Unauthorized lending, sale, granting of further licenses and sublicenses to the offered products and services by the user without express consent of Chattero, Inc. is prohibited. Such acts are not deemed to be the proper use of services.
+						</p>
+						<p>
+							4.7. The user must not modify or change the purpose and use of offered services and products. Misleading others as to the existence of cooperation, association, relationship or acting on behalf of Chattero, Inc. is prohibited.
+						</p>
+						
+						<h3 class="bordered-heading">5. Payments</h3>
+						<p>
+							5.1. The use of offered services available on <a href="htttp://www.Chatteroinc.com/">http://www.Chatteroinc.com/</a> is free of charge for the first 30 days.
+						</p>
+						<p>
+							5.2. After that period if the user wishes to continue using our services he will be requested to make a payment according to currently effective price list.
+						</p>
+						<p>
+							5.3. All payments shall be non-cash transactions, conducted electronically by external professional entities.
+						</p>
+						<p>
+							5.4. Default in payment according to currently effective price list means resignation from the provided services.
+						</p>
+						<p>
+							5.5 The receipts for all payments will be provided electronically and stored in the product as PDF files.
+						</p>
+						<p>
+							5.6. The user shall be given a 14 day period notice of all changes in the price list.
+						</p>
+						
+						<h3 class="bordered-heading">6. Refund Policy</h3>
+						<p>
+							6.1. Regardless of the billing cycle, we provide no refunds or credits for unused time of the service or plan downgrades if you decide to
+							close your account before the end of your subscription period.
+						</p>
+						<p>
+							6.2. There will be no exceptions in order to treat all users equally and to keep our administrative costs low for the ultimate benefit of our customers.
+						</p>
+						<p>
+							6.3. Details for trial license, paid subscription and canceling license are described on the refund policy page.
+						</p>
+						
+						<h3 class="bordered-heading">7. Account closing</h3>
+						<p>
+							7.1. The user may close his account at any time. Account closing means that the further use of services with the use of current password and login shall no longer be possible.
+						</p>
+						<p>
+							7.2. The user is responsible for closing his account.
+						</p>
+						<p>
+							7.3. Closing the account by the user before the end of settling period for which a payment has been made does not obligate Chattero, Inc. to refund the amount for the unused period. 
+						</p>
+						<p>
+							7.4. Chattero, Inc. reserves the right to close user's account due to gross infringement of the provisions of these terms and conditions or in the event of illegal use of the 
+							offered services.
+						</p>
+						<p>
+							7.5. Chattero, Inc. shall not be liable for damage suffered by the user arisen due to the suspension or closing the account by the user or for other reasons arising from the user's fault.
+						</p>
+						
+						<h3 class="bordered-heading">8. Guarantee and limited liability</h3>
+						<p>
+							8.1. Chattero, Inc. guarantees the highest quality of its operations to ensure accessibility and continuity of offered services and products in accordance with their use and purpose. No long distance data transmission,
+							however, guarantees 100% security, continuity and accessibility of the provided services.
+						</p>
+						<p>
+							8.2. Chattero, Inc. does not guarantee compatibility of offered services and products with other producers' software. The user shall bear responsibility for the choice and consequences following from the use of other software
+							including its applicability to user's objectives.
+						</p>
+						<p>
+							8.3. Chattero, Inc. stipulates that opinions given by users who do not reflect in any possible manner its views and opinions. Chattero, Inc. does not monitor or control users' opinions on a continual basis; if however, any opinions
+							in breach with these terms and conditions should be revealed efforts shall be immediately made to remove them as soon as possible.
+						</p>
+						<p>
+							8.4. Chattero, Inc. shall bear no liability in particular for:
+								<ul class="liabilities-list">
+									<li>a) All negative consequences being the result of force majeure,</li>
+									<li>b) Phrases and entries added to the network in connection with the use of offered services and products,</li>
+									<li>c) Unlawful and inconsistent with these terms and conditions users' operations while using offered services and products,</li>
+									<li>d) Disturbances in accessibility of offered products and services not caused by Chattero, Inc.,</li>
+									<li>e) Damage suffered by the user arisen due to the suspension or closing the account by the user or for other reasons arising from the user's fault,</li>
+									<li>f) Damage suffered by the user as a result of a third party using his data that enable him to access the provided services and products,</li>
+									<li>g) Damage following from the use or the impossibility to use offered products and services including damage actually suffered, the loss of expected benefits, data loss, damage or computer crash,
+									the costs of substitute equipment and software, shut-down, company reputation infringement,</li>
+									<li>h) Consequences of failure to perform or improper performance of obligations undertaken by other users even though such an obligation has been undertaken using offered products and services.</li>
+								</ul>
+						</p>
+						
+						<h3 class="bordered-heading">9. Privacy policy</h3>
+						<p>
+							Principles of user privacy protection including personal data protection have been described in a separate <a href="#">Privacy Policy</a>.
+						</p>
+						
+						<h3 class="bordered-heading">10. Final provisions</h3>
+						<p>
+							All disputes arising in connection with these terms and conditions shall be primarily resolved amicably.<br />
+							All disputes that cannot be amicably resolved shall be submitted for resolution by Common Court of Law at the location of Chattero, Inc. registered office.
+							<br /> The provisions of Civil Code, the act on copyright and neighboring rights, an act on electronic services providing and other provisions of effective law shall be 
+							applicable in issues not governed by these terms and conditions.
+						</p>
+						
+					</div>
+				
+					
+				</div><!-- end about-page -->
+				
+			</div><!-- end container -->						
+		</div><!-- end main -->
+		
+		<div id="footer">
+			<div class="container">
+				<div class="column footer-left">
+					<ul class="footer-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Terms</a></li>
+						<li><a href="#">Features</a></li>
+						<li><a href="#">Privacy</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Pricing</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li class="last"><a href="#">About</a></li>
+					</ul>
+					<p class="footer-logo"><a href=""><img src="img/footer-logo.png" alt="Respond.me" /></a></p>
+					<p class="follow-us">
+						Follow us:
+						<a href="#"><img src="img/like-btn.png" alt="Like us on Facebook" /></a>
+						<a href="#"><img src="img/tweet-btn.png" alt="Tweet us on Twitter" /></a>
+						<a href="#"><img src="img/gplus-btn.png" alt="Share this on Google Plus" /></a>
+					</p>
+					
+					<p class="copyright">&copy; Copyright 2013 Respond.me LTD</p>
+				</div>
+				
+		<!-- START CHAT-BOX -->
+		<div id="resp-me">	
+			<div class="column footer-respond columns seven">
+					<div class="respond-box">
+						<img class="we-banner" src="img/we-banner.png" alt="We are here" />
+						<a class="respond-chat"><img src="img/respond-chat.png" alt="Click to talk to us" /></a>
+					</div>
+					
+					<div class="chat-box">
+						<div class="cb">
+						<div class="chat-top">
+							<img class="chat-logo" src="img/chat-logo.png" alt="" />
+							<a class="chat-minimize"><img src="img/minimize.png" alt="" /></a>
+						</div>
+						
+						<form class="chat-form1" method="post">
+								<div class="cf1">
+							<p class="welcome">
+								Welcome to our live chat! Please fill in the form below before
+								starting the chat.
+							</p>
+							
+							<p class="gray-bg">
+								<label for="name">Name:</label><br />
+								<input type="text" name="respond-name" value="" />
+								
+								<ul class="edit-list">
+									<li><a href="#"><img src="img/edit-icon.png" alt="" /></a></li>
+									<li><a href="#"><img src="img/edit-icon2.png" alt="" /></a></li>
+									<li><a href="#"><img src="img/delete-icon.png" alt="" /></a></li>
+								</ul>
+							</p>
+							<p>
+								<label for="name">Email:</label><br />
+								<input type="email" name="respond-email" value="" />
+								
+								
+							</p>
+							<p>
+								<a class="start-chat">Start the chat</a>
+							</p>	
+								</div>						
+						</form>
+						<form class="chat-form2">
+							<div class="support">
+								<p>
+								<span>Support Operator</span>
+								<strong>Michael Starr</strong>
+								<span class="operator-stars">
+									<img src="img/star.png" alt="" />
+									<img src="img/star.png" alt="" />
+									<img src="img/star.png" alt="" />
+									<img src="img/star-half.png" alt="" />
+									<img src="img/star-empty.png" alt="" />
+								</span>
+								</p>
+							</div>
+							<div class="chat-content">
+								<a href="#"><img class="message-icon" src="img/email-icon.png" alt="" /></a>
+								<div class="chat-user">
+									<img src="img/chat-avatar1.png" alt="" />
+									<h5>Michael Starr:</h5>
+									<p>Hi Tom, how can I help you today?</p>
+								</div>
+									<div class="cht-border"></div>
+								<div class="chat-user cu2">
+									<img src="img/chat-avatar2.png" alt="" />
+									<h5>Customer:</h5>
+									<p>Hi, do you have the ray ban sunglasses in more colors?</p>
+								</div>
+								
+							</div>
+							<div class="chat-submit">
+								<div class="cs">
+									<input type="text" name="message" value="" placeholder="Type your message..." />
+									<input type="submit" class="sub-btn" name="chat-submit" value="Submit" />
+								</div>
+							</div>
+								
+						</form>
+						</div>
+					</div><!-- end chat-box -->
+			</div><!-- end footer-respond -->
+		</div><!-- end resp-me -->
+			</div>
+		</div><!-- end footer -->
+
+
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

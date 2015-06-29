@@ -1,0 +1,391 @@
+
+
+/*===== HEADER STYLES =====*/
+.header {
+	border-bottom: 10px solid #92d04e;
+}
+.logo {
+	float: left;
+	padding-top: 18px;
+	padding-bottom: 12px;
+}
+.dv {
+	float: right;
+	position: relative;
+}
+.bl {
+	position: absolute;
+	bottom: 0;
+	right: 9px;
+	height: 10px;
+	border-right: 1px solid #ccc;
+}
+.search-input {
+	float: right;
+	border: 0 none;
+	border-bottom: 1px solid #ccc;
+	color: #666;
+	margin-top: 55px;
+	font-size: 13px;
+	background: url(../img/search-icon.png) 0% 50% no-repeat;
+	padding-left: 25px;
+	width: 224px;
+	padding-right: 5px;
+	margin-right: 10px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	padding-bottom: 3px;
+	color :#333;
+}
+
+.nav {
+	float: right;
+	margin-top: 38px;
+	margin-right: 20px;
+}
+	.nav ul li {
+		float: left;
+		list-style: none;
+		margin-right: 49px;
+	}
+		.nav ul li:last-child {margin-right: 0;}
+		.nav ul li a {
+			display: inline-block;
+			padding-top: 24px;
+			color: #666;
+			background-position: top center;
+			font-family: 'Droid Sans', sans-serif;
+			font-family: Helvetica;
+		}
+			.nav ul li a:hover,.nav ul li a:active, .nav ul li a:link {text-decoration: none;}
+		li.li-print a{background: url(../img/print-icon.png) no-repeat;}
+		li.li-help a{background: url(../img/help-icon.png) no-repeat;}
+		li.li-contact a{background: url(../img/contact-icon.png) no-repeat;}
+		li.li-logout a{background: url(../img/logout-icon.png) no-repeat;}
+
+#cm-wrap {position: absolute; margin: 0 auto; left: 0; right: 0;}		
+#claim-menu {
+	clear: both;
+	margin-top: 0px;
+	background: #92d050;
+	-webkit-box-shadow: 1px 1px 1px 1px #b0b0b0;
+	box-shadow: 1px 1px 0px 1px #b0b0b0;
+	padding-top: 25px;
+	display: none;
+}
+	#claim-btn {
+		margin-top: 0px;
+		display: inline-block;
+		width: 185px;
+		height: 35px;
+		background-color: #92d04e;
+		border-bottom-left-radius: 6px;
+		border-bottom-right-radius: 6px;
+		cursor: pointer;
+		float: right;
+		margin-right: 20px;
+		color :#FFF;
+		padding-left: 13px;
+		padding-top: 6px;
+		font-weight: bold;
+		font-family: 'Droid Sans', sans-serif;			
+		-webkit-box-shadow: 1px 1px 1px 1px #b0b0b0;
+		box-shadow: 1px 1px 0px 1px #b0b0b0;
+	}
+		.carrow1 {background: url(../img/claim-arrow.png) 90% 48% no-repeat; background-color: #92d04e;}
+		.carrow2 {background: url(../img/claim-arrow2.png) 90% 53% no-repeat; background-color: #92d04e;}
+			#claim-btn:hover, #claim-btn:active, #claim-btn:link {
+				text-decoration: none;
+			}
+	#claim-menu h2 {
+		font-family: 'Droid Sans', sans-serif;		
+		font-size: 15px;
+		color: #000;
+		text-shadow: 0px 0px 1px #FFFFFF;
+		font-weight: bold;
+		padding: 0; margin: 0;
+		padding-top: 2px;
+		margin-bottom: 15px;
+	}
+	.claim {
+		float: left;
+		margin-right: 25px;
+		margin-bottom: 20px;
+	}
+		#claim-menu ul {
+			margin-left: 0;
+			padding: 0;
+		}
+		#claim-menu ul li {
+			margin-bottom: 10px;
+			list-style: none;
+		}
+		#claim-menu ul li a {
+			color: #FFF;
+			font-family: 'Droid Sans', sans-serif;	
+			font-size: 13px;
+		}
+			
+	.claim1 {width: 155px;}
+	.claim2 {margin-top: 33px; margin-right: 50px;}
+	.claim3 {margin-top: 33px; width: 188px; margin-right: 34px;}
+	.claim4 {border-left: 1px solid #c9e8a8; width: 150px; padding-left: 16px;}
+	.claim5 {border-left: 1px solid #c9e8a8; width: 150px; padding-left: 16px;}
+	
+/*===== MAIN STYLES =====*/	
+#main {
+	clear: both;
+	background: url(../img/main-bg.png) repeat;
+	overflow: hidden;
+	
+}
+	.main-content {
+		background: #FFF;
+		margin-top: 80px;
+		box-shadow: 0px 0px 2px 2px #f1f1f1;
+		box-shadow: 0px 0px 2px 2px #f1f1f1;
+	}
+	.tabs {
+		padding-top: 45px;
+	}
+		.tmenu{
+			margin: 0;
+			padding: 0;
+			margin-left: 16px;
+		}
+			.tmenu li {	
+				float: left;
+				list-style: none;
+				margin-right: 2px;
+			}
+				.tmenu li a {
+					display: inline-block;
+					width: 148px;
+					height: 43px;
+					border-top-left-radius: 6px;
+					border-top-right-radius: 6px;
+					background: #669900;
+					color: #cccccc;
+					font-family: 'Droid Sans', sans-serif;	
+					text-align: center;
+					line-height: 43px;
+				}
+				.tmenu li.active a {
+					background: #92d04e;
+					color: #FFF;
+				}
+					.tmenu li a:hover, .tmenu li a:active, .tmenu a:link {text-decoration: none;}
+		.content {	
+			clear: both;
+		}
+		.insurance-menu {
+			background: #92d04e;
+			overflow: hidden;
+			padding-bottom: 17px;
+		}
+			.insurance-menu ul {
+				margin: 0; padding: 0;
+				padding-top: 12px;
+				float: left;
+				margin-left: 10px;
+			}
+				.insurance-menu ul li {
+					list-style: none;
+					float: left;
+					margin-left: 5px;
+				}
+				.insurance-menu ul li a {
+					display: inline-block;
+					float: left;
+					font-family: 'Droid Sans', sans-serif;	
+					font-size: 13px;
+					color: #FFF;
+					padding: 6px;
+					padding-left: 12px;
+					padding-right: 12px;
+				}
+					.insurance-menu ul li a:hover,.insurance-menu ul li a:active, .insurance-menu ul li a:link {text-decoration: none;}
+				.insurance-menu ul li.active a {
+					color: #333;
+					background: url(../img/im-bg.png) repeat-x;
+					-webkit-border-radius: 5px 5px 5px 5px;
+					border-radius: 5px 5px 5px 5px;
+					-webkit-box-shadow: 1px 1px 1px 1px #6d9c3a;
+					box-shadow: 0px 1px 0px 0px #6d9c3a;
+				}
+			.insurance-menu select {
+				float: right;
+				width: 205px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				padding-left: 10px;
+				padding-right: 5px;
+				margin-right: 20px;
+				margin-top: 15px;
+				border-radius: 4px;
+				border: 0 none;
+				-webkit-box-shadow: 1px 1px 1px 1px #6d9c3a;
+				box-shadow: 0px 1px 1px 0px #6d9c3a;
+				font-family: 'Droid Sans', sans-serif;	
+				font-size: 13px;
+				color: #999;
+			}
+		.insurance-head {
+			background: url(../img/insurance-head.png) repeat-x;
+			height: 74px;
+			float: left;
+			width: 100%;
+			border-left: 1px solid #cccccc;
+			border-right: 1px solid #cccccc;
+		}
+			.insurance-head h2 {
+				font-family: 'Raleway', sans-serif;
+				font-weight: bold;
+				font-size: 21px;
+				color: #333;
+				margin-left: 18px;
+				padding-top: 8px;
+			}
+		.grid-view {
+			clear: both;
+			border-left: 1px solid #cccccc;
+			border-top: 1px solid #ccc;
+		}
+			.insurance-table {
+				width: 100%;
+			}
+				.insurance-table tr {
+					height: 60px;
+					border-bottom: 1px solid #ccc;
+				}
+					tr.tr6 {border-bottom: 0;}
+					tr.tr1 {height: 36px; background: #ddd url(../img/tr1.png) repeat-x;}
+					.gray-bg {background: #f9f9f9;}
+				.insurance-table th {
+					border-right: 1px solid #ccc;
+					font-weight: normal;
+					padding-left: 9px;
+					padding-top: 10px;
+					padding-right: 8px;
+					font-family: 'Droid Sans', sans-serif;	
+					color: #333;
+					font-size: 13px;
+					vertical-align: top;
+				}
+				.insurance-table td {
+					border-right: 1px solid #ccc;
+					vertical-align: top;
+					padding-left: 8px;
+					padding-top: 10px;
+					padding-right: 8px;
+					font-family: 'Droid Sans', sans-serif;	
+					color: #666;
+					font-size: 13px;
+				}
+					td.td1 {color: #4db848;}
+					td.td2 {color: #333;}
+					td.td3 {color: #333;}
+					td.td5 {padding-left: 26px; padding-right: 26px;}
+					td.td7 {padding-left: 16px; padding-right: 16px;}
+					td.td8 {padding-left: 28px; padding-right: 28px;}
+					td.td9 {padding-left: 16px; padding-right: 16px;}
+					td.td11 {color: #333;}
+					td.td12{padding-left: 18px; padding-right: 18px;}
+					td.td13 {color: #333;}
+					td.td15 {padding-left: 12px; padding-right: 10px;}
+				
+		.table-footer {
+			background: #669900;
+			height: 15px;
+			border: 1px solid #1e5d86;
+			margin-bottom: 52px;
+			width: 100%;
+		}
+					
+
+
+/*===== FOOTER STYLES =====*/	
+footer {clear: both;}
+	footer p {
+		color: #666;
+		font-size: 12px;
+		text-align: center;
+		font-family: 'Raleway', sans-serif;
+		padding-top: 45px;
+		padding-bottom: 45px;
+	}
+
+/*===== MEDIA QUERIES =====*/
+@media screen and (max-width: 1199px) {
+	.insurance-table td {padding-left: 7px; padding-right: 7px;}
+	.insurance-table th {padding-left: 8px; padding-right: 7px;}
+	td.td15 {padding-right: 8px;}
+	td.td5, td.td7 {padding-left: 20px; padding-right: 20px;}
+	td.td8 {padding-left: 33px;}
+	td.td9 {padding-left: 15px;}
+	td.td12 {padding-left: 18px;}
+	
+}
+@media (max-width: 991px) {	
+	.dv {margin-bottom: 20px;}
+	.nav {margin-right: 10px;}
+	#claim-btn {margin-right: 10px;}	
+	.claim4 {float: left; clear: both; border-left: 0; padding-left: 0;	}
+	table {overflow-x: auto;	display: block;}
+	
+}		
+
+@media (max-width: 700px) {	
+	.insurance-menu select {clear: both; float: left; margin-left: 15px;}
+}
+
+@media (max-width: 662px) {	
+	.tmenu li a {width: 90px;}	
+}
+
+@media (max-width: 627px) {	
+	.claim3 {width: 160px;}
+}
+
+@media (max-width: 625px) {	
+	.nav {margin-top: 15px;}
+	.dv {clear: both; margin-top: 30px;}
+		.dv input {margin-top: 0;}
+}
+
+@media (max-width: 605px) {	
+	.claim {clear: both; width: 80%;}
+	.claim5 {border-left: 0; padding-left: 0;}
+}
+
+@media (min-width: 605px) {	
+	.claim4, .claim5 {min-height: 178px}
+}
+
+@media (max-width: 441px) {	
+	.tmenu li a {width: 60px; font-size: 12px;}	
+}
+
+@media (max-width: 378px) {	
+	.nav {margin-left: -15px;}
+	
+}		
+@media (max-width: 364px) {	
+	.nav ul li {margin-right: 30px;}
+}
+
+@media (max-width: 321px) {
+	.tmenu {margin-left: 0; padding-left: 0;}
+	.nav {margin-left: -17px;}
+	.nav ul li {margin-right: 23px;}
+}
+
+@media (max-width: 303px) {	
+	.nav ul li {margin-right: 23px;}
+	.nav {margin-left: -20px;}
+}
+		
+
+		
+		
+		

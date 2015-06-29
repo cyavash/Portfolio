@@ -1,0 +1,679 @@
+/* ==========================================================================
+   RESET STYLES
+   ========================================================================== */
+* {
+	margin: 0; padding: 0;
+}
+   
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+img {
+	border: 0 none;
+}
+
+/* ==========================================================================
+   FONTS
+   ========================================================================== */
+@font-face {
+	font-family: 'MyriadPro-Bold';
+	src: url('fonts/myriadpro-bold.eot');
+	src: url('fonts/myriadpro-bold.eot?#iefix') format('embedded-opentype');
+	src: local('?'), url('fonts/myriadpro-bold.woff') format('woff'),
+	url('fonts/myriadpro-bold.ttf') format('truetype'), 
+	url('fonts/myriadpro-bold.svg#MyriadPro-Bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MyriadPro-Light';
+	src: url('fonts/myriadpro-light.eot');
+	src: url('fonts/myriadpro-light.eot?#iefix') format('embedded-opentype');
+	src: local('?'), url('fonts/myriadpro-light.woff') format('woff'), 
+	url('fonts/myriadpro-light.ttf') format('truetype'), 
+	url('fonts/myriadpro-light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MyriadPro-Regular';
+	src: url('fonts/myriadpro-regular.eot');
+	src: url('fonts/myriadpro-regular.eot?#iefix') format('embedded-opentype');
+	src: local('?'), url('fonts/myriadpro-regular.woff') format('woff'), 
+	url('fonts/myriadpro-regular.ttf') format('truetype'),
+	url('fonts/myriadpro-regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'MyriadPro-SemiBold';
+	src: url('fonts/myriadpro-semibold.eot');
+	src: url('fonts/myriadpro-semibold.eot?#iefix') format('embedded-opentype');
+	src: local('?'), url('fonts/myriadpro-semibold.woff') format('woff'),
+	url('fonts/myriadpro-semibold.ttf') format('truetype'),
+	url('fonts/myriadpro-semibold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'MyriadPro-SemiBoldIt';
+	src: url('fonts/myriaprosemiboldsemiextendeditalic.eot');
+	src: url('fonts/myriaprosemiboldsemiextendeditalic.eot?#iefix') format('embedded-opentype');
+	src: local('?'), url('fonts/myriaprosemiboldsemiextendeditalic.woff') format('woff'),
+	url('fonts/myriaprosemiboldsemiextendeditalic.ttf') format('truetype'), 
+	url('fonts/myriaprosemiboldsemiextendeditalic.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}   
+
+@font-face {
+	font-family: 'MyriadPro-BoldCond';
+	src: url('fonts/myriadpro-boldcond.eot');
+	src: url('fonts/myriadpro-boldcond.eot?#iefix') format('embedded-opentype');
+	src: local('?'), url('fonts/myriadpro-boldcond.woff') format('woff'),
+	url('fonts/myriadpro-boldcond.ttf') format('truetype'), 
+	url('fonts/myriadpro-boldcond.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
+    
+html {
+	background: #fff;
+}
+   
+body {
+	font-family: MyriadPro-Regular, "Myriad Pro", Arial, Helvetica Sans-serif;
+}
+
+
+/* ==========================================================================
+   HEADER STYLES
+   ========================================================================== */   
+
+.top {
+	width: 1020px;
+	margin: 0 auto;
+	
+}
+	.top h1 {
+		font-family: MyriadPro-BoldCond;
+		color: #dd7d2b;
+		font-size: 36px;
+		float: left;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		font-weight: normal;
+	}
+		.top h1 span {
+			color: #424242;
+		}
+	.top h3 {
+		font-family: MyriadPro-Bold;
+		font-size: 19.76px;
+		color: #333;
+		float: right;
+		margin-top: 28px;
+		text-align: right;
+		line-height: 0.75;
+		font-weight: normal;
+	}
+		.top h3 span {
+			font-family: MyriadPro-Regular;
+			font-size: 13.18px;
+			line-height: 1.06;
+		}
+
+.nav {
+	clear: both;
+	background: url(../images/nav-bg.png) repeat-x;
+	height: 47px;
+}
+
+	.nav-content {
+		width: 1020px;
+		margin: 0 auto;
+	}
+	.nav ul {
+		float: left;
+		margin-top: 10px;
+	}
+	.nav ul li {
+		float: left;
+		list-style: none;
+		margin-right: 27px;
+	}
+	
+	.nav ul li a {
+		text-decoration: none;
+		font-family: MyriadPro-Regular;
+		font-size: 15.64px;
+		color: #fff;
+		line-height: 1.66;
+	}
+	.nav h3 {
+		float: right;
+		font-family: MyriadPro-BoldCond;
+		font-size: 30px;
+		color: #fff;
+		font-weight: normal;
+		margin-top: 1px;
+	}
+   
+/* ==========================================================================
+   MAIN STYLES
+   ========================================================================== */
+
+.banner {
+	background: #f7f7f7 url(../images/banner-bg.png) repeat-x;
+	overflow: hidden;
+}
+
+.banner-content {
+	width: 1020px;
+	margin: 0 auto;
+}
+	.banner-content h2 {
+		font-family: MyriadPro-SemiBold;
+		font-size: 48px;
+		color: #010000;
+		width: 484px;
+		padding-top: 49px;
+		line-height: 1.28;
+		font-weight: normal;
+	}
+	.banner-content h3 {
+		font-family: MyriadPro-SemiBoldIt;
+		color: #dd7d2b;
+		font-size: 48px;
+		line-height: 1.3;
+		font-weight: normal;
+		margin-top: -6px;
+	}
+		.banner-content h3 span {
+			font-family: MyriadPro-SemiBold;
+			color: #010000;
+		}
+	
+	ul.qualities {
+		float: left;
+		margin-left: 42px;
+		margin-top: 20px;
+	}
+		.qualities li {
+			list-style: none;
+			background: url(../images/checkbox.png) left no-repeat;
+			padding-left: 32px;
+			padding-top: 3px;
+			font-size: 18px;
+			line-height: 1.5;
+		}
+	
+	.banner-image {
+		float: left;
+		margin-top: -200px;
+		margin-left: 80px;
+		position: relative;
+		left: 112px;
+		margin-bottom: -5px;
+	}
+		
+	.banner-right {
+		float: right;
+		width: 250px;
+		margin-top: -215px;
+		background: url(../images/bannerRight-bg.png) repeat-x;
+		height: 440px;
+	}
+		.banner-right p {
+			font-family: MyriadPro-Light;
+			font-size: 14px;
+			color: #6c6c6c;
+			line-height: 1.28;
+			width: 215px;
+			margin-left: 20px;
+			margin-top: 45px;
+		}
+		.getStarted-btn {
+			margin-top: 36px;
+			float: left;
+			margin-left: 52px;
+		}
+		
+		.banner-right small {
+			clear: both;
+			float: left;
+			font-family: MyriadPro-Regular;
+			font-size: 10px;
+			color: #3286c6;
+			margin-left: 23px;
+			margin-top: 52px;
+		}
+			.banner-right small span {
+				font-size: 14px;
+				line-height: 0.86;
+			}
+		
+		.banner-right .sdvosb-logo {
+			margin-left: 12px;
+			margin-top: 40px;
+			float: left;
+		}
+	
+.main-content {
+	clear: both;
+	width: 1020px;
+	margin: 0 auto;
+}
+
+.client-logos {
+	margin-top: 19px;
+}
+
+.client-logos img {float: left;}
+
+img.siemens-logo {margin-left: 13px; margin-top: 14px;}
+img.airforce-logo {margin-left: 14px;}
+img.stryker-logo {margin-left: 6px; margin-top: 13px; }
+img.alcon-logo {margin-left: 15px; margin-top: 16px;}
+img.ge-logo {margin-left: 12px; margin-top: 6px;}
+img.gsk-logo {margin-left: 18px; margin-top: 6px;}
+
+.content-box {
+	clear: both;
+	margin-bottom: 20px;
+	float: left;
+}
+
+.box {
+	float: left;
+	width: 241px;
+	margin-right: 18px;
+	margin-top: 30px;
+}
+
+.last-box {margin-right: 0px;}
+
+.box-heading {
+	background: url(../images/box-bg.png) repeat-x;
+	height: 96px;
+}
+	.box-heading h3 {
+		font-family: MyriadPro-Light;
+		font-size: 60px;
+		color: #FFF;
+		font-weight: normal;
+		text-align: center;
+		line-height: 0.5;
+		padding-top: 27px;
+	}
+		.box-heading h3 span {
+			font-size: 20px;
+			margin-top: 0px;
+			text-transform: uppercase;
+			font-family: MyriadPro-Regular;
+		}
+	
+.box .percent {font-size: 30px; display: inline; position: relative; top: -17px; color: #FFF; font-family: MyriadPro-Light; margin-right: -10px;}
+	
+.box-arrow {
+	width: 241px;
+	height: 50px;
+	background: url(../images/box-arrow.jpg) no-repeat; margin-left: 0px;
+}
+
+.box h2 {
+	font-family: MyriadPro-Bold;
+	font-size: 36px;
+	color: #000;
+	font-weight: normal;
+	text-align: center;
+	line-height: 1.7;	
+}
+.box p {
+	color: #666;
+	font-family: MyriadPro-Regular;
+	font-size: 14.5px;
+}
+
+p.highlighted {
+	color: #0080cb;
+	font-size: 17px;
+	line-height: 1.26;
+	margin-bottom: 25px;
+	height: 55px;
+}
+	p.highlighted em {
+		font-style: normal;
+		text-decoration: underline;
+		font-family: MyriadPro-SemiBold;
+	}
+	
+.information {
+	clear: both;
+	border-top: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;	
+	padding-top: 18px;
+	padding-bottom: 28px;
+	overflow: auto;
+}
+
+.info-box {
+	width: 435px;
+	float: left;
+	margin-left: 40px;
+}
+.info-box2 {margin-left: 100px;}
+	.info-box h2 {
+		font-family: MyriadPro-Regular;
+		font-size: 60px;
+		color: #006098;
+		text-align: center;
+		margin-bottom: -8px;
+	}
+	.info-box p {
+		text-align: center;
+		font-size: 16px;
+		color: #777;
+		
+	}
+	.info-box a img {
+		float: left;
+		margin-left: 128px;
+		margin-top: 21px;
+	}
+	
+.more-details {
+	clear: both;
+	background: url(../images/moreDetails-bg.png) repeat-x;	
+	overflow: hidden;
+}
+
+.seven-lies {
+	background: url(../images/sevenLies-bg.png) repeat-x;
+	width: 725px;
+	margin-top: 34px;
+	float: left;
+}
+	.seven-lies h3 {
+		font-family: MyriadPro-Regular;
+		font-weight: normal;
+		font-size: 30px;
+		color: #FFF;
+		margin-left: 30px;
+		padding-top: 25px;
+	}
+	.seven-lies p {
+		font-family: MyriadPro-Regular;
+		font-size: 14px;
+		color: #FFF;
+		margin-left: 30px;
+	}
+	.seven-lies ul {
+		margin-left: 50px;
+		margin-top: 20px;
+		padding-bottom: 31px;
+	}
+		.seven-lies ul li {
+			list-style: none;
+			font-family: MyriadPro-Regular;
+			font-size: 16px;
+			color: #FFF;
+			line-height: 1.25;
+		}
+			.seven-lies ul li span {
+				font-size: 12px;
+				margin-right: 1px;
+			}
+			
+.arrow-right {
+	width: 49px;
+	height: 279px;
+	background: url(../images/arrow-right.png) no-repeat;
+	float: left;
+	margin-top: 33px;
+}
+
+.sign-up {
+	width: 215px;
+	float: right;
+	margin-right: 15px;
+	margin-top: 71px;
+}
+	.sign-up h3 {
+		font-family: MyriadPro-Regular;
+		font-size: 30px;
+		color: #006098;
+		font-weight: normal;
+		text-align: center;
+		line-height: 1;
+	}
+		.sign-up h3 span {
+			font-size: 25px;
+			color: #777;
+		}
+	.sign-up form {
+		margin-top: 22px;
+	}
+	.sign-up form input {
+		width: 208px;
+		height: 26px;
+		border: 1px solid #ccc;
+		color: #a6a6a6;
+		font-family: MyriadPro-Regular;
+		font-size: 14px;
+		text-align: center;
+		line-height: 14px;
+	}
+	.sign-up form input.signUp-btn {
+		border: 0 none;
+		border-left: 1px solid #156da0;
+		border-right: 1px solid #156da0;
+		width: 122px;
+		font-size: 20px;
+		color: #FFF;
+		text-transform: uppercase;
+		font-family: MyriadPro-Regular;
+		margin-left: 42px;
+		margin-top: 17px;
+		height: 30px;
+		background: #006098;
+		cursor: pointer;
+	}
+
+.about {
+	clear: both;
+	height: 253px;
+	background: url(../images/about-bg.jpg) repeat-x;
+	margin-top: 45px;
+}	
+	
+.about-content {
+	width: 1020px;
+	margin: 0 auto;
+}
+
+.about-left {
+	float: left;
+	width: 415px;
+	margin-top: 45px;
+}
+	.about-left h4 {
+		font-family: MyriadPro-Regular;
+		color: #eee3c9;
+		font-size: 25px;
+		font-weight: normal;
+	}
+	.about-left h3 {
+		font-size: 40px;
+		color: #fff;
+		font-weight: normal;
+		font-family: MyriadPro-Regular;
+		margin-top: -10px;
+		margin-bottom: 13px;
+	}
+	.about-left p {
+		font-size: 14px;
+		color: #eee3c9;
+		line-height: 1.42;
+	}
+	
+.about-right {
+	float: left;
+	width: 290px;
+	margin-left: 160px;
+}
+	.about-right blockquote {
+		font-family: Georgia, Times, "Times New Roman", serif;
+		color: #eee3c9;
+		font-size: 18px;
+		font-style: italic;
+		width: 265px;
+		text-align: right;
+		margin-top: 40px;
+		margin-left: 27px;
+	}
+	img.sdvosb-logo2 {
+		margin-top: 15px;
+	}
+	.about-right h5 {
+		font-family: MyriadPro-Regular;
+		font-size: 16px;
+		color: #fff;
+		font-weight: normal;
+		float: right;
+		margin-top: 38px;
+	}
+	.about-right .small-text {
+		float: right;
+		margin-top: -53px;
+		font-size: 12px;
+		width: 175px;
+		text-align: right;
+		color: #FFF;
+	}
+	img.robertFoley-img {
+		float: right;
+		margin-top: -26px;
+		margin-right: 40px;
+		z-index: 100;
+		position: relative;
+	}
+	
+/* ==========================================================================
+   FOOTER STYLES
+   ========================================================================== */   
+#footer {
+	clear: both;
+	background: url(../images/footer-bg.png) repeat-x;
+	margin-top: -26px;
+	float: left;
+	width: 100%;
+	padding-bottom: 36px;
+}
+
+.footer-content {
+	width: 1020px;
+	margin: 0 auto;
+}
+	
+ul.social {
+	float: left;
+	margin-top: 22px;
+}
+	.social li {
+		list-style: none;
+		line-height: 1.7;
+	}
+	.social li a {
+		text-decoration: none;
+		font-family: MyriadPro-Regular;
+		font-size: 14px;
+		color: #8a8a8a;
+		padding-left: 24px;
+	}
+		a.twitter {background: url(../images/social-icons.png) left top no-repeat;}
+		a.facebook {background: url(../images/social-icons.png) 0 35% no-repeat;}
+		a.linkedin {background: url(../images/social-icons.png) 0 68% no-repeat;}
+		a.stumbleupon {background: url(../images/social-icons.png) 0 102% no-repeat;}
+		
+.stats {
+	float: left;
+	margin-left: 145px;
+	margin-top: 30px;
+}
+	.stats h4 {
+		font-family: MyriadPro-Regular;
+		font-weight: normal;
+		font-size: 30px;
+		color: #848484;
+	}
+	.stats p {
+		font-family: MyriadPro-Regular;
+		font-size: 18px;
+		color: #848484;
+		margin-top: -5px;
+		margin-bottom: 5px;
+	}
+	.stats small {
+		font-family: MyriadPro-Regular;
+		font-size: 12px;
+		color: #848484;
+	}
+	
+.footer-right {
+	float: right;
+}
+
+img.small-logo {
+	float: right;
+	margin-top: 38px;
+}
+
+.footer-right ul {
+	float: right;
+	margin: 72px -87px 10px 0px;
+}
+	.footer-right ul li {
+		list-style: none;
+		float: left;
+	}
+	.footer-right ul li a {
+		text-decoration: none;
+		font-family: MyriadPro-Regular;
+		font-size: 14px;
+		color: #848484;		
+	}
+	.footer-right ul li span {
+		margin-left: 6px;
+		margin-right: 8px;
+		font-size: 14px;
+		color: #848484;
+		font-family: MyriadPro-Regular;
+	}
+	
+.footer-right p {
+	clear: both;
+	text-align: right;
+	font-family: MyriadPro-Regular;
+	font-size: 12px;
+	color: #848484;
+}
+

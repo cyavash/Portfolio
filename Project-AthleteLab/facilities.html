@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Athlete Lab</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/gallery-slider.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+	<script src="js/jquery.customSelect.min.js" type="text/javascript"></script>
+	
+
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+		
+		$(document).click(function(e){if(!$(e.target).is('.selectBox')){$(".select_it").slideUp()}});
+			
+		
+		//navigation
+			$('ul.nav > li').hover(function () {
+    if ($(this).find('ul.submenu').length > 0) {
+        clearTimeout($.data(this, 'timer'));
+     $('ul', this).stop(true, true).slideDown(100);
+        $(this).addClass('arrow-down');
+    }
+},
+function () {
+    if ($(this).find('ul.submenu').length > 0) {
+        $.data(this, 'timer', setTimeout($.proxy(function() {
+      $('ul', this).stop(true, true).slideUp(100);
+    }, this), 100));
+        $(this).removeClass('arrow-down');
+    }
+});		
+		//Tabs
+		$('.tab-button').click(function(){
+			if($(this).hasClass('tab-active')!=true)
+			{
+				$('.tab-button').removeClass('tab-active');
+				$(this).addClass('tab-active');
+				tab_index=$(this).index('.tab-button');
+				$('.tab-content').hide();
+				$('.tab-content:eq('+tab_index+')').fadeIn(0);
+			}
+		});
+		
+		$(".scroll_down").click(function() {
+			 $('html, body').animate({
+				 scrollTop: $("#facilities").offset().top
+			 }, 1000);
+		 });
+		
+		
+	});
+
+</script>
+<script type="text/javascript">
+		$(document).ready(function(){
+	$('select.country-select').customSelect();
+		});
+	</script>
+	
+
+</head>
+<body>
+<div id="header" class="facilities-header">
+	<div class="header-content">
+		<div class="country-icon"></div>
+		<select class="country-select">
+			<option>SINGAPORE</option>
+			<option>GERMANY</option>
+			<option>Korea</option>
+		</select>
+
+		<div class="navigation">
+			<a href="#"><img class="logo" src="images/logo.png" alt="Athlete Lab" /></a>
+			<ul class="nav">
+				<li><a href="#">Home</a>
+				</li>
+				<li><a href="#">Facilities</a>
+					<ul class="submenu">
+						<li><a href="#">Coaching</a></li>
+                        <li><a href="#">Performance Tests</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Trainers</a>
+					<ul class="submenu">
+						<li><a href="#">Coaching</a></li>
+                        <li><a href="#">Performance Tests</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Membership</a>
+					<ul class="submenu">
+						<li><a href="#">Coaching</a></li>
+                        <li><a href="#">Performance Tests</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Schedule</a>
+					<ul class="submenu">
+						<li><a href="#">Coaching</a></li>
+                        <li><a href="#">Performance Tests</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<ul class="action-buttons">
+				<a class="sign-up" href="#">Sign Up</a>
+				<a class="login" href="#">Login</a>
+			</ul>
+			
+		</div><!-- end navigation -->
+		
+		<div class="contact-heading">	
+			<h2>State of the Art Facilities</h2>
+			<p class="c-p">This should be an introductory line on the facilities</p>
+			<p class="scroll_down"></p>
+		</div>
+		
+	</div><!-- end header-content -->
+</div><!-- end header -->
+
+
+<div id="main">
+	<div class="main-content">
+		<h2 class="heading-pattern3">Our Facilities</h2>
+	</div><!-- end main-content -->  
+</div><!-- end main -->
+   
+       
+	    <!--Facilities-->
+        <div id="facilities">
+ 
+                
+                <!--Buttons-->
+                <div class="buttons">
+                    <div class="tab-button tab-active">
+                    	<img src="images/facility_tab_img.png" alt="" />
+                        <div class="blue_overlay"></div>
+                        <p>Computrainers</p>
+                    </div>
+                    
+                    <div class="tab-button">
+                    	<img src="images/facility_tab_img.png" alt="" />
+                        <div class="blue_overlay"></div>
+                        <p>Bike Fitting</p>
+                    </div>
+                    
+                    <div class="tab-button">
+                    	<img src="images/facility_tab_img.png" alt="" />
+                        <div class="blue_overlay"></div>
+                        <p>Lockers</p>
+                    </div>
+                    
+                    <div class="tab-button">
+                    	<img src="images/facility_tab_img.png" alt="" />
+                        <div class="blue_overlay"></div>
+                        <p>Showers</p>
+                    </div>
+                    
+                    <div class="tab-button">
+                    	<img src="images/facility_tab_img.png" alt="" />
+                        <div class="blue_overlay"></div>
+                        <p>Bike Parking</p>
+                    </div>
+                    
+                    <div class="tab-button">
+                    	<img src="images/facility_tab_img.png" alt="" />
+                        <div class="blue_overlay"></div>
+                        <p>Food &amp; Drinks</p>
+                    </div>
+                    
+                    <div class="tab-button last">
+                    	<img src="images/facility_tab_img.png" alt="" />
+                        <div class="blue_overlay"></div>
+                        <p>Central Location</p>
+                    </div>
+                    
+                	<div class="clearfix"></div>
+                </div>
+    
+                <div class="clearfix"></div>
+                
+                
+                <!--Tab-->
+                <div class="tab-content tb-facilities tab-content-display">
+                 
+                    <h2>Computrainer</h2>
+                    <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit diam in quam. Pellentesque nulla turpis, porta nec iaculis id, egestas ac dui. Cras molestie nisi erat, ut aliquet lectus dictum non. Curabitur sollicitudin tincidunt gravida. Nunc pulvinar iaculis congue. Suspendisse sed mauris tortor. Praesent vel laoreet tellus.</p>
+                     
+                     <!--Specifications-->   
+                     <div class="specif">
+                     
+                     	<div class="block">
+                        	<img src="images/computrainer_one.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        <div class="block">
+                        	<img src="images/computrainer_two.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        <div class="block last">
+                        	<img src="images/computrainer_three.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                     </div>   
+                
+                </div>
+    			
+                  <!--Tab-->
+                <div class="tab-content tb-facilities">
+                    
+                    <h2>Bike Fitting</h2>
+                    <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit diam in quam. Pellentesque nulla turpis, porta nec iaculis id, egestas ac dui. Cras molestie nisi erat, ut aliquet lectus dictum non. Curabitur sollicitudin tincidunt gravida. Nunc pulvinar iaculis congue. Suspendisse sed mauris tortor. Praesent vel laoreet tellus.</p>
+                        
+                    <!--Specifications-->   
+                     <div class="specif">
+                     
+                     	<div class="block">
+                        	<img src="images/computrainer_one.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        <div class="block">
+                        	<img src="images/computrainer_two.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        <div class="block last">
+                        	<img src="images/computrainer_three.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                     </div>
+                      
+                </div>
+                
+                <!--Tab-->
+                <div class="tab-content tb-facilities">
+                    
+                    <h2>Lockers</h2>
+                    <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit diam in quam. Pellentesque nulla turpis, porta nec iaculis id, egestas ac dui. Cras molestie nisi erat, ut aliquet lectus dictum non. Curabitur sollicitudin tincidunt gravida. Nunc pulvinar iaculis congue. Suspendisse sed mauris tortor. Praesent vel laoreet tellus.</p>
+                        
+                    <!--Specifications-->   
+                     <div class="specif">
+                     
+                     	<div class="block">
+                        	<img src="images/computrainer_one.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        <div class="block">
+                        	<img src="images/computrainer_two.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        <div class="block last">
+                        	<img src="images/computrainer_three.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                     </div>
+                      
+                </div>
+                
+                <!--Tab-->
+                  <!--Tab-->
+                <div class="tab-content tb-facilities">
+                    
+                    <h2>Showers</h2>
+                    <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit diam in quam. Pellentesque nulla turpis, porta nec iaculis id, egestas ac dui. Cras molestie nisi erat, ut aliquet lectus dictum non. Curabitur sollicitudin tincidunt gravida. Nunc pulvinar iaculis congue. Suspendisse sed mauris tortor. Praesent vel laoreet tellus.</p>
+                        
+                    <!--Specifications-->   
+                     <div class="specif">
+                     
+                     	<div class="block">
+                        	<img src="images/computrainer_one.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        <div class="block">
+                        	<img src="images/computrainer_two.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        <div class="block last">
+                        	<img src="images/computrainer_three.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                     </div>
+                      
+                </div>
+                
+                <!--Tab-->
+                <div class="tab-content tb-facilities">
+                    
+                    <h2>Bike Parking</h2>
+                    <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit diam in quam. Pellentesque nulla turpis, porta nec iaculis id, egestas ac dui. Cras molestie nisi erat, ut aliquet lectus dictum non. Curabitur sollicitudin tincidunt gravida. Nunc pulvinar iaculis congue. Suspendisse sed mauris tortor. Praesent vel laoreet tellus.</p>
+                        
+                     <!--Specifications-->   
+                     <div class="specif">
+                     
+                     	<div class="block">
+                        	<img src="images/computrainer_one.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        <div class="block">
+                        	<img src="images/computrainer_two.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        <div class="block last">
+                        	<img src="images/computrainer_three.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                     </div>
+                     
+                </div>
+                
+                <!--Tab-->
+                 
+                <div class="tab-content tb-facilities">
+                    
+                    <h2>Food and Drinks</h2>
+                    <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit diam in quam. Pellentesque nulla turpis, porta nec iaculis id, egestas ac dui. Cras molestie nisi erat, ut aliquet lectus dictum non. Curabitur sollicitudin tincidunt gravida. Nunc pulvinar iaculis congue. Suspendisse sed mauris tortor. Praesent vel laoreet tellus.</p>
+                        
+                    <!--Specifications-->   
+                     <div class="specif">
+                     
+                     	<div class="block">
+                        	<img src="images/computrainer_one.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        <div class="block">
+                        	<img src="images/computrainer_two.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        <div class="block last">
+                        	<img src="images/computrainer_three.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                     </div>
+                      
+                </div>
+                
+                <!--Tab-->
+                <div class="tab-content tb-facilities">
+                    
+                    <h2>Central Location</h2>
+                    <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit diam in quam. Pellentesque nulla turpis, porta nec iaculis id, egestas ac dui. Cras molestie nisi erat, ut aliquet lectus dictum non. Curabitur sollicitudin tincidunt gravida. Nunc pulvinar iaculis congue. Suspendisse sed mauris tortor. Praesent vel laoreet tellus.</p>
+                        
+                     <!--Specifications-->   
+                     <div class="specif">
+                     
+                     	<div class="block">
+                        	<img src="images/computrainer_one.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        <div class="block">
+                        	<img src="images/computrainer_two.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        <div class="block last">
+                        	<img src="images/computrainer_three.jpg" alt="" />
+                            <h3>SUB heading computrainer</h3>
+                            <p>Pellentesque blandit nisi id elit porttitor, non facilisis odio dignissim. Etiam condimentum, arcu sit amet pharetra tincidunt, lectus quam tincidunt orci, in congue velit </p>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                     </div>
+                     
+                </div>
+                
+        </div>
+        
+        <!--Parallax Slider-->
+        <div id="parallax_slider">
+        	
+            <!--Text-->
+        	<div class="text">
+            	<h3>Athlete Lab Singapore</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a sapien libero. Maecenas vitae suscipit<br/> turpis. Morbi lobortis leo non odio semper, id commodo sapien vestibulum.</p>
+            </div>
+            
+            <!--Slider-->
+            <div id="parallax index">
+            	<div class="day-at-square inverted-div auto-play">
+  
+                  <div class="gallery-container">
+                    <ul class="background">
+                    <li><img alt="" src="images/parallax_slider_imgthree.jpg" /></li>
+                    <li><img alt="" src="images/parallax_slider_imgthree.jpg" /></li>
+                    <li><img alt="" src="images/parallax_slider_imgthree.jpg" /></li>
+                    <li><img alt="" src="images/parallax_slider_imgthree.jpg" /></li>
+                    <li><img alt="" src="images/parallax_slider_imgthree.jpg" /></li>
+                    
+                    </ul>
+                    <div id="day-gallery">
+                      <div class="scroller">
+                        <ul class="foreground">
+                         <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                          <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                          <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                          <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                           <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                           <li><img alt="" src="images/parallax_slider_imgone.jpg" /></li>
+                           <li><img alt="" src="images/parallax_slider_imgone.jpg" /></li>
+                           <li><img alt="" src="images/parallax_slider_imgone.jpg" /></li>
+                           <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                          <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                          <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                          <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                           <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                          <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                           <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                          <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                           <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                          <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                           <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                          <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                           <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                          <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                           <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                          <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                          <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                          <li><img alt="" src="images/parallax_slider_imgtwo.jpg" /></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            	
+            </div>
+            
+        </div>
+	   
+	   
+	   
+
+<div id="fb-updates" class="updates-facilities">
+	<div class="updates-content">
+		
+		<h2>Get the Latest Updates from us on Facebook</h2>
+		<h3>Pictures, articles, latest timetables and the best in training gear is shared
+		daily on our page.</h3>
+		<a class="fb-like" href="#"><img src="images/fb-like.jpg" alt="" /></a>
+	
+	</div><!-- end updates-content -->
+</div><!-- end fb-updates -->
+
+<div id="footer">
+	<div class="footer-content">
+		<img class="footer-logo" src="images/footer-logo.png" alt="Athlete Lab" />
+		<p>Copyright &copy; 2013 Athlete Lab All rights reserved.</p>
+		
+		<ul class="company">
+			<li>Company</li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Trainers</a></li>
+			<li><a href="#">Terms</a></li>
+			<li><a href="#">Privacy</a></li>
+		</ul>
+		
+		<ul class="memberships">
+			<li>Memberships</li>
+			<li><a href="#">Monthly Subscription</a></li>
+			<li><a href="#">Ride Packs</a></li>
+			<li><a href="#">Coaching</a></li>
+			<li><a href="#">Bike Storage</a></li>
+		</ul>
+		
+		<ul class="contact">
+			<li>Contact</li>
+			<li><a href="#">Singapore</a></li>
+			<li><a href="#">Sydney</a></li>
+		</ul>
+		
+		<ul class="social-buttons">
+			<a class="twitter" href="#"><img src="images/twitter-icon.png" alt="Follow us on Twitter" /></a>
+			<a class="facebook" href="#"><img src="images/fb-icon.png" alt="Like us on Facebook" /></a>
+		</ul>	
+	</div><!-- end footer-content -->
+</div><!-- end footer -->
+
+<script src="js/parallax.js" type="text/javascript"></script>
+	<script src="js/jquery.customSelect.min.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+body {
+	background: url(../images/bg.jpg) top center no-repeat;
+	width: 100%; 
+}
+
+#header h1 {
+	font-size: 20px;
+	width: 320px;
+}
+
+.action-list li a {
+		font-family: Arial;
+		font-size: 17px;
+		font-weight: bold;
+		position: relative;
+		top: 20px;
+	}
+
+.login-btn {
+	position: relative;
+	top: 7px;
+}
+
+.language-select {
+	margin-top: -18px;
+}
+
+.nav li a {	
+		text-decoration: none;
+		font-family: Arial;
+		color: #a4a6a7;
+		font-size: 14.5px;
+		padding-top: 11px;
+		float: left;
+	}
+	
+.box-content h3 {
+		font-size: 23px;
+}
+
+.box-bottom p {
+			font-size: 15px;
+			padding-top: 15px;
+			font-weight: bold;
+		}
+
+ .main-border {
+	width: 933px;
+	margin-top: 1305px;
+ }		
+ 
+ .bxslider h2 {
+	font-family: arial;
+	font-weight: bold;
+	font-size: 35.81px;
+}	
+
+#featured h3 {
+	font-family: arial;
+	font-size: 26px;
+}
+
+.tab-list li a {
+		font-family: arial;
+		font-size: 17px;
+}
+	

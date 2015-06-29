@@ -1,0 +1,18 @@
+
+@font-face {
+	font-family: 'Tungsten-Bold';
+	src: url('fonts/Tungsten-Bold.eot');
+	src: local('☺'), url('fonts/Tungsten-Bold.woff') format('woff'), url('fonts/Tungsten-Bold.ttf') format('truetype'), url('fonts/Tungsten-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Tungsten-Semibold';
+	src: url('fonts/Tungsten-Semibold.eot');
+	src: local('☺'), url('fonts/Tungsten-Semibold.woff') format('woff'), url('fonts/Tungsten-Semibold.ttf') format('truetype'), url('fonts/Tungsten-Semibold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
